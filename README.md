@@ -42,7 +42,7 @@ This will be the general Structure of our website
 	|	 		|-- Event3
 	|	 		+-- Event4
 	|
-	+-- Templates
+	+-- templates
 		|-- head.php
 		|-- footer.php
 		+-- content.php
