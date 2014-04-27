@@ -1,20 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Login</title>
-  </head>
-  <body>
-    <h1>Simple Login with CodeIgniter</h1>
-    <?php echo validation_errors(); ?>
-    <form action="/login/verify" method="post" accept-charset="utf-8">
-      <label for="username">Username:</label>
-      <input type="text" size="20" id="username" name="username"/>
-      <br/>
-      <label for="password">Password:</label>
-      <input type="password" size="20" id="password" name="password"/>
-      <br/>
-      <input type="submit" value="Login"/>
-      <div><a href="./register">Register</a></div>
-    </form>
-  </body>
-</html>
+                        <div id='login'>
+<?php echo validation_errors("<p class='error'>",'</p>')?>
+                            <form class="glass" action="/login/verify" method="post" accept-charset="utf-8">
+                                <p class="clearfix">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" id="username" placeholder="Username">
+                                </p>
+                                <p class="clearfix">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" placeholder="Password"> 
+                                </p>
+                                <p class="clearfix">
+                                    <input type="checkbox" name="remember" id="remember" checked>
+                                    <label for="remember">Remember me</label>
+                                </p>
+                                <p class="clearfix">
+                                    <input type="submit" name="submit" value="Sign in">
+                                </p>
+                                <p class="clearfix">
+                                    <a href="/login/password" class="forgot">
+                                        Forgot Password?
+                                    </a>
+                                </p>                      
+                            </form>
+                            <div class="glass">
+                                <p class="clearfix">
+                                    <a href="/register">
+                                        <input type="submit" name="submit" value="Sign Up">
+                                    </a>
+                                </p>
+                            </div>

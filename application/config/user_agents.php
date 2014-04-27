@@ -90,9 +90,9 @@ $mobiles = array(
 //					'motorola'			=> 'Motorola'
 
 					// Phones and Manufacturers
-					'motorola'			=> "Motorola",
-					'nokia'				=> "Nokia",
-					'palm'				=> "Palm",
+					'motorola'			=> "target",
+					'nokia'				=> "target",
+					'palm'				=> "target",
 					'iphone'			=> "Apple iPhone",
 					'ipad'				=> "iPad",
 					'ipod'				=> "Apple iPod Touch",
@@ -101,26 +101,26 @@ $mobiles = array(
 					'blackberry'		=> "BlackBerry",
 					'cocoon'			=> "O2 Cocoon",
 					'blazer'			=> "Treo",
-					'lg'				=> "LG",
+					'lg'				=> "target",
 					'amoi'				=> "Amoi",
 					'xda'				=> "XDA",
 					'mda'				=> "MDA",
 					'vario'				=> "Vario",
 					'htc'				=> "HTC",
-					'samsung'			=> "Samsung",
+					'samsung'			=> "target",
 					'sharp'				=> "Sharp",
-					'sie-'				=> "Siemens",
-					'alcatel'			=> "Alcatel",
-					'benq'				=> "BenQ",
+					'sie-'				=> "target",
+					'alcatel'			=> "target",
+					'benq'				=> "target",
 					'ipaq'				=> "HP iPaq",
 					'mot-'				=> "Motorola",
 					'playstation portable'	=> "PlayStation Portable",
 					'hiptop'			=> "Danger Hiptop",
 					'nec-'				=> "NEC",
-					'panasonic'			=> "Panasonic",
-					'philips'			=> "Philips",
+					'panasonic'			=> "target",
+					'philips'			=> "target",
 					'sagem'				=> "Sagem",
-					'sanyo'				=> "Sanyo",
+					'sanyo'				=> "target",
 					'spv'				=> "SPV",
 					'zte'				=> "ZTE",
 					'sendo'				=> "Sendo",
@@ -138,8 +138,8 @@ $mobiles = array(
 					'netfront'				=> "Netfront Browser",
 					'openwave'				=> "Openwave Browser",
 					'mobilexplorer'			=> "Mobile Explorer",
-					'operamini'				=> "Opera Mini",
-					'opera mini'			=> "Opera Mini",
+					'operamini'				=> "target",
+					'opera mini'			=> "target",
 
 					// Other
 					'digital paths'			=> "Digital Paths",
@@ -153,13 +153,14 @@ $mobiles = array(
 					// Fallback
 					'mobile'				=> "Generic Mobile",
 					'wireless'				=> "Generic Mobile",
-					'j2me'					=> "Generic Mobile",
-					'midp'					=> "Generic Mobile",
-					'cldc'					=> "Generic Mobile",
+					'j2me'					=> "target",
+					'midp'					=> "target",
+					'cldc'					=> "target",
 					'up.link'				=> "Generic Mobile",
 					'up.browser'			=> "Generic Mobile",
 					'smartphone'			=> "Generic Mobile",
-					'cellphone'				=> "Generic Mobile"
+					'cellphone'				=> "Generic Mobile",
+					'UCWEB'					=> "UC Web"
 				);
 
 // There are hundreds of bots but these are the most common.

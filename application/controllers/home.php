@@ -12,11 +12,9 @@ class Home extends CI_Controller {
   {
     if($this->session->userdata('logged_in'))
     {
-      $session_data = $this->session->userdata('logged_in');
-      $data['username'] = $session_data['username'];
-      $this->load->view('home_view', $data);
-	  
-	  $this->user->updateUser(array('password' =>MD5('pixie')));
+		$user = $this->user->getUser();
+      	//print_r($user);
+		$this->load->template('home_view', $user);
 	  
     }
     else
@@ -31,6 +29,10 @@ class Home extends CI_Controller {
     $this->session->unset_userdata('logged_in');
     session_destroy();
     redirect('login', 'refresh');
+  }
+  
+  function profile($action){
+	  
   }
 
 

@@ -14,9 +14,27 @@ Class User extends CI_Model
 	}
 	
 	function getUser(){
+		// TODO : Optimize
+		
 		if($session_data = $this->session->userdata('logged_in')){
 			$query=$this->db->get_where('users',array('username'=> $session_data['username']));
-			return $query;
+			$data= array();
+			$result = $query->result();
+			foreach($result as $row){
+				$data =array(
+					'username' => $row->username,
+					'first_name' => $row->first_name,
+					'last_name' => $row->last_name,
+					'email' => $row->email,
+					'cell' => $row->cell,
+					'college' => $row->college,
+					'batch' => $row->batch,
+					'branch' => $row->branch,
+					'gender' => $row->gender,
+					'accomodation' => $row->accomodation
+				);
+			}
+			return $data;
 		}
 		else
 			return FALSE;
@@ -32,7 +50,7 @@ Class User extends CI_Model
 	
 	function login($username, $password)
 	{
-		$query=$this -> db ->get_where('users', array('username'=>$username,'password'=>MD5($password))); // TODO : Optimize this query
+		$query=$this -> db ->get_where('users', array('username'=>$username,'password'=>$password)); // TODO : Optimize this query
 
 		if($query -> num_rows() == 1)
 		{
@@ -46,7 +64,54 @@ Class User extends CI_Model
 	}
 	
 	function register($data){
+		$this->load->library('email');
+		$this->email->from('no-reply@techvaganza.org', 'Techvaganza');
+		$this->email->to($data['email']);
 		
+		$this->email->subject('Verification e-mail');
+		
+		
+		$v_id= md5($data['username'].time());
+		
+		$this->db->insert('verification_queue',array(
+			'username'=>$data['username'],
+			'v_code' => $v_id
+		));
+		
+		$this->email->message("Please Click the Link below to verify your account
+			<a href='".base_url("register/verify/".$data['username']."/".$v_id)."'>".base_url("register/verify/".$data['username']."/".$v_id)."</a>
+		hello");	
+		
+		$this->email->send();
+		try{
+			$query =  $this -> db -> insert('users',$data) ;
+			$this->load->view('email_verification');
+		}
+		catch(Exception $e){
+			redirect('register','refresh');
+		}
 	}
+	
+	function isNotVerified($username){
+		$query=$this->db->get_where('verification_queue',array(
+			'username'=>$username
+		));
+		if($query->num_rows()>=1){
+			// Not verified
+			foreach($query->result() as $row)
+				return $row->v_code;
+		}
+		
+		return false;
+	}
+	
+	function resetPassword($username,$password){
+		
+		$this->db	->where('username', $username ) 
+					->update('users', array('password'=>$password)); 
+					
+		$this->db	->delete('pwd_reset',array('username'=>$username));
+	}
+	
 }
 ?>
