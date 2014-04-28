@@ -47,7 +47,7 @@ class Register extends CI_Controller {
 	//print($this->input->post('accomodation'));
 	
     $this->load->library('form_validation');
-	$this->form_validation->set_error_delimiters('<span class="error">','</span>');
+	$this->form_validation->set_error_delimiters('<p class="error">','</p>');
     $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|callback__check_username');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|md5');
     $this->form_validation->set_rules('c_password', 'Password Confirmation', 'trim|xss_clean|matches[password]');

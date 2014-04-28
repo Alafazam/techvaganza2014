@@ -11,19 +11,21 @@ class Events extends CI_Controller {
   function index(){
 	  
 	  	// print categories of all the events
+		
+		print_r($this->event->getCategories());
+		//$this->load->template(EVENTVIEW,$data);
 	 
   }
   
   function creatives($eventid=0){
 	  $name=__FUNCTION__;
-	  if(!$eventid){
+	  if(!$eventid){ 
 		  // Print all the events
 	  	print_r($this->event->getEvents($name));
 	  }
 	  else{
-		  $event = $this->event->getEvent($eventid);
+		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
-		  echo $len;
 		  if($len){
 			  print_r($event);
 		  }
@@ -33,30 +35,77 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function technophoria(){
+  function technophoria($eventid=0){
 	  $name=__FUNCTION__;
-	  
-	  print_r($this->event->getEvents($name));
+	  if(!$eventid){ 
+		  // Print all the events
+	  	print_r($this->event->getEvents($name));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  print_r($event);
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
   } 
   
-  function preciphers(){
+  function preciphers($eventid=0){
 	  $name=__FUNCTION__;
-	  
-	  print_r($this->event->getEvents($name));
+	  if(!$eventid){ 
+		  // Print all the events
+	  	print_r($this->event->getEvents($name));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  print_r($event);
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
   } 
   
-  function autodrift(){
+  function autodrift($eventid=0){
 	  $name=__FUNCTION__;
-	  
-	  print_r($this->event->getEvents($name));
+	  if(!$eventid){ 
+		  // Print all the events
+	  	print_r($this->event->getEvents($name));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  print_r($event);
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
   } 
   
-  function robonoid(){
+  function robonoid($eventid=0){
 	  $name=__FUNCTION__;
-	  
-	  print_r($this->event->getEvents($name));
+	  if(!$eventid){ 
+		  // Print all the events
+	  	print_r($this->event->getEvents($name));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  print_r($event);
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
   } 
-
 }
 
 ?>

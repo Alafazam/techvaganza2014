@@ -1,5 +1,5 @@
                         <div id='login'>
-<?php echo validation_errors("<p class='error'>",'</p>')?>
+<?php echo validation_errors("<div class='error glass center'>",'</div>')?>
                             <form class="glass" action="/login/verify" method="post" accept-charset="utf-8">
                                 <p class="clearfix">
                                     <label for="username">Username</label>
@@ -9,11 +9,11 @@
                                     <label for="password">Password</label>
                                     <input type="password" name="password" id="password" placeholder="Password"> 
                                 </p>
-                                <p class="clearfix">
+                                <p class="clearfix half">
                                     <input type="checkbox" name="remember" id="remember" checked>
                                     <label for="remember">Remember me</label>
                                 </p>
-                                <p class="clearfix">
+                                <p class="clearfix half">
                                     <input type="submit" name="submit" value="Sign in">
                                 </p>
                                 <p class="clearfix">

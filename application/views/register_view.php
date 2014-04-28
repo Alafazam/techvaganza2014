@@ -1,4 +1,4 @@
-<h1>Register</h1>
+<h1 class="center">Register</h1>
 <div id="form_register">
 <form action="/register/validate" method="post" accept-charset="utf-8" class="glass">  
     <p class='clearfix'>
@@ -32,15 +32,15 @@
       <?php echo form_error('email'); ?>
       </p>
     <p class='clearfix'>
-      <label for='cell'>Cell</label>
+      <label for='cell'>Phone</label>
       <input type='tel' id='cell' name='cell' value="<?php echo set_value('cell'); ?>" />
       <?php echo form_error('cell'); ?>
       </p>
     <p class='clearfix'>
-      <label for='gender'>Gender</label>
-      <input type="radio" name='gender' id='gender' value='Female' <?php echo set_radio('gender','Female') ?> />
-      <span class='form_gender'>Female</span>
-      <input type="radio" name='gender' id='gender' value='Male' <?php echo set_radio('gender','Male') ?>  />
+		<label for='gender'>Gender</label>
+      	<input type="radio" name='gender' id='female' value='Female' <?php echo set_radio('gender','Female') ?> />
+      	<span class='form_gender'>Female</span>
+      	<input type="radio" name='gender' id='gender' value='Male' <?php echo set_radio('gender','Male') ?>  />
     	<span class='form_gender'>Male</span>
 	<?php echo form_error('gender'); ?>
       </p>
@@ -59,11 +59,11 @@
     <input type='text' id='branch' name='branch' value="<?php echo set_value('branch'); ?>" />
     <?php echo form_error('branch'); ?>
       </p>
-    <p class='clearfix'>
+    <p class='clearfix half'>
       <label for='accomodation'>Accomodation</label>
       <input type="checkbox" name="accomodation" id="accomodation" value='y' <?php echo set_checkbox('accomodation', 'y'); ?> />     <?php echo form_error('accomodation'); ?>
       </p>
-    <p class='clearfix'>
+    <p class='clearfix half'>
     <input type="submit" value="Login"/>
       </p>
   </form>
