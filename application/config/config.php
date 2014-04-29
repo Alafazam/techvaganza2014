@@ -18,7 +18,7 @@
 
 //$config['base_url']	= 'http://techvaganza.org/php/';
 
-$config['base_url']	= 'http://localhost/';
+$config['base_url']	= 'http://101.222.106.70';//'http://localhost/';
 
 
 /*

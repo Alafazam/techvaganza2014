@@ -14,10 +14,6 @@ class Login extends CI_Controller {
 		redirect('home','refresh');
 	}
 	
-	
-	
-
-	
 	$this->load->model('user','',TRUE);
 	
 	
@@ -27,6 +23,10 @@ class Login extends CI_Controller {
   {	  
     $this->load->helper('form');
 	$this->load->helper('date');
+	
+	if($this->useragent->isOpera()){
+		$this->load->opera('');	
+	}
 	
 	$this->load->template('login_view');
   }
@@ -106,7 +106,8 @@ class Login extends CI_Controller {
 					->get('pwd_reset');
 		if(!$query->num_rows()){
 			$this->load->template('message_view',array(
-			'message'=>"Link Might have Expired..."
+			'message'=>"<p class='clearfix'>Link Might have Expired...</p>".
+						"<p class='clearfix'><a href='/login'><input type='submit' value='Sign In'></a></p>"
 		));
 			return false;
 		}
@@ -208,6 +209,9 @@ class Login extends CI_Controller {
       	return TRUE;
     }
   }
+  
+  
+
 
 }
 

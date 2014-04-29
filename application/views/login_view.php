@@ -1,6 +1,6 @@
                         <div id='login'>
 <?php echo validation_errors("<div class='error glass center'>",'</div>')?>
-                            <form class="glass" action="/login/verify" method="post" accept-charset="utf-8">
+                            <form class="glass" action="<?=base_url()?>login/verify" method="post" accept-charset="utf-8">
                                 <p class="clearfix">
                                     <label for="username">Username</label>
                                     <input type="text" name="username" id="username" placeholder="Username">
@@ -17,14 +17,14 @@
                                     <input type="submit" name="submit" value="Sign in">
                                 </p>
                                 <p class="clearfix">
-                                    <a href="/login/password" class="forgot">
+                                    <a href="<?=base_url()?>login/password" class="forgot">
                                         Forgot Password?
                                     </a>
                                 </p>                      
                             </form>
                             <div class="glass">
                                 <p class="clearfix">
-                                    <a href="/register">
+                                    <a href="<?=base_url()?>register">
                                         <input type="submit" name="submit" value="Sign Up">
                                     </a>
                                 </p>

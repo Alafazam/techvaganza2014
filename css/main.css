@@ -42,3 +42,19 @@
 	margin:80px 15px 15px 75px;
 	color:#EEEEEE;
 }
+
+@media all and (max-width:720px) {
+	.glass label:first-child,
+	.glass input[type='text'],
+	.glass input[type='password'],
+	.glass input[type='email'],
+	.glass input[type='tel'],
+	.half
+	{
+		width:100% !important;	
+	}
+	
+	.half label:first-child{
+		width:80% !important;
+	}
+}
