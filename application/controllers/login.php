@@ -15,7 +15,7 @@ class Login extends CI_Controller {
 	}
 	
 	$this->load->model('user','',TRUE);
-	
+	$this->load->library('UserAgent');
 	
   }
 
@@ -25,7 +25,8 @@ class Login extends CI_Controller {
 	$this->load->helper('date');
 	
 	if($this->useragent->isOpera()){
-		$this->load->opera('');	
+		$this->load->opera('login_view');
+		return false;	
 	}
 	
 	$this->load->template('login_view');
