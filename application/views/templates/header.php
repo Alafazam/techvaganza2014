@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <script src="<?=base_url()?>js/snap.svg-min.js"></script>
 		<script src="<?=base_url()?>js/modernizr.custom.js"></script>
-
+		<script src="<?=base_url()?>js/svgLoader.js"></script>
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/component.css" />
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/icons.css" />	
@@ -13,8 +13,9 @@
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/main.css" />		
     </head>
     
-    <body>
-    <div class="container">
+<body>
+    <div id="pagewrap" class="pagewrap">
+        <div class="container show"  >
         <!-- Push Wrapper -->
         <div class="mp-pusher" id="mp-pusher">
 			<!-- mp-menu -->
@@ -35,10 +36,10 @@
                                             <h2>CS/IT</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">CoderMania</a></li>
-                                                <li><a href="#">Google CodeJam</a></li>
-                                                <li><a href="#">Performance Crusher</a></li>
-                                                <li><a href="#">Futuristic Experience</a></li>
+                                                <li><a class="pageload-link" href="#">CoderMania</a></li>
+                                                <li><a class="pageload-link" href="#">Google CodeJam</a></li>
+                                                <li><a class="pageload-link" href="#">Performance Crusher</a></li>
+                                                <li><a class="pageload-link" href="#">Futuristic Experience</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -48,11 +49,11 @@
                                             <h2>Civil</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Flat Superscreen</a></li>
-                                                <li><a href="#">Gigantic LED</a></li>
-                                                <li><a href="#">Power Eater</a></li>
-                                                <li><a href="#">3D Experience</a></li>
-                                                <li><a href="#">Classic Comfort</a></li>
+                                                <li><a class="pageload-link" href="#">Flat Superscreen</a></li>
+                                                <li><a class="pageload-link" href="#">Gigantic LED</a></li>
+                                                <li><a class="pageload-link" href="#">Power Eater</a></li>
+                                                <li><a class="pageload-link" href="#">3D Experience</a></li>
+                                                <li><a class="pageload-link" href="#">Classic Comfort</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -62,10 +63,10 @@
                                             <h2>Electrical</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Smart Shot</a></li>
-                                                <li><a href="#">Power Shooter</a></li>
-                                                <li><a href="#">Easy Photo Maker</a></li>
-                                                <li><a href="#">Super Pixel</a></li>
+                                                <li><a class="pageload-link" href="#">Smart Shot</a></li>
+                                                <li><a class="pageload-link" href="#">Power Shooter</a></li>
+                                                <li><a class="pageload-link" href="#">Easy Photo Maker</a></li>
+                                                <li><a class="pageload-link" href="#">Super Pixel</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -75,10 +76,10 @@
                                             <h2>Electronics</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Smart Shot</a></li>
-                                                <li><a href="#">Power Shooter</a></li>
-                                                <li><a href="#">Easy Photo Maker</a></li>
-                                                <li><a href="#">Super Pixel</a></li>
+                                                <li><a class="pageload-link" href="#">Smart Shot</a></li>
+                                                <li><a class="pageload-link" href="#">Power Shooter</a></li>
+                                                <li><a class="pageload-link" href="#">Easy Photo Maker</a></li>
+                                                <li><a class="pageload-link" href="#">Super Pixel</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -88,10 +89,10 @@
                                             <h2>Metallugy</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Smart Shot</a></li>
-                                                <li><a href="#">Power Shooter</a></li>
-                                                <li><a href="#">Easy Photo Maker</a></li>
-                                                <li><a href="#">Super Pixel</a></li>
+                                                <li><a class="pageload-link" href="#">Smart Shot</a></li>
+                                                <li><a class="pageload-link" href="#">Power Shooter</a></li>
+                                                <li><a class="pageload-link" href="#">Easy Photo Maker</a></li>
+                                                <li><a class="pageload-link" href="#">Super Pixel</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -101,10 +102,10 @@
                                             <h2>Mechanical</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Smart Shot</a></li>
-                                                <li><a href="#">Power Shooter</a></li>
-                                                <li><a href="#">Easy Photo Maker</a></li>
-                                                <li><a href="#">Super Pixel</a></li>
+                                                <li><a class="pageload-link" href="#">Smart Shot</a></li>
+                                                <li><a class="pageload-link" href="#">Power Shooter</a></li>
+                                                <li><a class="pageload-link" href="#">Easy Photo Maker</a></li>
+                                                <li><a class="pageload-link" href="#">Super Pixel</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -123,19 +124,19 @@
                                             <h2>Mechanical</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a href="#">Smart Shot</a></li>
-                                                <li><a href="#">Power Shooter</a></li>
-                                                <li><a href="#">Easy Photo Maker</a></li>
-                                                <li><a href="#">Super Pixel</a></li>
+                                                <li><a class="pageload-link" href="#">Smart Shot</a></li>
+                                                <li><a class="pageload-link" href="#">Power Shooter</a></li>
+                                                <li><a class="pageload-link" href="#">Easy Photo Maker</a></li>
+                                                <li><a class="pageload-link" href="#">Super Pixel</a></li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li><a href="#">National Geographic</a></li>
-                                    <li><a href="#">Scientific American</a></li>
-                                    <li><a href="#">The Spectator</a></li>
-                                    <li><a href="#">The Rambler</a></li>
-                                    <li><a href="#">Physics World</a></li>
-                                    <li><a href="#">The New Scientist</a></li>
+                                    <li><a class="pageload-link" href="#">National Geographic</a></li>
+                                    <li><a class="pageload-link" href="#">Scientific American</a></li>
+                                    <li><a class="pageload-link" href="#">The Spectator</a></li>
+                                    <li><a class="pageload-link" href="#">The Rambler</a></li>
+                                    <li><a class="pageload-link" href="#">Physics World</a></li>
+                                    <li><a class="pageload-link" href="#">The New Scientist</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -157,12 +158,12 @@
                                                         <h2 class="icon icon-female">Women's Clothing</h2>
                                                         <a class="mp-back" href="#">back</a>
                                                         <ul>
-                                                            <li><a href="#">Naked</a></li>
-                                                            <li><a href="#">Tops</a></li>
-                                                            <li><a href="#">Dresses</a></li>
-                                                            <li><a href="#">Trousers</a></li>
-                                                            <li><a href="#">Shoes</a></li>
-                                                            <li><a href="#">Sale</a></li>
+                                                            <li><a class="pageload-link" href="#">Naked</a></li>
+                                                            <li><a class="pageload-link" href="#">Tops</a></li>
+                                                            <li><a class="pageload-link" href="#">Dresses</a></li>
+                                                            <li><a class="pageload-link" href="#">Trousers</a></li>
+                                                            <li><a class="pageload-link" href="#">Shoes</a></li>
+                                                            <li><a class="pageload-link" href="#">Sale</a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -172,10 +173,10 @@
                                                         <h2 class="icon icon-male">Men's Clothing</h2>
                                                         <a class="mp-back" href="#">back</a>
                                                         <ul>
-                                                            <li><a href="#">Shirts</a></li>
-                                                            <li><a href="#">Trousers</a></li>
-                                                            <li><a href="#">Shoes</a></li>
-                                                            <li><a href="#">Sale</a></li>
+                                                            <li><a class="pageload-link" href="#">Shirts</a></li>
+                                                            <li><a class="pageload-link" href="#">Trousers</a></li>
+                                                            <li><a class="pageload-link" href="#">Shoes</a></li>
+                                                            <li><a class="pageload-link" href="#">Sale</a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -183,20 +184,20 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <a class="icon icon-diamond" href="#">Jewelry</a>
+                                        <a class="pageload-link" class="icon icon-diamond" href="#">Jewelry</a>
                                     </li>
                                     <li>
-                                        <a class="icon icon-music" href="#">Music</a>
+                                        <a class="pageload-link" class="icon icon-music" href="#">Music</a>
                                     </li>
                                     <li>
-                                        <a class="icon icon-food" href="#">Grocery</a>
+                                        <a class="pageload-link" class="icon icon-food" href="#">Grocery</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="icon icon-photo" href="#">Contacts</a></li>
-                        <li><a class="icon icon-wallet" href="#">Sponsers</a></li>
-                        <li><a class="icon icon-wallet" href="#">Gallery</a></li>
+                        <li><a class="icon icon-photo pageload-link" href="#">Contacts</a></li>
+                        <li><a class="icon icon-wallet pageload-link" href="#">Sponsers</a></li>
+                        <li><a class="icon icon-wallet pageload-link" href="#">Gallery</a></li>
         
                     </ul>
                         
@@ -233,3 +234,171 @@
                         <!-- <p><a href="#"  class="menu-trigger">Open/Close Menu</a></p> -->
                     </div>
                     <div id='akt_content'>
+                        <div id="contain">
+                                        <div class="container" id="page-0">
+                                            <div class="cat_heading"><h1>Events</h1></div>  
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">N</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Infographical Education</h2>
+                                                            <h3 class="ca-sub">Understanding visually</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">K</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Sophisticated Team</h2>
+                                                            <h3 class="ca-sub">Professionals in action</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">L</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Unconditional Support</h2>
+                                                            <h3 class="ca-sub">24/7 for you needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="container" id="page-1">
+                                            <div class="cat_heading"><h1>WorkShops</h1></div>   
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="container" id="page-1">
+                                            <div class="cat_heading"><h1>Hospitality</h1></div> 
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="container" id="page-1">
+                                            <div class="cat_heading"><h1>Contacts</h1></div>    
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="container" id="page-1">
+                                            <div class="cat_heading"><h1>Sponsors</h1></div>    
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>  
+                                            </ul>
+                                        </div>
+                                        <div class="container" id="page-1">
+                                            <div class="cat_heading"><h1>Gallary</h1></div> 
+                                            <ul class="ca-menu">
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">F</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Exceptional Service</h2>
+                                                            <h3 class="ca-sub">Personalized to your needs</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="ca-icon">H</span>
+                                                        <div class="ca-content">
+                                                            <h2 class="ca-main">Creative Storytelling</h2>
+                                                            <h3 class="ca-sub">Advanced use of technology</h3>
+                                                        </div>
+                                                    </a>
+                                                </li>  
+                                            </ul>
+                                        </div>  
+                                    </div>
+                
