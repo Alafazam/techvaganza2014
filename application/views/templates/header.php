@@ -4,7 +4,6 @@
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <script src="<?=base_url()?>js/snap.svg-min.js"></script>
-        <script src="<?=base_url()?>js/star.js"></script>		
 		<script src="<?=base_url()?>js/modernizr.custom.js"></script>
 
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/normalize.css" />
@@ -206,6 +205,29 @@
             
             <div class="scroller"><!-- this is for emulating position fixed of the nav -->
                 <div class="scroller-inner">
+                    <div class="top_header clearfix">
+                                            <span class="right"><a<?php 
+                                            if(isset($first_name))
+                                            {
+                                                echo    ' href="'.base_url().'home/logout"<span>Logout';
+                                            }
+                                            else
+                                            {
+                                                echo    ' href="'.base_url().'login"<span>Login';
+                                            }
+                                            ?></span></a></span>
+                                            <span class="right"><a <?php 
+                                            if(isset($first_name))
+                                            {
+                                                echo    'href="#"><span>Welcome '.$first_name ;
+                                            }
+                                            else
+                                            {
+                                                echo    'href="'.base_url().'register"<span>Register';
+                                            }
+                                            ?>
+                                            </span></a></span>
+                    </div>
                     <div class="block">
                         <a href="#" id="trigger" class="bt-menu-trigger"><span>Menu</span></a>
                         <!-- <p><a href="#"  class="menu-trigger">Open/Close Menu</a></p> -->
