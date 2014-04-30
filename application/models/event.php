@@ -54,5 +54,30 @@ Class Event extends CI_Model
 		return $data;
 	}
 	
+	function register($eventid){		
+		if($session_data = $this->session->userdata('logged_in')){
+			
+			$query= $this->db->get_where('events_registration',array(
+				'username' => $session_data['username'],
+				'event_id' =>$eventid
+			));
+			
+			if($query->num_rows()==0)			
+				$this->db->insert('events_registration',array(
+					'username' => $session_data['username'],
+					'event_id' =>$eventid
+				));
+		}		
+	}
+	
+	function unregister($eventid){
+		if($session_data = $this->session->userdata('logged_in')){
+			$this->db->delete('events_registration',array(
+				'username' => $session_data['username'],
+				'event_id' =>$eventid
+			));
+		}		
+	}
+	
 }
 ?>

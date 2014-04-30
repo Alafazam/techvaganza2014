@@ -17,8 +17,9 @@ class Events extends CI_Controller {
 	 
   }
   
-  function creatives($eventid=0){
+  function creatives($eventid=0,$register=0){
 	  $name=__FUNCTION__;
+	  
 	  if(!$eventid){ 
 		  // Print all the events
 	  	print_r($this->event->getEvents($name));
@@ -27,6 +28,17 @@ class Events extends CI_Controller {
 		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
 		  if($len){
+			  
+			  if($register==="register"){ // if user wants to register for that event
+			  	echo 'registered';
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+			  	echo 'unregistered';
+				  $this->event->unregister($eventid);
+			  }
+			  
+			  
 			  print_r($event);
 		  }
 		  else{
