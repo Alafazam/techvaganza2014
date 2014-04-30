@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2014 at 11:31 AM
+-- Generation Time: Apr 30, 2014 at 09:07 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.22
 
@@ -32,18 +32,39 @@ CREATE TABLE IF NOT EXISTS `events` (
   `name` varchar(30) CHARACTER SET ascii NOT NULL,
   `view_name` varchar(30) CHARACTER SET ascii NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `category` varchar(20) NOT NULL,
+  `category` varchar(20) CHARACTER SET ascii NOT NULL,
+  `description` varchar(160) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `event_id` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `event_id`, `name`, `view_name`, `time`, `category`) VALUES
-(1, 'create', 'Creatives 1', 'what_the_fuck ', '2014-05-25 07:30:00', 'creatives'),
-(2, 'codemania', 'Code Mania', 'view_codemania', '2014-05-26 11:00:00', 'creatives');
+INSERT INTO `events` (`id`, `event_id`, `name`, `view_name`, `time`, `category`, `description`) VALUES
+(1, 'create', 'Creatives 1', 'view_create ', '2014-05-25 07:30:00', 'creatives', NULL),
+(2, 'codemania', 'Code Mania', 'view_codemania', '2014-05-26 11:00:00', 'creatives', NULL),
+(3, 'smackdown', 'Smack Down', 'view_smack', '2014-05-26 18:30:00', 'robonoid', 'Robo wars');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events_registration`
+--
+
+CREATE TABLE IF NOT EXISTS `events_registration` (
+  `username` varchar(10) NOT NULL,
+  `event_id` varchar(30) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `events_registration`
+--
+
+INSERT INTO `events_registration` (`username`, `event_id`, `time`) VALUES
+('ankit', 'create', '2014-04-30 19:05:03');
 
 -- --------------------------------------------------------
 
@@ -79,13 +100,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `branch` varchar(30) NOT NULL,
   `accomodation` enum('y','n') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=106 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=113 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `cell`, `gender`, `college`, `batch`, `branch`, `accomodation`) VALUES
+(112, 'ibnbatuta', 'e10adc3949ba59abbe56e057f20f883e', 'ankitbc', 'mc', 'tanayabh@gmail.com', '9876543212', 'Male', 'nit jhand', '2011', 'chodu science', 'y'),
+(111, 'ankit2', 'd518b92738257b1840880b40287ad389', 'Ankit', 'Verma', 'ankitstarski@gmail.com', '9858577847', 'Male', 'NIT Srinagar', '2011', 'CSE', 'n'),
 (105, 'ankit', 'd518b92738257b1840880b40287ad389', 'Ankit', 'Ankit', 'ankitstarski@gmail.com', '9858577847', 'Male', 'NIT Srinagar', '2011', 'CSE', 'n');
 
 -- --------------------------------------------------------
@@ -99,6 +122,13 @@ CREATE TABLE IF NOT EXISTS `verification_queue` (
   `v_code` varchar(50) NOT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `verification_queue`
+--
+
+INSERT INTO `verification_queue` (`username`, `v_code`) VALUES
+('ankit2', 'ca49ba2164f62830825069f5abb60459');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
