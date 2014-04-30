@@ -180,8 +180,25 @@
     margin-left: -50%;
     margin-top : -190px;
 
-    };   
+    }
+	
+	/*
+	 * Don't remove this code, you removed it previously
+	 */
     
+	.glass label:first-child,
+	.glass input[type='text'],
+	.glass input[type='email'],
+	.glass input[type='password'],
+	.glass input[type='tel'],
+	.half{
+		width:100% !important;
+	}
+	
+	.half label:first-child{
+		width:80% !important;
+	}
+	
 }
 
 /* Low End mobiles */

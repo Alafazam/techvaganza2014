@@ -64,7 +64,7 @@
         0 16px 10px -8px rgba(0, 0, 0, 0.6);
 }
 
-.glass label {
+.glass label  {
     /* Size and position */
     width: 50%;
     float: left;
@@ -80,6 +80,18 @@
     text-indent: 10px;
     font-weight: 700;
     cursor: pointer;
+}
+
+.glass span{
+	color: #ddd;
+    font-size: 12px;
+    height:33px;
+    line-height: 33px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
 }
 
 .glass input[type=text],
@@ -119,7 +131,7 @@
 .glass label:hover ~ input[type=text],
 .glass label:hover ~ input[type=password],
 .glass label:hover ~ input[type=email],
-.glass label:hover ~ input[type=tel] {
+.glass label:hover ~ input[type=tel]{
     background: #27292c;
 }
 
