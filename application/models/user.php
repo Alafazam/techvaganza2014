@@ -13,6 +13,15 @@ Class User extends CI_Model
 		}
 	}
 	
+	function getUsername(){
+		if($session_data = $this->session->userdata('logged_in')){
+			return $session_data['username'];
+		}
+		else{
+			return false;
+		}
+	}
+	
 	function getUser(){
 		// TODO : Optimize
 		
@@ -111,6 +120,22 @@ Class User extends CI_Model
 					->update('users', array('password'=>$password)); 
 					
 		$this->db	->delete('pwd_reset',array('username'=>$username));
+	}
+	
+	
+	function update($data){
+		try{
+			if($username=$this->getUsername()){
+				$query =  $this -> db	-> where(array('username'=>$username)) 
+										-> update('users',$data) ;
+				redirect('home/profile','refresh');
+			}
+			else{
+			}
+		}
+		catch(Exception $e){
+			redirect('home','refresh');
+		}
 	}
 	
 }

@@ -10,6 +10,7 @@
 <file name="email_verification.php" server="C:/xampp/htdocs/" local="130427569564799749" remote="130427569560000000" Dst="0" />
 <file name="event_view.php" server="C:/xampp/htdocs/" local="130431739870000000" remote="130431739870000000" Dst="0" />
 <file name="welcome_view.php" server="C:/xampp/htdocs/" local="130434096435195035" remote="130434096430000000" Dst="0" />
-<file name="profile_view.php" server="C:/xampp/htdocs/" local="130434137027896805" remote="130434137020000000" Dst="0" />
+<file name="profile_view.php" server="C:/xampp/htdocs/" local="130434522747148684" remote="130434522740000000" Dst="0" />
 <file name="events_view.php" server="C:/xampp/htdocs/" local="130434157161898404" remote="130434157160000000" Dst="0" />
+<file name="profile_edit_view.php" server="C:/xampp/htdocs/" local="130434524444715780" remote="130434524440000000" Dst="0" />
 </dwsync>

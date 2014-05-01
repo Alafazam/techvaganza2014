@@ -38,6 +38,6 @@
             <td><?=$accomodation=='y'?'Yes':'No'?></td>
         </tr>
     </table>
-    
-    <p>**Profile Edit Feature and User Dashboard will be available soon</p>
+    <a class="half right"  href="/home/profile/edit"><input type='submit' value="Edit Profile" /></a>
+    <p>**User Dashboard will be available soon</p>
 </div>

@@ -9,12 +9,6 @@
     font-style: normal;
 }
 
-
-
-
-
-
-
 *,
 *:after,
 *::before {
@@ -26,6 +20,7 @@
 html, body, .container, .scroller {
 	height: 100%;
 }
+
 a {
 	text-decoration: none;
 	color: #f7f7f7;
@@ -266,13 +261,10 @@ a:hover, a:focus {
 .mp-menu h2 {
 	margin: 0;
 	padding: 1em;
-	padding-top: 2.0vh;
-	padding-bottom: 2.0vh;
 	color: rgba(0,0,0,0.4);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
 	font-size: 2em;
-	font-size: 4.9vh;
 }
 
 .mp-menu.mp-overlap h2::before {
@@ -282,7 +274,6 @@ a:hover, a:focus {
 	margin-right: 8px;
 	font-size: 75%;
 	line-height: 1.8;
-	line-height: 3.6vh;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.1s 0.3s;
 	-moz-transition: opacity 0.3s, -moz-transform 0.1s 0.3s;
@@ -297,7 +288,6 @@ a:hover, a:focus {
 	font-weight: 700;
 	letter-spacing: 1px;
 	font-size: 1em;
-	font-size: 2.9vh;
 }
 
 .mp-overlap .mp-level.mp-level-overlay > h2::before {
@@ -313,13 +303,10 @@ a:hover, a:focus {
 .mp-menu ul li > a {
 	display: block;
 	padding: 0.7em 1em 0.7em 1.8em;
-	padding-top: 1.4vh;
-	padding-bottom: 1.4vh;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	font-size: 1.4em;
-	font-size: 3.7vh;	
+	font-size: 1.2em;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	-moz-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
@@ -329,9 +316,8 @@ a:hover, a:focus {
 	position: absolute;
 	left: 10px;
 	z-index: -1;
-	color: rgba(0,0,0,0.2);
+	color: rgba(0,0,0,0.6);
 	line-height: 3.5;
-	line-height: 6.9vh;
 }
 
 .mp-level > ul > li:first-child > a {
@@ -358,10 +344,7 @@ a:hover, a:focus {
 	font-weight: 700;
 	display: block;
 	font-size: 0.8em;
-	font-size: 1.9vh;
 	padding: 1em;
-	padding-top: 2.0vh;
-	padding-bottom: 2.0vh;
 	position: relative;
 	box-shadow: inset 0 1px rgba(0,0,0,0.1);
 	-webkit-transition: background 0.3s;
@@ -375,7 +358,6 @@ a:hover, a:focus {
 	content: "\e037";
 	right: 10px;
 	font-size: 1.3em;
-	font-size: 2.6vh;
 	color: rgba(0,0,0,0.3);
 }
 
