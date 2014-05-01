@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="/css/icons.css" />	
 		<link rel="stylesheet" type="text/css" href="/css/login_form.css" />
 		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="/css/comingsoon.css" />
+
         <?php
 			if(isset($home)){
 				echo "<link rel='stylesheet' href='/css/hexaflip.css' />";
@@ -242,170 +244,11 @@
                     </div>
                     <div id='akt_content'>
                         <div id="contain">
-                                        <div class="container" id="page-0">
-                                            <div class="cat_heading"><h1>Events</h1></div>  
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">N</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Infographical Education</h2>
-                                                            <h3 class="ca-sub">Understanding visually</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">K</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Sophisticated Team</h2>
-                                                            <h3 class="ca-sub">Professionals in action</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">L</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Unconditional Support</h2>
-                                                            <h3 class="ca-sub">24/7 for you needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="container" id="page-1">
-                                            <div class="cat_heading"><h1>WorkShops</h1></div>   
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="container" id="page-1">
-                                            <div class="cat_heading"><h1>Hospitality</h1></div> 
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="container" id="page-1">
-                                            <div class="cat_heading"><h1>Contacts</h1></div>    
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="container" id="page-1">
-                                            <div class="cat_heading"><h1>Sponsors</h1></div>    
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>  
-                                            </ul>
-                                        </div>
-                                        <div class="container" id="page-1">
-                                            <div class="cat_heading"><h1>Gallary</h1></div> 
-                                            <ul class="ca-menu">
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">F</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Exceptional Service</h2>
-                                                            <h3 class="ca-sub">Personalized to your needs</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <span class="ca-icon">H</span>
-                                                        <div class="ca-content">
-                                                            <h2 class="ca-main">Creative Storytelling</h2>
-                                                            <h3 class="ca-sub">Advanced use of technology</h3>
-                                                        </div>
-                                                    </a>
-                                                </li>  
-                                            </ul>
-                                        </div>  
-                                    </div>
+                        	<div class="container" id="coming_soon_container">
+								<div class="coming_soon cat_heading"><h1>Coming Soon</h1></div>	
+								<div class="coming_soon">
+									<p><a id="csgo"	class="coming_soon pageload-link" href="#page-1">Go back</a></p>
+								</div>	
+							</div>
+                        </div>
                 

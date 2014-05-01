@@ -27,23 +27,65 @@
 	<script src="/js/mlpushmenu.js"></script>
     <script>
        var mlPushMenu =  new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-        //(function() {
-				var pageWrap = document.getElementById( 'akt_content' ),
+				// var pageWrap = document.getElementById( 'akt_content' ),
+				//  navMenu = document.getElementById( 'mp-menu' ),
+				// 	pages = [].slice.call( pageWrap.querySelectorAll( 'div.container' ) ),
+				// 	currentPage = 0,
+				// 	triggerLoading = [].slice.call( navMenu.querySelectorAll( 'a.pageload-link' ) ),
+				// 	loader = new SVGLoader( document.getElementById( 'loader' ),pages,currentPage, { speedIn : 300, easingIn : mina.easeIn } );
+				// function init() {
+				// 	triggerLoading.forEach( function( trigger ) {
+				// 		trigger.addEventListener( 'click', function( ev ) {
+				// 			ev.preventDefault();
+				// 			loader.show();
+				// 			mlPushMenu._resetMenu();
+				// 			// after some time hide loader
+				// 			setTimeout( function() {
+				// 				loader.hide();
+				// 			}, 2000 );
+				// 		} );
+				// 	} );	
+				// }
+
+
+				// init();
+				var pageWrap = document.getElementById( 'contain' ),
 				 navMenu = document.getElementById( 'mp-menu' ),
 					pages = [].slice.call( pageWrap.querySelectorAll( 'div.container' ) ),
 					currentPage = 0,
 					triggerLoading = [].slice.call( navMenu.querySelectorAll( 'a.pageload-link' ) ),
-					loader = new SVGLoader( document.getElementById( 'loader' ),pages,currentPage, { speedIn : 300, easingIn : mina.easeIn } );
+					loader = new SVGLoader( document.getElementById( 'loader' ),pages,currentPage, { speedIn : 500, easingIn : mina.easeIn } );
+					triggerLoading.push(document.getElementById('csgo'));
+					console.log(triggerLoading[triggerLoading.length-1]);
+				
+
+
 				function init() {
 					triggerLoading.forEach( function( trigger ) {
 						trigger.addEventListener( 'click', function( ev ) {
 							ev.preventDefault();
 							loader.show();
 							mlPushMenu._resetMenu();
-							// after some time hide loader
+							//remove this if conditioin afterwords
+							if (!star.coming_soon) {
+                        		star.coming_soon = true;
+                        		classie.addClass(pages[loader.current_page], 'show');
+                        		star.wind();
+                    		} else {
+                        		classie.removeClass(pages[loader.current_page], 'show');
+                    			star.coming_soon=false;
+                        		
+                        		setTimeout( function() {
+								star._unwind();
+							}, 1000 );
+
+                    		}
+                    		//till here
 							setTimeout( function() {
 								loader.hide();
 							}, 2000 );
+							// after some time hide loader
+
 						} );
 					} );	
 				}
@@ -51,12 +93,10 @@
 
 				init();
 
-//			})();
-
 		
 
     </script>
-        <script src="/js/star.js"></script>
+        <script src="/js/coming_soon.js"></script>
 
 	</body>
 </html>

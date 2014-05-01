@@ -1,0 +1,22 @@
+.coming_soon {
+	padding: 3em 1em 1.0em;
+	text-align: center;
+	clear: both;
+}
+
+.coming_soon h2 {
+	font-size: 2.6em;
+	font-weight: 300;
+	padding: 4em 0 0.4em;
+}
+
+.coming_soon p {
+	font-size: 1.5em;
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+#coming_soon_container{
+
+	margin-top: 80px;
+}

@@ -107,15 +107,15 @@
 
 
 #viewport{
-    -webkit-transition: all 3s;
+    -webkit-transition: all 0.4s;
 
-    -moz-transition: all 3s ;
+    -moz-transition: all 0.4s ;
 
-    -ms-transition: all 3s ;
+    -ms-transition: all 0.4s ;
 
-    -o-transition: all 3s ;
+    -o-transition: all 0.4s ;
 
-    transition: all 3s ;
+    transition: all 0.4s ;
     width:600px;
     height:  600px;
     position: absolute;
