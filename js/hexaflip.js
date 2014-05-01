@@ -434,7 +434,7 @@ var settings = {
         size: 45,
         margin: 4,
         fontSize: 30,
-        perspective: 450
+        perspective: 2000
     },
     makeObject = function(a){
         var o = {};
