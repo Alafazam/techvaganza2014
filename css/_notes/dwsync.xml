@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name=".DS_Store" server="C:/xampp/htdocs/" local="130428912018084068" remote="130428912010000000" Dst="0" />
-<file name="component.css" server="C:/xampp/htdocs/" local="130433614475408960" remote="130433614470000000" Dst="0" />
-<file name="icons.css" server="C:/xampp/htdocs/" local="130428912018114070" remote="130428912010000000" Dst="0" />
-<file name="login_form.css" server="C:/xampp/htdocs/" local="130433622094204731" remote="130433622090000000" Dst="0" />
-<file name="main.css" server="C:/xampp/htdocs/" local="130433620024386344" remote="130433620020000000" Dst="0" />
-<file name="normalize.css" server="C:/xampp/htdocs/" local="130428912022004293" remote="130428912020000000" Dst="0" />
+<file name="component.css" server="C:/xampp/htdocs/" local="130433396227615203" remote="130433396220000000" />
+<file name="icons.css" server="C:/xampp/htdocs/" local="130208508260000000" remote="130208508260000000" />
+<file name="login_form.css" server="C:/xampp/htdocs/" local="130433630548070670" remote="130433630540000000" />
+<file name="main.css" server="C:/xampp/htdocs/" local="130433630548110697" remote="130433630540000000" />
+<file name="normalize.css" server="C:/xampp/htdocs/" local="130177752000000000" remote="130177752000000000" />
 </dwsync>
