@@ -463,7 +463,7 @@ var settings = {
 document.addEventListener('DOMContentLoaded', function(){
     
     window.setInterval(function(){                
-        var date2 = new Date();
+        var date2 = new Date(curtime);
         var timeDiff = date1.getTime() - date2.getTime();
         var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));            
         var diffHours = Math.floor(timeDiff / (1000 * 3600 ))%24;            
@@ -485,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             x++;
         }
-        
+        curtime+=1000;
         tvza.setValue(hflp);
 
     },1000);
