@@ -3,14 +3,14 @@
     <head>
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <script src="<?=base_url()?>js/snap.svg-min.js"></script>
-		<script src="<?=base_url()?>js/modernizr.custom.js"></script>
-		<script src="<?=base_url()?>js/svgLoader.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?=base_url()?>css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/component.css" />
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/icons.css" />	
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/login_form.css" />
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/main.css" />
+        <script src="/js/snap.svg-min.js"></script>
+		<script src="/js/modernizr.custom.js"></script>
+		<script src="/js/svgLoader.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="/css/icons.css" />	
+		<link rel="stylesheet" type="text/css" href="/css/login_form.css" />
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
         <?php
 			if(isset($home)){
 				echo "<link rel='stylesheet' href='/css/hexaflip.css' />";
@@ -29,6 +29,8 @@
                     <h2 class="icon icon-world">All Categories</h2>
                     <a class="mp-back" href="#">back</a>
                     <ul>
+                        <li><a class="icon icon-shop" href="/">Home</a></li>
+                        <li><a class="icon icon-display" href="/login">Login</a></li>
                         <li class="icon icon-arrow-left">
                             <a class="icon icon-display" href="#">Events</a>
                             <div class="mp-level">
@@ -202,7 +204,6 @@
                         </li>
                         <li><a class="icon icon-photo pageload-link" href="#">Contacts</a></li>
                         <li><a class="icon icon-wallet pageload-link" href="#">Sponsers</a></li>
-                        <li><a class="icon icon-wallet pageload-link" href="#">Gallery</a></li>
         
                     </ul>
                         

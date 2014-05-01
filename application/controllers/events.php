@@ -11,12 +11,12 @@ class Events extends CI_Controller {
   function index(){
 	  
 	  	// print categories of all the events
-		
-		print_r($this->event->getCategories());
+		$this->load->template('events_view');
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }
   
+/*
   function creatives($eventid=0,$register=0){
 	  $name=__FUNCTION__;
 	  
@@ -117,7 +117,9 @@ class Events extends CI_Controller {
 			  show_404();
 		  }
 	  }
-  } 
+  }
+  */ 
 }
+
 
 ?>

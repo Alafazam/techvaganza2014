@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="home_view.php" server="C:/xampp/htdocs/" local="130428504255810362" remote="130428504250000000" Dst="0" />
+<file name="home_view.php" server="C:/xampp/htdocs/" local="130434155194635883" remote="130434155190000000" Dst="0" />
 <file name="index.html" server="C:/xampp/htdocs/" local="129466704000000000" remote="129466704000000000" Dst="0" />
-<file name="login_view.php" server="C:/xampp/htdocs/" local="130432526020001117" remote="130432526020000000" Dst="0" />
+<file name="login_view.php" server="C:/xampp/htdocs/" local="130434155008605243" remote="130434155000000000" Dst="0" />
 <file name="register_view.php" server="C:/xampp/htdocs/" local="130430829440334054" remote="130430829440000000" Dst="0" />
 <file name="password_reset.php" server="C:/xampp/htdocs/" local="130432555077653120" remote="130432555070000000" Dst="0" />
 <file name="pwd_reset.php" server="C:/xampp/htdocs/" local="130432558460316597" remote="130432558460000000" Dst="0" />
@@ -10,4 +10,6 @@
 <file name="email_verification.php" server="C:/xampp/htdocs/" local="130427569564799749" remote="130427569560000000" Dst="0" />
 <file name="event_view.php" server="C:/xampp/htdocs/" local="130431739870000000" remote="130431739870000000" Dst="0" />
 <file name="welcome_view.php" server="C:/xampp/htdocs/" local="130434096435195035" remote="130434096430000000" Dst="0" />
+<file name="profile_view.php" server="C:/xampp/htdocs/" local="130434137027896805" remote="130434137020000000" Dst="0" />
+<file name="events_view.php" server="C:/xampp/htdocs/" local="130434157161898404" remote="130434157160000000" Dst="0" />
 </dwsync>

@@ -12,9 +12,7 @@ class Home extends CI_Controller {
   {
     if($this->session->userdata('logged_in'))
     {
-		$user = $this->user->getUser();
-      	//print_r($user);
-		$this->load->template('home_view', $user);
+		$this->profile();
 	  
     }
     else
@@ -31,7 +29,18 @@ class Home extends CI_Controller {
     redirect('login', 'refresh');
   }
   
-  function profile($action){
+  function profile($action=0){
+	if($this->session->userdata('logged_in'))
+    {
+		$user = $this->user->getUser();
+		$this->load->template('profile_view', $user);
+	  
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('login', 'refresh');
+	}
 	  
   }
 

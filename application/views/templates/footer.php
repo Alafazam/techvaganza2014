@@ -23,8 +23,8 @@
         
     
 
-    <script src="<?=base_url()?>js/classie.js"></script>
-	<script src="<?=base_url()?>js/mlpushmenu.js"></script>
+    <script src="/js/classie.js"></script>
+	<script src="/js/mlpushmenu.js"></script>
     <script>
        var mlPushMenu =  new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
         //(function() {
@@ -56,7 +56,7 @@
 		
 
     </script>
-        <script src="<?=base_url()?>js/star.js"></script>
+        <script src="/js/star.js"></script>
 
 	</body>
 </html>
