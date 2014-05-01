@@ -19,13 +19,13 @@
 #login{
     width: 300px;
     position: relative;
-    margin: 60px auto 30px;
+    margin: 10px auto 30px;
 }
 
 #form_register{
     max-width: 480px;
     position: relative;
-    margin: 60px auto 30px;
+    margin: 10px auto 30px;
 }
 
 .forgot{

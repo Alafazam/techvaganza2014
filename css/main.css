@@ -57,6 +57,53 @@
 }
 
 
+#akt_content{
+	margin:80px 15px 15px 15px;
+	color:#eee;
+}
+
+#akt_content h1{
+	text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #aaa,
+               0 3px 0 #777,
+               0 4px 0 #444,
+               0 6px 1px rgba(255,255,255,.1),
+               0 0 5px rgba(255,255,255,.1);
+}
+
+.center{
+	text-align:center;
+}
+
+.max-300{
+	max-width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.max-480{
+	max-width:480px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#profile{
+	padding:20px;
+}
+
+#profile table {
+	width: 100%;
+	border:0;
+	border-collapse:separate;
+	border-spacing:10px 20px;
+}
+
+#profile td:first-child{
+	font-weight:bold;
+}
+
+#profile tr{
+	margin-bottom:20px;
+}
 
 
 #viewport{
@@ -191,8 +238,10 @@
 	.glass input[type='email'],
 	.glass input[type='password'],
 	.glass input[type='tel'],
-	.half{
+	.half,
+	#profile td{
 		width:100% !important;
+		display:block;
 	}
 	
 	.half label:first-child{

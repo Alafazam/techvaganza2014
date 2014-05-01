@@ -6,16 +6,20 @@ class Welcome extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('user', '', TRUE);
+		$this->load->helper('url');
     }
 
     function index() {
         if ($this->session->userdata('logged_in')) {
             $user = $this->user->getUser();
             //print_r($user);
+			
+			$user['home'] = 'yes';
+			
             $this->load->template('welcome_view', $user);
 
         } else {
-            $user = $this->user->getUser();
+            $user = array('home' =>'yes');
             //$user->first_name = 'Guest';
             //If no session, redirect to login page
             $this->load->template('welcome_view', $user);
