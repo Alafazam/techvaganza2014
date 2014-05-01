@@ -10,7 +10,12 @@
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/component.css" />
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/icons.css" />	
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/login_form.css" />
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/main.css" />		
+		<link rel="stylesheet" type="text/css" href="<?=base_url()?>css/main.css" />
+        <?php
+			if(isset($home)){
+				echo "<link rel='stylesheet' href='/css/hexaflip.css' />";
+			}
+		?>	
     </head>
     
 <body>
@@ -207,6 +212,7 @@
             <div class="scroller"><!-- this is for emulating position fixed of the nav -->
                 <div class="scroller-inner">
                     <div class="top_header clearfix">
+                    
                                             <span class="right"><a<?php 
                                             if(isset($first_name))
                                             {

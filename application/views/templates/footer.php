@@ -1,4 +1,14 @@
 						</div><!-- /scroller-inner -->
+                        <?php
+					if(isset($home)){
+				?>	
+					<div id="timer-wrapper" >
+						<div id="tvza-timer"></div>                
+					</div>
+					<script src="/js/hexaflip.js"></script>
+				<?php
+					}
+				?>
 					</div><!-- /scroller -->
 
 				</div><!-- /pusher -->
@@ -10,6 +20,8 @@
 				</svg>
 			</div><!-- /pageload-overlay -->
 		</div><!--/pagewrap-->
+        
+    
 
     <script src="<?=base_url()?>js/classie.js"></script>
 	<script src="<?=base_url()?>js/mlpushmenu.js"></script>
