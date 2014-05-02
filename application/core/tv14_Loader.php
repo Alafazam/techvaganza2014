@@ -1,11 +1,38 @@
 <?php
 class tv14_Loader extends CI_Loader {
-    public function template($template_name, $vars = array(), $return = FALSE)
+    
+	/*public function view($view, $vars = array(), $return = FALSE)
     {
+        $CI =& get_instance();
+
+        $CI->load->library("user_agent");
+
+        if($CI->agent->is_mobile()){
+            $view = 'mobile/'.$view;
+        }
+
+        return $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return));
+    }*/
+	
+	
+	
+	
+	public function template($template_name, $vars = array(), $return = FALSE)
+    {
+		$CI =& get_instance();
+
+        $CI->load->library("user_agent");
+
+        if($CI->agent->is_mobile()){
+        $content  = $this->view('mobile/templates/header', $vars, $return);
+        $content .= $this->view('mobile/'.$template_name, $vars, $return);
+        $content .= $this->view('mobile/templates/footer', $vars, $return);
+        }else{
         $content  = $this->view('templates/header', $vars, $return);
         $content .= $this->view($template_name, $vars, $return);
         $content .= $this->view('templates/footer', $vars, $return);
-
+		}
+		
         if ($return)
         {
             return $content;

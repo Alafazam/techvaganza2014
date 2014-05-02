@@ -216,7 +216,8 @@
                 <div class="scroller-inner">
                     <div class="top_header clearfix">
                     
-                                            <span class="right"><a<?php 
+                                            <span class="right"><a
+                                            <?php 
                                             if(isset($first_name))
                                             {
                                                 echo    ' href="'.base_url().'home/logout"<span>Logout';
