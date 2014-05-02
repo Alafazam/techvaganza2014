@@ -1,7 +1,7 @@
-var textArray = ['Events', 'Workshops', 'Hospitality', 'Contacts', 'Sponsers', 'Gallary']
+var textArray = ['Events', 'Workshops', 'Hospitality', 'Contacts', 'Sponsors', 'Gallery']
 var shades = ['#fe9601', '#D92B48', '#00A03E', '#0241E2', '#ED00F4', '#00d2f1', '#6ABED8', '#D92B48', '#00A03E', '#0241E2', ]
 var menu_Items = 6;
-var timing = 750;
+var timing = 170;
 //more colors
 //00b796   0DC9F7    982395     FF534B
 //86289b   D99FD3    1352A2
@@ -15,7 +15,6 @@ window.onload = function() {
         star = new Star(viewport, menu_Items);
         window.star = star;
         star._unwind();
-
         //star._wind();
     }
 
@@ -168,16 +167,14 @@ showMenuText = function(el) {
     el.animate({
         'fill-opacity': 0.9
     }, 100);
-
     var fin = el;
-
     id = fin.attr('id');
     // console.log(id);
     var myregExp = /\d/;
     no = Number(myregExp.exec(id)[0]);
 
     leaf_rotaton = fin.transform()['globalMatrix'].split()['rotate'];
-    console.log(leaf_rotaton);
+    //console.log(leaf_rotaton);
 
     if (leaf_rotaton < 0) {
         leaf_rotaton += 360;
@@ -196,10 +193,10 @@ showMenuText = function(el) {
         svgTextElement.attr({
             'font-size': value * 30,
             opacity: value,
-            transform: 'r(' + (-leaf_rotaton) * (value) + ',530,330)'
+            //transform: 'r(' + (-leaf_rotaton) * (value) + ',530,330)'
 
         }); // Animate by font-size ?
-    }, timing, mina.bounce);
+    }, timing, mina.easeout);
 
 }
 

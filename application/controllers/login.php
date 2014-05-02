@@ -136,7 +136,7 @@ class Login extends CI_Controller {
     //This method will have the credentials validation
     $this->load->library('form_validation');
 
-    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|strtolower');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|md5|callback__check_database');
 	
     if($this->form_validation->run() == FALSE)

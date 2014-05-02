@@ -46,7 +46,6 @@ class Home extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="error">','</p>');
 		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]');
-		$this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|max_length[128]|callback__check_email');
 		$this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
 		$this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
 		$this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
@@ -64,7 +63,6 @@ class Home extends CI_Controller {
 			$data = array(
 				'first_name'=>$this->input->post('first_name'),
 				'last_name'=>$this->input->post('last_name'),
-				'email'=>$this->input->post('email'),
 				'cell'=>$this->input->post('cell'),
 				'gender'=>$this->input->post('gender'),
 				'college'=>$this->input->post('college'),

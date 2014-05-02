@@ -79,7 +79,6 @@ Class User extends CI_Model
 		
 		$this->email->subject('Verification e-mail');
 		
-		
 		$v_id= md5($data['username'].time());
 		
 		$this->db->insert('verification_queue',array(
@@ -94,7 +93,12 @@ Class User extends CI_Model
 		$this->email->send();
 		try{
 			$query =  $this -> db -> insert('users',$data) ;
-			$this->load->view('email_verification');
+			$this->load->template('message_view',
+			array(
+				'message'=>"<p class='clearfix'>An Email verification has been sent to your email id,".
+									" please verify your email before you continue\n".
+									"<a href='/'><input type='submit' value='Go to Homepage'/></a>"
+			));
 		}
 		catch(Exception $e){
 			redirect('register','refresh');

@@ -46,7 +46,7 @@
       </p>
     <p class='clearfix'>
     <label for='college'>College Name</label>
-    <input type='text' id='college' name='college'  value="<?php echo set_value('college'); ?>"/>
+    <input type='text' id='college' name='college'  value="<?php echo set_value('college')?set_value('college'):"NIT Srinagar"; ?>"/>
     <?php echo form_error('college'); ?>
       </p>
     <p class='clearfix'>
@@ -64,7 +64,7 @@
       <input type="checkbox" name="accomodation" id="accomodation" value='y' <?php echo set_checkbox('accomodation', 'y'); ?> />     <?php echo form_error('accomodation'); ?>
       </p>
     <p class='clearfix half'>
-    <input type="submit" value="Login"/>
+    <input type="submit" value="Register"/>
       </p>
   </form>
 </div>

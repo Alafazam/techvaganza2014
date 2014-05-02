@@ -12,11 +12,6 @@
     <?php echo form_error('last_name'); ?>
       </p>
     <p class='clearfix'>
-      <label for='email'>Email</label>
-      <input type='email' id='email' name='email' value="<?php echo isset($email)?$email:set_value('email'); ?>" />
-      <?php echo form_error('email'); ?>
-      </p>
-    <p class='clearfix'>
       <label for='cell'>Phone</label>
       <input type='tel' id='cell' name='cell' value="<?php echo isset($cell)?$cell:set_value('cell'); ?>" />
       <?php echo form_error('cell'); ?>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Login</title>
+        <title>Techvaganza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	    <link href="/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="/css/login_form.css" />
+    <link rel="stylesheet" type="text/css" href="/css/login_form.css" />
+    <link rel="stylesheet" type="text/css" href="/css/main-mobile.css" />
 
 <style type="text/css">
   body{
@@ -33,26 +34,26 @@
           </button>
           <a class="navbar-brand" <?php 						if(isset($first_name))
                                             {
-                                                echo    'href="#">Welcome '.$first_name ;
+                                                echo    'href="/home">Welcome '.$first_name ;
                                             }
                                             else
                                             {
-                                                echo    'href="'.base_url().'register"> Register';
+                                                echo    'href="/register"> Register';
                                             }
                                             ?></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a 
 			<?php 
                                             if(isset($first_name))
                                             {
-                                                echo    ' href="'.base_url().'home/logout">Logout';
+                                                echo    ' href="/home/logout">Logout';
                                             }
                                             else
                                             {
-                                                echo    ' href="'.base_url().'login">Login';
+                                                echo    ' href="/login">Login';
                                             }
                                             ?>
                                             </a></li>
@@ -125,3 +126,4 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+    <div id="akt_content">

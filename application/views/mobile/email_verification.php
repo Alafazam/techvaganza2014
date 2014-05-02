@@ -1,1 +1,0 @@
-An Email verification has been sent to your email id, please verify your email before you continue

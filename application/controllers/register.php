@@ -30,14 +30,19 @@ class Register extends CI_Controller {
 		  if($r==$v_id){
 			  $this->db->delete('verification_queue', array('username' => $username));
 			  
-			  echo "you have been verified, You may continue to login page";
+			  $this->load->template('message_view', array(
+			  	'message' => "you have been verified,".
+			  				" You may continue to login page".
+			  				"<a href='/login'><input type='submit' value='Log In'/></a>"
+			  ));
 		  }
 		  else{
-			  echo "Invalid Verification Code";
+			  $this->load->template('message_view', array('message' => "Invalid Verification Code"));
 		  }
 	  }
 	  else{
-		  echo "You have already been verified... Continue with login ";
+		  $this->load->template('message_view', array('message' => "You have already been verified... Continue with login... "));
+		  redirect('/login');
 	  }
   }
   
@@ -48,12 +53,12 @@ class Register extends CI_Controller {
 	
     $this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<p class="error">','</p>');
-    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[10]|callback__check_username');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[10]|strtolower|callback__check_username');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|max_length[50]|md5');
     $this->form_validation->set_rules('c_password', 'Password Confirmation', 'trim|xss_clean|matches[password]');
     $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
     $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]');
-    $this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|max_length[128]|callback__check_email');
+    $this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|max_length[128]|strtolower|callback__check_email');
     $this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
     $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
     $this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
@@ -93,12 +98,6 @@ class Register extends CI_Controller {
   {
     //Field validation succeeded.  Validate against database
     $username = $this->input->post('username');
-    
-	if(!preg_match('/^[a-z0-9_-]{3,15}$/',$username))
-	{
-		$this->form_validation->set_message('_check_username', 'UserName Must only contains small Alphabets, Numbers, Underscore and Hyphen');
-        return false;
-	}
 	
     //query the database
     $result = $this->db->get_where('users',array('username'=> $username));

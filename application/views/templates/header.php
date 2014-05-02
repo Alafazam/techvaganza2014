@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Login</title>
+        <title>Techvaganza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <script src="/js/snap.svg-min.js"></script>
 		<script src="/js/modernizr.custom.js"></script>
@@ -150,21 +150,21 @@
                                             <?php 
                                             if(isset($first_name))
                                             {
-                                                echo    ' href="'.base_url().'home/logout"<span>Logout';
+                                                echo    ' href="/home/logout"<span>Logout';
                                             }
                                             else
                                             {
-                                                echo    ' href="'.base_url().'login"<span>Login';
+                                                echo    ' href="/login"<span>Login';
                                             }
                                             ?></span></a></span>
                                             <span class="right"><a <?php 
                                             if(isset($first_name))
                                             {
-                                                echo    'href="#"><span>Welcome '.$first_name ;
+                                                echo    'href="/home"><span>Welcome '.$first_name ;
                                             }
                                             else
                                             {
-                                                echo    'href="'.base_url().'register"<span>Register';
+                                                echo    'href="/register"<span>Register';
                                             }
                                             ?>
                                             </span></a></span>
