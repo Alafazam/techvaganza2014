@@ -48,17 +48,17 @@ class Register extends CI_Controller {
 	
     $this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<p class="error">','</p>');
-    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|callback__check_username');
-    $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|md5');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[10]|callback__check_username');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|max_length[50]|md5');
     $this->form_validation->set_rules('c_password', 'Password Confirmation', 'trim|xss_clean|matches[password]');
-    $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|_check_email');
-    $this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|callback__check_phone');
+    $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
+    $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]');
+    $this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|max_length[128]|callback__check_email');
+    $this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
     $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
-    $this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('branch', 'Branch', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
+    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|max_length[4]');
+    $this->form_validation->set_rules('branch', 'Branch', 'trim|required|xss_clean|max_length[30]');
     $this->form_validation->set_rules('accomodation', 'Accomodation', 'trim|xss_clean|callback__check_accomodation');
 	
     if($this->form_validation->run() == FALSE)

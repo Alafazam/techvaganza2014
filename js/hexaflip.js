@@ -434,7 +434,7 @@ var settings = {
         size: 45,
         margin: 4,
         fontSize: 30,
-        perspective: 450
+        perspective: 2000
     },
     makeObject = function(a){
         var o = {};
@@ -451,7 +451,7 @@ var settings = {
         }
         return o;
     };
-    var date1 = new Date("May 23, 2014 00:00:00");
+    var date1 = new Date("May 24, 2014 00:00:00");
     hflp =  {
                 x1: "T", x2: 'E', x3: 'C', x4: 'H', x5: 'V', x6: 'A', x7: 'G', x8: 'A', x9: 'N', x10: 'Z', x11: 'A'
     };
