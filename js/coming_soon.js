@@ -184,7 +184,7 @@ showMenuText = function(el) {
     };
 
     var svgTextElement = fin.text(530, 330, textArray[no]).attr({
-        fill: '#f00',
+        fill: '#fff',
         id: 'svgTextElement',
         fontSize: '10px',
         opacity: 1,
