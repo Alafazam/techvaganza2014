@@ -61,31 +61,25 @@
   -webkit-transform-origin:center -250px;
 }
 #tvza-timer .hexaflip-cube {
-  opacity: 1;
+  opacity: 0.9;
   filter: alpha(opacity=90);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
 }
 #tvza-timer .hexaflip-cube .hexaflip-left,
 #tvza-timer .hexaflip-cube .hexaflip-right {
-  background-color: #1C1F2A !important;
+  background-color: #222 !important;
 }
 #tvza-timer .hexaflip-cube > div{
   font-weight: 100;
   text-shadow: none;
 }
-#tvza-timer .hexaflip-cube > div{
-  background-color: #132853;
-  color: white;
+#tvza-timer .hexaflip-cube > div:nth-child(1n+1){
+  background-color: #069ad5;
 }
 #tvza-timer .hexaflip-cube > div:nth-child(2n+2) {
-  background-color: white;
-  color: #132853;
-}/*
-=======
   background-color: #eee;
   color: #069ad5;
 }
->>>>>>> 854c62aa2555a48dc970a84565827de68212b3d2
 #tvza-timer .hexaflip-cube > div:nth-child(3n+3) {
   background-color: #069ad5;
 }
@@ -94,4 +88,3 @@
   color: #069ad5;
 }
 
-*/
