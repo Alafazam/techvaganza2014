@@ -11,12 +11,26 @@
   body{
     background: black;
     color: white;
-
+  font-size: 1.8em;
   }
-
-.jumbotron{
-  background: #260303;
+.btn-default {
+  padding-bottom: 10px;
+  padding-top:10px ;
+  color: #fff;
+  background-color: #110E0E;
+  border-color: black;
 }
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  color: #fffdfd;
+  background-color: #444444;
+  border-color:black;
+}
+.bottom_stiatic{
+margin-bottom: -10px;
+}
+
+
+a:hover{text-decoration: none;}
 
 </style>
     </head>
@@ -44,21 +58,6 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a 
-			<?php 
-                                            if(isset($first_name))
-                                            {
-                                                echo    ' href="/home/logout">Logout';
-                                            }
-                                            else
-                                            {
-                                                echo    ' href="/login">Login';
-                                            }
-                                            ?>
-                                            </a></li>
-            <li><a href="#Hospitality">Hospitality</a></li>
-            <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -116,6 +115,8 @@
                   </li>
               </ul>
             </li>
+            <li><a href="#Hospitality">Hospitality</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown">Workshops<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -126,4 +127,4 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div id="akt_content">
+    <div id="akt_content" >

@@ -1,3 +1,24 @@
+	<div class="btn-group btn-group-justified bottom_stiatic">
+  <div class="btn-group">
+    <a  class="btn btn-default" href="/">Home</a>
+  </div>
+  <div class="btn-group">
+    <a  class="btn btn-default" href="/">Contact Us</a>
+  </div>
+  <div class="btn-group">
+    <a class="btn btn-default" <?php 
+                                            if(isset($first_name))
+                                            {
+                                                echo    ' href="/home/logout">Logout';
+                                            }
+                                            else
+                                            {
+                                                echo    ' href="/login">Login';
+                                            }
+                                            ?>
+      </a>
+  </div>
+</div>
 	</div>
 	<script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>

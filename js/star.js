@@ -178,7 +178,7 @@ showMenuText = function(el) {
     var svgTextElement = leaf.text(0, 0, textArray[no]).attr({
         fill: 'white',
         id: 'svgTextElement',
-        fontSize: '10px',
+        fontSize: '30px',
         opacity: 0,
         "text-anchor": "middle",
         // transform: 't70,200' + 'r' + ((-leaf_rotaton))

@@ -57,7 +57,7 @@
 					triggerLoading = [].slice.call( navMenu.querySelectorAll( 'a.pageload-link' ) ),
 					loader = new SVGLoader( document.getElementById( 'loader' ),pages,currentPage, { speedIn : 500, easingIn : mina.easeIn } );
 					triggerLoading.push(document.getElementById('csgo'));
-					console.log(triggerLoading[triggerLoading.length-1]);
+					// console.log(triggerLoading[triggerLoading.length-1]);
 				
 
 

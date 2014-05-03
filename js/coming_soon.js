@@ -27,9 +27,11 @@ function Star(viewport, menu_Items) {
     classie.addClass(this.viewport, 'unwinded');
     this.sub_menus = menu_Items;
     this.star = Snap.select('#star');
+    // console.log(star);
     this.fin = this.star.select('#g0');
     this.g = this.star.g();
     this.fins = [];
+    // this.logos = [];
     this.grades = [];
     this.shades = [];
     this.g.attr({
@@ -37,22 +39,31 @@ function Star(viewport, menu_Items) {
     });
     this.coming_soon = false;
 
-    //this.fin.select('g.logo_wrapper').remove();
-
-    for (var i = 0; i < this.sub_menus; i++) {
+    for (var i = (this.sub_menus - 1); i >= 0; i--) {
         if (i == 0) {
             this.fin.appendTo(this.g);
             this.fins[0] = this.fin;
         };
+
         if (i != 0) {
             this.fins[i] = this.fin.clone();
+            // console.log(this.fins[i]);
             this.fins[i].attr({
                 id: 'g' + i,
                 class: 'fin',
             });
             this.fins[i].appendTo(this.g);
-        };
 
+        };
+        //logo adding here
+        // this.logos[i] = this.star.select('#l' + i).attr({
+        //     transform: 'r(-' + ((360 / 6) * i) + ',507.47,260)',
+        // });
+
+
+        // this.fins[i].append(this.logos[i]);
+
+        // this.fins[i].select("").remove();
         this.grades[i] = this.star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(000,000,000,1)');
         this.fins[i].attr({
             fill: this.grades[i],
@@ -183,7 +194,7 @@ showMenuText = function(el) {
     var svgTextElement = fin.text(530, 330, textArray[no]).attr({
         fill: '#fff',
         id: 'svgTextElement',
-        fontSize: '10px',
+        fontSize: '30px',
         opacity: 1,
         "text-anchor": "middle",
         transform: 'r(-' + leaf_rotaton + ',530,330)'

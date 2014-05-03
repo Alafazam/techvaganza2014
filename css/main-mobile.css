@@ -1,12 +1,12 @@
 body {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 #akt_content{
-  margin: 15px;
+  margin: 0 15px;
 }
 
-#akt_content h1{
+/*#akt_content h1{
 	text-shadow: 0 1px 0 #ccc, 
                0 2px 0 #aaa,
                0 3px 0 #777,
@@ -14,6 +14,7 @@ body {
                0 6px 1px rgba(255,255,255,.1),
                0 0 5px rgba(255,255,255,.1);
 }
+*/
 
 .center{
 	text-align:center;
@@ -91,8 +92,9 @@ body {
 
   /*
    * Don't remove this code, you removed it previously
-   */
-    
+  */
+  /*Sorry... :) */
+
   .glass label:first-child,
   .glass input[type='text'],
   .glass input[type='email'],
@@ -108,3 +110,17 @@ body {
     width:80% !important;
   }
 
+
+a{
+  color: #CCC;
+  text-decoration: none;
+  text-align: center;
+}
+li a:hover{
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,a:active,a:visited{  color: white;
+};
