@@ -35,7 +35,7 @@ a:hover{text-decoration: none;}
 </style>
     </head>
     
-    <body>
+    <body class="max-500">
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
