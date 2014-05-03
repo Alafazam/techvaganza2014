@@ -25,7 +25,7 @@ padding-bottom: 0px;
           </div>
           <div class="nav nav-tabs nav-justified">
             <ul class="list-group center">
-              <li class="list-group-item"><a href="/comingsoon">Home</a>         </li>
+              <li class="list-group-item"><a href="/">Home</a>         </li>
               <li class="list-group-item"><a href="/comingsoon">Events</a>       </li>
               <li class="list-group-item"><a href="/comingsoon">Workshops</a>    </li>
               <li class="list-group-item"><a href="/comingsoon">Technofun</a>    </li>
