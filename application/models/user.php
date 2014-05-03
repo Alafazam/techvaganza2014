@@ -87,8 +87,7 @@ Class User extends CI_Model
 		));
 		
 		$this->email->message("Please Click the Link below to verify your account
-			<a href='".base_url("register/verify/".$data['username']."/".$v_id)."'>".base_url("register/verify/".$data['username']."/".$v_id)."</a>
-		hello");	
+".base_url("register/verify/".$data['username']."/".$v_id)."");	
 		
 		$this->email->send();
 		try{
@@ -96,7 +95,8 @@ Class User extends CI_Model
 			$this->load->template('message_view',
 			array(
 				'message'=>"<p class='clearfix'>An Email verification has been sent to your email id,".
-									" please verify your email before you continue\n".
+									" please verify your email before you continue</p>\n".
+									"<p class='clearfix'>If you have not received our email, wait for a few minutes or check your spam folder</p>".
 									"<a href='/'><input type='submit' value='Go to Homepage'/></a>"
 			));
 		}

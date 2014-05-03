@@ -317,7 +317,7 @@ a:hover, a:focus {
 	left: 10px;
 	z-index: -1;
 	color: rgba(0,0,0,0.6);
-	line-height: 3.5;
+	line-height: 3.2;
 }
 
 .mp-level > ul > li:first-child > a {

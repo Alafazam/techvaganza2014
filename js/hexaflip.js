@@ -478,6 +478,12 @@ document.addEventListener('DOMContentLoaded', function(){
             }
             x=0;
         }
+		else if(x%10==8){
+            hflp =  {
+                x1: "T", x2: 'E', x3: 'C', x4: 'H', x5: 'V', x6: 'A', x7: 'G', x8: 'A', x9: 'N', x10: 'Z', x11: 'A'
+            }
+			x++;
+        }
         else{
             if(timeDiff>=0)
                 hflp =  {

@@ -37,7 +37,7 @@ function Star(viewport, menu_Items) {
     });
     this.coming_soon = false;
 
-    this.fin.select('g.logo_wrapper').remove();
+    //this.fin.select('g.logo_wrapper').remove();
 
     for (var i = 0; i < this.sub_menus; i++) {
         if (i == 0) {

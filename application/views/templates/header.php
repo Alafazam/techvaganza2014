@@ -49,7 +49,7 @@
                                                 <li><a class="pageload-link" href="#">Android Advance</a></li>
                                                 <li><a class="pageload-link" href="#">Go fix It</a></li>
                                                 <li><a class="pageload-link" href="#">De vardad juginerio</a></li>
-                                                <li><a class="pageload-link" href="#">Trouble-Shootin</a></li>
+                                                <li><a class="pageload-link" href="#">CodeMania</a></li>
 
                                             </ul>
                                         </div>
@@ -89,7 +89,7 @@
                                             <h2>Fixer Elixer</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="pageload-link" href="#">Junckyard</a></li>
+                                                <li><a class="pageload-link" href="#">Junkyard</a></li>
                                                 <li><a class="pageload-link" href="#">Transform_It</a></li>
                                                 <li><a class="pageload-link" href="#">Sanrachna</a></li>
                                                 <li><a class="pageload-link" href="#">Nirman</a></li>
@@ -135,7 +135,7 @@
                         </li>
                         <li><a class="icon icon-photo pageload-link" href="#">Hospitality</a></li>
                         <li><a class="icon icon-photo pageload-link" href="#">Contacts</a></li>
-                        <li><a class="icon icon-wallet pageload-link" href="#">Sponsers</a></li>
+                        <li><a class="icon icon-wallet pageload-link" href="#">Sponsors</a></li>
         
                     </ul>
                         

@@ -24,11 +24,6 @@ class Login extends CI_Controller {
     $this->load->helper('form');
 	$this->load->helper('date');
 	
-	if($this->useragent->isOpera()){
-		$this->load->opera('login_view');
-		return false;	
-	}
-	
 	$this->load->template('login_view');
   }
   
@@ -63,10 +58,12 @@ class Login extends CI_Controller {
 			  $query = $this->db->get('pwd_reset');
 			  
 			  if($query-> num_rows() == 1){  // if pwd reset already requested
+			  	  $this->db->where(array(
+				  		'email'=> $email	
+				  ));
 				  $this->db->update('pwd_reset',array(
 					  'username'=>$username,
-					  'v_id' => $v_id,
-					  'email'=> $email			  
+					  'v_id' => $v_id		  
 				  ));				  				  
 			  }
 			  else{  // if pwd reset not requested
@@ -79,9 +76,7 @@ class Login extends CI_Controller {
 			  
 			  
 			  $this->email->message("Please Click the Link below to reset your password
-				  <a href='".base_url("login/reset/".
-									  $username."/".$v_id)."'>".
-									  base_url("login/reset/".$username."/".$v_id)."</a>");				  
+".base_url("login/reset/".$username."/".$v_id)."");				  
 			  $this->email->send();	
 			  
 			  

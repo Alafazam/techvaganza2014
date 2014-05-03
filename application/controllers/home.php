@@ -91,6 +91,43 @@ class Home extends CI_Controller {
 	}
 	  
   }
+  
+  	public function _check_phone($phone)
+	{
+		if($phone==""){
+			return true;
+		}
+		
+		if(preg_match('/^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$/',$phone))
+		{
+			return true;
+		} else {
+			$this->form_validation->set_message('_check_phone', '%s '.$phone.' is invalid format, Enter in 10 digit format');
+			return false;
+		}
+	}
+	
+	public function _check_accomodation($val){
+		$text = 'y';
+		if(strcmp($val,'y')==0){
+			$this->accomodation= 'y';
+		}
+		else{
+			$this->accomodation='n';
+		}
+	}
+	
+	public function _check_gender($val){
+		$text = 'y';
+		if($val=='Male' || $val=='Female'){
+			return TRUE; // Fuck you
+		}
+		else{
+			$this->form_validation->set_message('_check_gender', 'Please Don\'t take PANGA with Source Code');
+			return false;
+		}
+	}
+
 
 
 }

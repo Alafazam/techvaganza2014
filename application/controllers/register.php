@@ -53,7 +53,7 @@ class Register extends CI_Controller {
 	
     $this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<p class="error">','</p>');
-    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[10]|strtolower|callback__check_username');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[19]|strtolower|callback__check_username');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|max_length[50]|md5');
     $this->form_validation->set_rules('c_password', 'Password Confirmation', 'trim|xss_clean|matches[password]');
     $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
@@ -62,7 +62,7 @@ class Register extends CI_Controller {
     $this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
     $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
     $this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
-    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|max_length[4]');
+    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|max_length[4]|callback__maximumCheck');
     $this->form_validation->set_rules('branch', 'Branch', 'trim|required|xss_clean|max_length[30]');
     $this->form_validation->set_rules('accomodation', 'Accomodation', 'trim|xss_clean|callback__check_accomodation');
 	
@@ -98,6 +98,14 @@ class Register extends CI_Controller {
   {
     //Field validation succeeded.  Validate against database
     $username = $this->input->post('username');
+	
+	if(preg_match('/^[a-zA-Z](([\._\-][a-zA-Z0-9])|[a-zA-Z0-9])*[a-z0-9]$/',$username))
+	{
+	
+	} else {
+			$this->form_validation->set_message('_check_username', 'Invalid Username, username cannot contain spaces or another special chars except underscores, hyphens and dot');
+			return false;
+		}
 	
     //query the database
     $result = $this->db->get_where('users',array('username'=> $username));
@@ -167,6 +175,20 @@ class Register extends CI_Controller {
 		else{
 			$this->form_validation->set_message('_check_gender', 'Please Don\'t take PANGA with Source Code');
 			return false;
+		}
+	}
+	
+	function _maximumCheck($num)
+	{
+		if ($num > 2013)
+		{
+			$this->form_validation->set_message('_maximumCheck',
+							'Enter Start year of your batch');
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
 		}
 	}
 

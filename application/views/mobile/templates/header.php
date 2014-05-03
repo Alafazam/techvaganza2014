@@ -23,7 +23,7 @@
     
     <body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
