@@ -56,13 +56,13 @@ class Register extends CI_Controller {
     $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|max_length[19]|strtolower|callback__check_username');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[6]|max_length[50]|md5');
     $this->form_validation->set_rules('c_password', 'Password Confirmation', 'trim|xss_clean|matches[password]');
-    $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
-    $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]');
+    $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]|alpha');
+    $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]|alpha');
     $this->form_validation->set_rules('email', 'Email ID', 'trim|required|xss_clean|valid_email|max_length[128]|strtolower|callback__check_email');
     $this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
     $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
     $this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
-    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|max_length[4]|callback__maximumCheck');
+    $this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|exact_length[4]|callback__maximumCheck');
     $this->form_validation->set_rules('branch', 'Branch', 'trim|required|xss_clean|max_length[30]');
     $this->form_validation->set_rules('accomodation', 'Accomodation', 'trim|xss_clean|callback__check_accomodation');
 	
@@ -142,7 +142,7 @@ class Register extends CI_Controller {
     }
   }
   
-	public function _check_phone($phone)
+	function _check_phone($phone)
 	{
 		if($phone==""){
 			return true;
@@ -157,7 +157,7 @@ class Register extends CI_Controller {
 		}
 	}
 	
-	public function _check_accomodation($val){
+	function _check_accomodation($val){
 		$text = 'y';
 		if(strcmp($val,'y')==0){
 			$this->accomodation= 'y';
@@ -167,7 +167,7 @@ class Register extends CI_Controller {
 		}
 	}
 	
-	public function _check_gender($val){
+	function _check_gender($val){
 		$text = 'y';
 		if($val=='Male' || $val=='Female'){
 			return TRUE; // Fuck you
@@ -180,10 +180,9 @@ class Register extends CI_Controller {
 	
 	function _maximumCheck($num)
 	{
-		if ($num > 2013)
+		if ($num > 2013 or $num < 1950)
 		{
-			$this->form_validation->set_message('_maximumCheck',
-							'Enter Start year of your batch');
+			$this->form_validation->set_message('_maximumCheck','Enter Start year of your batch');
 			return FALSE;
 		}
 		else

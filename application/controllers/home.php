@@ -44,12 +44,12 @@ class Home extends CI_Controller {
 	  if($action ==="save"){
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<p class="error">','</p>');
-		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]');
-		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]');
+		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean|max_length[50]|alpha');
+		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean|max_length[50]|alpha');
 		$this->form_validation->set_rules('cell', 'Phone No', 'trim|xss_clean|max_length[13]|callback__check_phone');
 		$this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean|callback__check_gender');
 		$this->form_validation->set_rules('college', 'College Name', 'trim|required|xss_clean|max_length[128]');
-		$this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|max_length[4]');
+		$this->form_validation->set_rules('batch', 'Batch', 'trim|required|xss_clean|exact_length[4]|callback__maximumCheck');
 		$this->form_validation->set_rules('branch', 'Branch', 'trim|required|xss_clean|max_length[30]');
 		$this->form_validation->set_rules('accomodation', 'Accomodation', 'trim|xss_clean|callback__check_accomodation');
 		
@@ -92,7 +92,7 @@ class Home extends CI_Controller {
 	  
   }
   
-  	public function _check_phone($phone)
+  	function _check_phone($phone)
 	{
 		if($phone==""){
 			return true;
@@ -107,7 +107,7 @@ class Home extends CI_Controller {
 		}
 	}
 	
-	public function _check_accomodation($val){
+	function _check_accomodation($val){
 		$text = 'y';
 		if(strcmp($val,'y')==0){
 			$this->accomodation= 'y';
@@ -117,7 +117,7 @@ class Home extends CI_Controller {
 		}
 	}
 	
-	public function _check_gender($val){
+	function _check_gender($val){
 		$text = 'y';
 		if($val=='Male' || $val=='Female'){
 			return TRUE; // Fuck you
@@ -128,6 +128,18 @@ class Home extends CI_Controller {
 		}
 	}
 
+	function _maximumCheck($num)
+	{
+		if ($num > 2013)
+		{
+			$this->form_validation->set_message('_maximumCheck','Enter Start year of your batch');
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
+	}
 
 
 }
