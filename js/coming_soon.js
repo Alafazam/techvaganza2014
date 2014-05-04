@@ -18,6 +18,22 @@ window.onload = function() {
         //star._wind();
     }
 
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-40855347-1', 'techvaganza.org');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+
 };
 
 function Star(viewport, menu_Items) {
@@ -64,10 +80,10 @@ function Star(viewport, menu_Items) {
         // this.fins[i].append(this.logos[i]);
 
         // this.fins[i].select("").remove();
-        this.grades[i] = this.star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(000,000,000,1)');
+        this.grades[i] = this.star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(0,0,0,1)');
         this.fins[i].attr({
             fill: this.grades[i],
-            'fill-opacity': 0.7
+            'fill-opacity': 0.9
         });
 
     }
@@ -176,7 +192,7 @@ Star.prototype.wind = function() {
 
 showMenuText = function(el) {
     el.animate({
-        'fill-opacity': 0.9
+        'fill-opacity': 0.7
     }, 100);
     var fin = el;
     id = fin.attr('id');
@@ -213,7 +229,7 @@ showMenuText = function(el) {
 
 hideMenuText = function(el) {
     el.animate({
-        'fill-opacity': 0.5
+        'fill-opacity': 0.9
     }, 100);
     el.parent().select('#svgTextElement').remove();
 }
