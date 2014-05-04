@@ -156,6 +156,12 @@
     transition : rotateX(180deg);
 }
 
+.path_wrapper:hover{
+cursor: pointer;
+}
+
+
+
 .cat_heading
 {
     font-family: 'Lato', Arial, sans-serif;
