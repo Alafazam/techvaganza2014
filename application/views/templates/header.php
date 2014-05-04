@@ -32,7 +32,17 @@
                     <a class="mp-back" href="#">back</a>
                     <ul>
                         <li><a class="icon icon-shop" href="/">Home</a></li>
-                        <li><a class="icon icon-display" href="/login">Login</a></li>
+                        <li><a class="icon icon-shop" href="/Aboutus">About Us</a></li>                        
+                        <li><a class="icon icon-display" <?php 
+                                            if(isset($first_name))
+                                            {
+                                                echo    ' href="/home/logout">Logout';
+                                            }
+                                            else
+                                            {
+                                                echo    ' href="/login">Login';
+                                            }
+                                            ?></a></li>
                         <li class="icon icon-arrow-left">
                             <a class="icon icon-display" href="#">Events</a>
                             <div class="mp-level">

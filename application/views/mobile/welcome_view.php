@@ -26,11 +26,13 @@ padding-bottom: 0px;
           <div class="nav nav-tabs nav-justified">
             <ul class="list-group center">
               <li class="list-group-item"><a href="/">Home</a>         </li>
+              <li class="list-group-item"><a href="/aboutus">About Us</a>      </li>
               <li class="list-group-item"><a href="/comingsoon">Events</a>       </li>
               <li class="list-group-item"><a href="/comingsoon">Workshops</a>    </li>
               <li class="list-group-item"><a href="/comingsoon">Technofun</a>    </li>
               <li class="list-group-item"><a href="/comingsoon">Hospitality</a>  </li>
               <li class="list-group-item"><a href="/comingsoon">Contact</a>      </li>
+
             </ul>
           </div>
 

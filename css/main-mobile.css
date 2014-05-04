@@ -19,6 +19,9 @@ body {
 .center{
 	text-align:center;
 }
+.container {
+max-width: 750px;
+}
 
 .max-300{
 	max-width:300px;
