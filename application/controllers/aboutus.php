@@ -15,6 +15,13 @@ class Aboutus extends CI_Controller {
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }
+  function ajax(){
+	  
+	  	// print categories of all the events
+		$this->load->view('about_us_view');
+		//$this->load->template(EVENTVIEW,$data);
+	 
+  }
   
 }
 

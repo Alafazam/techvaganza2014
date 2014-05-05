@@ -32,8 +32,8 @@
                     <a class="mp-back" href="#">back</a>
                     <ul>
                         <li><a class="icon icon-shop" href="/">Home</a></li>
-                        <li><a class="icon icon-shop pageload-link" href="/aboutus">About Us</a></li>                        
-                        <li><a class="icon icon-display pageload-link" <?php 
+                        <li><a class="icon icon-shop" href="/aboutus">About Us</a></li>                        
+                        <li><a class="icon icon-display" <?php 
                                             if(isset($first_name))
                                             {
                                                 echo    ' href="/home/logout">Logout';
@@ -144,7 +144,7 @@
                             </div>
                         </li>
                         <li><a class="icon icon-photo pageload-link" href="#">Hospitality</a></li>
-                        <li><a class="icon icon-photo pageload-link" href="#">Contacts</a></li>
+                        <li><a class="icon icon-photo " href="/contacts">Contacts</a></li>
                         <li><a class="icon icon-wallet pageload-link" href="#">Sponsors</a></li>
         
                     </ul>

@@ -116,7 +116,7 @@ a:hover{text-decoration: none;}
               </ul>
             </li>
             <li><a href="#Hospitality">Hospitality</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="/contacts">Contact</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown">Workshops<span class="caret"></span></a>
               <ul class="dropdown-menu">

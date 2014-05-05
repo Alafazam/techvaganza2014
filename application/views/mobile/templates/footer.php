@@ -3,7 +3,7 @@
     <a  class="btn btn-default" href="/">Home</a>
   </div>
   <div class="btn-group">
-    <a  class="btn btn-default" href="/">Contact Us</a>
+    <a  class="btn btn-default" href="/contacts">Contact Us</a>
   </div>
   <div class="btn-group">
     <a class="btn btn-default" <?php 
