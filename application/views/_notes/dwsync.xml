@@ -4,7 +4,7 @@
 <file name="login_view.php" server="techvaganza.org/httpdocs/" local="130436778359112227" remote="130436582400000000" Dst="0" />
 <file name="welcome_view.php" server="techvaganza.org/httpdocs/" local="130436778359182231" remote="130436627400000000" Dst="0" />
 <file name="contacts_view.php" server="techvaganza.org/httpdocs/" local="130437645823586506" remote="130437450000000000" Dst="0" />
-<file name="about_us_view.php" server="C:/xampp/htdocs/" local="130436999393144651" remote="130436999390000000" Dst="0" />
+<file name="about_us_view.php" server="C:/xampp/htdocs/" local="130437724926770950" remote="130437724920000000" Dst="0" />
 <file name="contacts_view.php" server="C:/xampp/htdocs/" local="130437645823586506" remote="130437645820000000" Dst="0" />
 <file name="events_view.php" server="C:/xampp/htdocs/" local="130434157161898404" remote="130434157160000000" Dst="0" />
 <file name="event_view.php" server="C:/xampp/htdocs/" local="130435039972912244" remote="130435039970000000" Dst="0" />
@@ -17,5 +17,5 @@
 <file name="profile_view.php" server="C:/xampp/htdocs/" local="130434533647362141" remote="130434533640000000" Dst="0" />
 <file name="pwd_reset.php" server="C:/xampp/htdocs/" local="130432558460316597" remote="130432558460000000" Dst="0" />
 <file name="register_view.php" server="C:/xampp/htdocs/" local="130435072753327177" remote="130435072750000000" Dst="0" />
-<file name="welcome_view.php" server="C:/xampp/htdocs/" local="130437717173897511" remote="130437717170000000" Dst="0" />
+<file name="welcome_view.php" server="C:/xampp/htdocs/" local="130437730873061058" remote="130437730870000000" Dst="0" />
 </dwsync>
