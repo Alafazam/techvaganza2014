@@ -1,7 +1,7 @@
-									<div id="viewport" class="unwinded">
+								<!-- 	<div id="viewport" class="unwinded">
 										<svg version="1.1" id="star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 								width="100%" height="100%" viewBox=" 0 0 600 600"  xml:space="preserve">
-											<!-- <g id="logo_conatainer" >
+											<g id="logo_conatainer" >
 												<g id="l0" class="main_logo">
 													<path fill="#fff" stroke="#000000" stroke-width="1.5626" stroke-miterlimit="10" d="M532.475,280.117
 														c0,2.697-2.186,4.883-4.883,4.883h-40.234c-2.696,0-4.883-2.186-4.883-4.883v-40.234c0-2.697,2.187-4.883,4.883-4.883h40.234
@@ -243,7 +243,7 @@
 													<polygon fill="#000000"points="528.297,272.085 524.74,272.085 524.74,265.548 526.519,265.548 528.297,265.548 	"/>
 													<rect fill="#000" x="486.363" y="265.548" width="3.556" height="6.537"/>
 												</g>
-												<g id="l5" class="main_logo" fill="#000">
+												<g id="l5" class="main_logo" fill="000">
 													<path fill="#fff" stroke="#000000" stroke-width="1.5626" stroke-miterlimit="10" d="M532.475,280.117
 														c0,2.697-2.186,4.883-4.883,4.883h-40.234c-2.696,0-4.883-2.186-4.883-4.883v-40.234c0-2.697,2.187-4.883,4.883-4.883h40.234
 														c2.697,0,4.883,2.186,4.883,4.883V280.117z"/>
@@ -274,7 +274,7 @@
 													<path fill="#000"d="M497.267,259.371c2.159-0.007,3.96,1.771,3.981,3.931c0.021,2.189-1.781,4.008-3.979,4.016
 														c-2.158,0.007-3.967-1.778-3.982-3.932C493.271,261.186,495.063,259.378,497.267,259.371"/>
 												</g>
-											</g> -->
+											</g>
 											<g id="g0" class="fin" fill="none">
 												<g id="path_wrapper" class="path_wrapper">
 													<path  id="snap1"  stroke-miterlimit="10" d="M585.37,300.47
@@ -283,4 +283,4 @@
 												</g>
 											</g>
 										</svg>
-		        					</div>
+		        					</div> -->

@@ -96,8 +96,7 @@ Star.prototype._unwind = function(link) {
                     loader.hide();
                     star.coming_soon = true;
                     classie.addClass(pages[loader.current_page], 'show');
-
-                }, 2000);
+                }, 1000);
             }
             this.parent().select('#svgTextElement').remove();
         });
@@ -214,6 +213,9 @@ Star.prototype._next_menu = function() {};
 
 Star.prototype.ajax_linking = function() {
 
-
+    var stateObject = {};
+    var title = "Wow Title";
+    var newUrl = "/my/awesome/url";
+    history.pushState(stateObject, title, newUrl);
 
 };

@@ -1,4 +1,4 @@
-*,*:after,*::before{
+*,*:after,*::before,body{
         border: 0px;
         margin: 0px;
         -webkit-box-sizing: border-box;
