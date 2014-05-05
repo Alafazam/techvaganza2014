@@ -12,7 +12,7 @@
         <div class="col">
           <div class="row-md-4">
             <h2>Intro</h2>
-            <p>Techvaganza is the annual college festival of NIT Srinagar. Its an exceptional confluence of exquisite cultural displays with technological innovations reverberating in an aura filled with excitement, amusement and splendor. After the overwhelming success of Techvaganza 2013, NIT Srinagar is back with Techvaganza 2014 which promises to transcend all the thresholds of science and entertainment.Techvaganza 2014 guarantees inimitable world, teeming with boundless merriment, talent and skill as you plunge into the ocean of entertainment at this three day youth extravaganza. This edition of Techvaganza, for the first time since its birth, incorporates the theme of "Angels & Deamons" boasting of unique and exciting events and performances ranging from Competitions to Concerts, from Workshops to Guest Lectures and from Literary Arts to Hackathons.</p>
+            <p>Techvaganza is the annual college festival of NIT Srinagar. Its an exceptional confluence of exquisite cultural displays with technological innovations reverberating in an aura filled with excitement, amusement and splendor. After the overwhelming success of Techvaganza 2013, NIT Srinagar is back with Techvaganza 2014 which promises to transcend all the thresholds of science and entertainment.Techvaganza 2014 guarantees inimitable world, teeming with boundless merriment, talent and skill as you plunge into the ocean of entertainment at this three day youth extravaganza.</p>
           </div>
           <div class="row-md-4">
             <h2>Whats in It</h2>
@@ -20,7 +20,7 @@
           </div>
           <div class="row-md-4">
             <h2>Its not just a festival , its a celebration.</h2>
-            <p>Come join the battle between Angel & Deamons at the Largest Techno-Cultural College Festival in North India... </p>
+            <p>Come join the Techno Paradise </p>
           </div>
         </div>
       </div>
