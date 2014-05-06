@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD
 	$username= $this->session->userdata('logged_in');
 	$username=$username['username'];
-=======
-    $username= $this->session->userdata('logged_in');
-    $username=$username['username'];
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -63,19 +58,11 @@
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-<<<<<<< HEAD
-                                                <li><a class="pageload-link" href="#">Android Anatomy</a></li>
-                                                <li><a class="pageload-link" href="#">Android Advance</a></li>
-                                                <li><a class="pageload-link" href="#">Go fix It</a></li>
-                                                <li><a class="pageload-link" href="#">De vardad Ingeniero</a></li>
-                                                <li><a class="pageload-link" href="#">CodoMania</a></li>
-=======
                                                 <li><a class="pageload-link" href="/events/codeShode/androidAdb">Android Anatomy</a></li>
                                                 <li><a class="pageload-link" href="/events/codeShode/androidAdvance">Android Advance</a></li>
                                                 <li><a class="pageload-link" href="/events/codeShode/goFixIt">Go fix It</a></li>
                                                 <li><a class="pageload-link" href="/events/codeShode/deVardadIngeniero">De vardad Ingeniero</a></li>
                                                 <li><a class="pageload-link" href="/events/codeShode/codeMania">CodoMania</a></li>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
 
                                             </ul>
                                         </div>
@@ -86,70 +73,35 @@
                                             <h2>Creatives</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-<<<<<<< HEAD
-                                                <li><a class="pageload-link" href="#">Heat Exachange</a></li>
-                                                <li><a class="pageload-link" href="#">Captive Dynax</a></li>
-                                                <li><a class="pageload-link" href="#">Cheme-sepestor</a></li>
-                                                <li><a class="pageload-link" href="#">Fulcrum</a></li>
-                                                <li><a class="pageload-link" href="#">Witricity</a></li>
-                                                <li><a class="pageload-link" href="#">Optro-acoustics</a></li>
-=======
                                                 <li><a class="icallajax" href="/events/creatives/heatExachange">Heat Exachange</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/coptiveDynax">Captive Dynax</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/chemeSepestor">Cheme-sepestor</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/fulcrum">Fulcrum</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/witricity">Witricity</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/optroAcoustics">Optro-acoustics</a></li>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-<<<<<<< HEAD
-                                        <a class="icon icon-camera" href="#">Builder</a>
-=======
-                                        <a class="icon icon-camera " href="#events/bob">Builder</a>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
+                                        <a class="icon icon-camera " href="#">Builder</a>
                                         <div class="mp-level">
                                             <h2>Builder</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-<<<<<<< HEAD
-                                                <li><a class="pageload-link" href="#">Konstructor</a></li>
-                                                <li><a class="pageload-link" href="#">Bridge the Gap</a></li>
-                                                <li><a class="pageload-link" href="#">College Planning</a></li>
-                                                <li><a class="pageload-link" href="#">Reser-where</a></li>
-                                                <li><a class="pageload-link" href="#">Truss-o-maniac</a></li>
-=======
                                                 <li><a class="icallajax" href="/events/bob/konstructor">Konstructor</a></li>
                                                 <li><a class="icallajax" href="/events/bob/bridgeTheGorge">Bridge the gorge</a></li>
                                                 <li><a class="icallajax" href="/events/bob/collegePlanning">College Planning</a></li>
                                                 <li><a class="icallajax" href="/events/bob/reserWhere">Reser-where</a></li>
                                                 <li><a class="icallajax" href="/events/bob/truss">Truss-o-maniac</a></li>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-<<<<<<< HEAD
-                                        <a class="icon icon-camera" href="#">Fixer Elixir</a>
-=======
                                         <a class="icon icon-camera " href="#events/fixer_Elixer">Fixer Elixir</a>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                         <div class="mp-level">
                                             <h2>Fixer Elixir</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-<<<<<<< HEAD
-                                                <li><a class="pageload-link" href="#">Junkyard</a></li>
-                                                <li><a class="pageload-link" href="#">Transform It</a></li>
-                                                <li><a class="pageload-link" href="#">Sanrachna</a></li>
-                                                <li><a class="pageload-link" href="#">Nirman</a></li>
-                                                <li><a class="pageload-link" href="#">The Estimator</a></li>
-                                                <li><a class="pageload-link" href="#">Traffixing</a></li>
-                                                <li><a class="pageload-link" href="#">Minimal Motor</a></li>
-                                                <li><a class="pageload-link" href="#">Filter the Litre</a></li>
-=======
                                                 <li><a class="icallajax" href="/events/fixerElixir/Junkyard">Junkyard</a></li>
                                                 <li><a class="icallajax" href="/events/fixerElixir/Transform_It">Transform_It</a></li>
                                                 <li><a class="icallajax" href="/events/fixerElixir/Sanrachna">Sanrachna</a></li>
@@ -158,33 +110,19 @@
                                                 <li><a class="icallajax" href="/events/fixerElixir/traffixing">Traffixing</a></li>
                                                 <li><a class="icallajax" href="/events/fixerElixir/minimalMotor">Minimal motor</a></li>
                                                 <li><a class="icallajax" href="/events/fixerElixir/filterTheLitre">Filter the Litre</a></li>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="icon icon-arrow-left">
-<<<<<<< HEAD
-                                        <a class="icon icon-camera" href="#">Robonoid</a>
-=======
                                         <a class="icon icon-camera " href="#events/robonoids">Robonoids</a>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                         <div class="mp-level">
                                             <h2>Robonoid</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-<<<<<<< HEAD
-                                                <li><a class="pageload-link" href="#">Smack Down</a></li>
-                                                <li><a class="pageload-link" href="#">Rescue Bot</a></li>
-                                                <li><a class="pageload-link" href="#">Line Follower</a></li>
-                                                <li><a class="pageload-link" href="#">Mystery Box</a></li>
-                                                <li><a class="pageload-link" href="#">Embe-sys</a></li>
-=======
                                                 <li><a class="icallajax" href="/events/robonoids/smackDown">Smack Down</a></li>
                                                 <li><a class="icallajax" href="/events/robonoids/rescueBot">Rescue Bot</a></li>
                                                 <li><a class="icallajax" href="/events/robonoids/lineFollower">Line Follower</a></li>
                                                 <li><a class="icallajax" href="/events/robonoids/mystryBox<">Mystry Box</a></li>
                                                 <li><a class="icallajax" href="/events/robonoids/embeSys">Embe-sys</a></li>
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                             </ul>
                                         </div>
                                     </li>
@@ -234,11 +172,8 @@
                                             <span class="right"><a <?php 
                                             if(isset($username))
                                             {
-<<<<<<< HEAD
-												echo    'href="/home"><span>Welcome '.$username ;
-=======
+
                                                 echo    'href="/home"><span>Welcome '.$username ;
->>>>>>> 125fb8fc327ea33a9c86abbb31e8e62bb4493292
                                             }
                                             else
                                             {
