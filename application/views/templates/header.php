@@ -34,26 +34,26 @@
                     <h2 class="icon icon-world">All Categories</h2>
                     <a class="mp-back" href="#">back</a>
                     <ul>
-                        <li><a class="icon icon-home" href="/">Home</a></li>
-                        <li><a class="icon  icon-cool icallajax" href="/aboutus">About Us</a></li>                        
-                        <li><a class="icon icon-enter" <?php 
+                        <li><a class="iconz iconz-star" href="/"> Home</a></li>
+                        <li><a class="iconz iconz-heart icallajax" href="/aboutus"> About Us</a></li>                        
+                        <li><a <?php 
                                             if(isset($first_name))
                                             {
-                                                echo    ' href="/home/logout">Logout';
+                                                echo    'class="iconz iconz-exit"  href="/home/logout"> Logout';
                                             }
                                             else
                                             {
-                                                echo    ' href="/login">Login';
+                                                echo    'class="iconz iconz-enter"  href="/login"> Login';
                                             }
                                             ?></a></li>
                         <li class="icon icon-arrow-left">
-                            <a class="icon icon-display" href="#">Events</a>
+                            <a class="iconz iconz-address-book" href="#"> Events</a>
                             <div class="mp-level">
-                                <h2 class="icon icon-display">Events</h2>
+                                <h2 class="iconz iconz-address-book"> Events</h2>
                                 <a class="mp-back" href="#">back</a>
                                 <ul>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-phone " href="#events/codeShode">CodeShode</a>
+                                        <a class="iconz iconz-code " href="#events/codeShode"> CodeShode</a>
                                         <div class="mp-level">
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -68,7 +68,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-tv " href="#events/creatives">Creatives</a>
+                                        <a class="iconz iconz-spinner3 " href="#events/creatives"> Creatives</a>
                                         <div class="mp-level">
                                             <h2>Creatives</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -83,7 +83,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="#events/bob">Builder</a>
+                                        <a class="iconz iconz-gears " href="#events/bob"> Builder</a>
                                         <div class="mp-level">
                                             <h2>Builder</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -97,7 +97,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="#events/fixer_Elixer">Fixer Elixir</a>
+                                        <a class="iconz iconz-spinner2 " href="#events/fixer_Elixer"> Fixer Elixir</a>
                                         <div class="mp-level">
                                             <h2>Fixer Elixir</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -114,7 +114,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="#events/robonoids">Robonoids</a>
+                                        <a class="iconz  iconz-android " href="#events/robonoids"> Robonoids</a>
                                         <div class="mp-level">
                                             <h2>Robonoids</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -131,24 +131,24 @@
                             </div>
                         </li>
                         <li class="icon icon-arrow-left">
-                            <a class="icon icon-news" href="#">Workshops</a>
+                            <a class="icon icon-news" href="#"> Workshops</a>
                             <div class="mp-level">
-                                <h2 class="icon icon-news">Workshops</h2>
+                                <h2 class="icon icon-news"> Workshops</h2>
                                 <a class="mp-back" href="#">back</a>
                                 <ul>
-                                    <li><a class="icallajax" href="#workshops/">CS/IT</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Mechanical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Electrical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Metallurgy</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Civil</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Chemical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">EC</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">CS/IT</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">Mechanical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">Electrical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">Metallurgy</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">Civil</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">Chemical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon/">EC</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="icon icon-photo icallajax" href="/hospitality">Hospitality</a></li>
-                        <li><a class="icon icon-photo icallajax" href="/contacts">Contacts</a></li>
-                        <li><a class="icon icon-wallet icallajax" href="/Sponsors">Sponsors</a></li>
+                        <li><a class="iconz iconz-happy icallajax" href="/hospitality"> Hospitality</a></li>
+                        <li><a class="iconz iconz-phone icallajax" href="/contacts"> Contacts</a></li>
+                        <li><a class="iconz iconz-group icallajax" href="/Sponsors"> Sponsors</a></li>
         
                     </ul>
                         
