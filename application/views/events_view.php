@@ -20,7 +20,7 @@ padding: 20px;}
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/codeShode">
+                        <a class="icallajax" href="/events/codeshode">
                             <div class="ca-content">
                                 <h2 class="ca-main">CodeShode</h2>
                                 <h3 class="ca-sub">#define BattleOCode()</h3>
@@ -36,7 +36,7 @@ padding: 20px;}
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/fixerElixer">
+                        <a class="icallajax" href="/events/fixerelixer">
                             <div class="ca-content">
                                 <h2 class="ca-main">Fixer Elixer</h2>
                                 <h3 class="ca-sub">Mix it Fix it</h3>
