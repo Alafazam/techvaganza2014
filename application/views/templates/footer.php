@@ -65,9 +65,7 @@ function init() {
                 console.log("zdvsvc"+newUrl);
             ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    url: newUrl,
-                    content: data,
-                    title: title
+                    content: data
                 };
                 updateContent(stateObject);                
                 star.wind();
@@ -108,15 +106,12 @@ function updateLinks() {
             console.log(newUrl);
             ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    url: newUrl,
-                    content: data,
-                    title: title
+                    content: data
                 };
                 setTimeout(function(argument) {
                     updateContent(stateObject); // body...
                 }, 600);
                 star.wind();
-                init();
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 2000);

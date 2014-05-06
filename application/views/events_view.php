@@ -15,7 +15,7 @@ padding: 20px;}
                         <a class="icallajax" href="/events/creatives">
                             <div class="ca-content">
                                 <h2 class="ca-main">Creatives</h2>
-                                <h3 class="ca-sub">Invention,creation,innovation</h3>
+                                <h3 class="ca-sub">Innovate And Create</h3>
                             </div>
                         </a>
                     </li>

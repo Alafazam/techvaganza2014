@@ -34,9 +34,9 @@
                     <h2 class="icon icon-world">All Categories</h2>
                     <a class="mp-back" href="#">back</a>
                     <ul>
-                        <li><a class="icon icon-shop" href="/">Home</a></li>
-                        <li><a class="icon icon-shop icallajax" href="/aboutus">About Us</a></li>                        
-                        <li><a class="icon icon-display" <?php 
+                        <li><a class="icon icon-home" href="/">Home</a></li>
+                        <li><a class="icon  icon-cool icallajax" href="/aboutus">About Us</a></li>                        
+                        <li><a class="icon icon-enter" <?php 
                                             if(isset($first_name))
                                             {
                                                 echo    ' href="/home/logout">Logout';
