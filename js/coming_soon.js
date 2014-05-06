@@ -7,35 +7,8 @@ var timing = 170;
 //86289b   D99FD3    1352A2
 
 
-window.onload = function() {
 
-    // console.log("window.innerHeight:"+window.innerHeight+"\ny:"+y+"\nty:"+ty+"\npivots[1]:"+pivots[1]+"\npivots[0]"+pivots[0]);
-    var viewport = document.getElementById('viewport');
-    if (viewport) {
-        star = new Star(viewport, menu_Items);
-        window.star = star;
-        star._unwind();
-        //star._wind();
-    }
-
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-40855347-1', 'techvaganza.org');
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
-
-
-};
-
+// console.log("window.innerHeight:"+window.innerHeight+"\ny:"+y+"\nty:"+ty+"\npivots[1]:"+pivots[1]+"\npivots[0]"+pivots[0]);
 function Star(viewport, menu_Items) {
     this._Star = this;
     this.viewport = viewport;
@@ -53,6 +26,7 @@ function Star(viewport, menu_Items) {
     this.g.attr({
         id: 'star_g',
     });
+    this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
     this.coming_soon = false;
 
     for (var i = (this.sub_menus - 1); i >= 0; i--) {
@@ -83,7 +57,7 @@ function Star(viewport, menu_Items) {
         this.grades[i] = this.star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(0,0,0,1)');
         this.fins[i].attr({
             fill: this.grades[i],
-            'fill-opacity': 0.9
+            'fill-opacity': 0.8
         });
 
     }
@@ -107,9 +81,10 @@ Star.prototype._unwind = function(link) {
         var wrapper = this.star.select('#g' + i);
         var angle = (360 / this.sub_menus);
         wrapper.animate({
-            transform: 'r(' + ((i) * angle) + ',300,300)',
+            transform: 'r(' + ((i) * angle) + ',300,300)' + 't' + this.pivots[0] + ',-' + this.pivots[1],
             opacity: 1,
-        }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
+            'box-shadow': '5px'
+        }, 320 + (i * (360 / this.ssub_menus)), mina.easeout);
         //adding event handlers
         this.fins[i].click(function(event) {
             self._wind(this);
@@ -152,7 +127,7 @@ Star.prototype._wind = function(el) {
         elem.unhover();
         elem.unclick();
         elem.animate({
-                'fill-opacity': 0.4,
+                'fill-opacity': 0.6,
                 transform: 'r(0,300,300)',
             },
             120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
@@ -176,7 +151,7 @@ Star.prototype.wind = function() {
         elem.unhover();
         elem.unclick();
         elem.animate({
-                'fill-opacity': 0.4,
+                'fill-opacity': 0.6,
                 transform: 'r(0,300,300)',
             },
             120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
@@ -191,9 +166,7 @@ Star.prototype.wind = function() {
 
 
 showMenuText = function(el) {
-    el.animate({
-        'fill-opacity': 0.7
-    }, 100);
+
     var fin = el;
     id = fin.attr('id');
     // console.log(id);
@@ -217,6 +190,9 @@ showMenuText = function(el) {
 
     });
     Snap.animate(0, 1, function(value) {
+        el.animate({
+            'fill-opacity': value
+        }, 100);
         svgTextElement.attr({
             'font-size': value * 30,
             opacity: value,
@@ -229,7 +205,7 @@ showMenuText = function(el) {
 
 hideMenuText = function(el) {
     el.animate({
-        'fill-opacity': 0.9
+        'fill-opacity': 0.8
     }, 100);
     el.parent().select('#svgTextElement').remove();
 }
@@ -238,6 +214,9 @@ Star.prototype._next_menu = function() {};
 
 Star.prototype.ajax_linking = function() {
 
-
+    var stateObject = {};
+    var title = "Wow Title";
+    var newUrl = "/my/awesome/url";
+    history.pushState(stateObject, title, newUrl);
 
 };

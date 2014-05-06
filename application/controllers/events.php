@@ -17,6 +17,12 @@ class Events extends CI_Controller {
   }
   
 
+
+  function ajax($value='')
+  {
+  			$this->load->view('events_view');
+  }
+
   function codeshode($eventid=0,$register=0){
 	  $name=__FUNCTION__;
 	  

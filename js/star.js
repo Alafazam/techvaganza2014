@@ -1,79 +1,65 @@
-var textArray = ['Events', 'Workshops', 'Hospitality', 'Contacts', 'Sponsers', 'Gallary']
+var textArray = ['Events', 'Workshops', 'Hospitality', 'Contacts', 'Sponsors', 'Gallery']
 var shades = ['#fe9601', '#D92B48', '#00A03E', '#0241E2', '#ED00F4', '#00d2f1', '#6ABED8', '#D92B48', '#00A03E', '#0241E2', ]
 var menu_Items = 6;
-var timing = 750;
+var timing = 170;
+var main_menu = ['events', 'workshops', 'hospitality', 'contacts', 'sponsors', 'gallery'];
+
 //more colors
 //00b796   0DC9F7    982395     FF534B
 //86289b   D99FD3    1352A2
 
 
-window.onload = function() {
 
-    // console.log("window.innerHeight:"+window.innerHeight+"\ny:"+y+"\nty:"+ty+"\npivots[1]:"+pivots[1]+"\npivots[0]"+pivots[0]);
-    var viewport = document.getElementById('viewport');
-    if (viewport) {
-        star = new Star(viewport, menu_Items);
-        window.star = star;
-        star._unwind();
-        //star._wind();
-    }
-
-};
-
+// console.log("window.innerHeight:"+window.innerHeight+"\ny:"+y+"\nty:"+ty+"\npivots[1]:"+pivots[1]+"\npivots[0]"+pivots[0]);
 function Star(viewport, menu_Items) {
     this._Star = this;
     this.viewport = viewport;
     classie.removeClass(this.viewport, 'winded');
     classie.addClass(this.viewport, 'unwinded');
     this.sub_menus = menu_Items;
-    this.fin = Snap.select('#snap1');
-    this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
-    var star = Snap.select('#star');
-    this.g = star.g();
+    this.star = Snap.select('#star');
+    // console.log(star);
+    this.fin = this.star.select('#g0');
+    this.g = this.star.g();
     this.fins = [];
+    this.logos = [];
     this.grades = [];
     this.shades = [];
     this.g.attr({
         id: 'star_g',
-        width: '400px',
-        height: '400px',
-        transform: 't135,20'
     });
-    for (var i = 0; i < this.sub_menus; i++) {
+    this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
+    this.coming_soon = false;
+
+    for (var i = (this.sub_menus - 1); i >= 0; i--) {
         if (i == 0) {
-            var wrapper = this.fin.parent();
-            wrapper.attr('id', 'g' + i);
-            wrapper.appendTo(this.g);
+            this.fin.appendTo(this.g);
             this.fins[0] = this.fin;
+        };
+
+        if (i != 0) {
+            this.fins[i] = this.fin.clone();
+            // console.log(this.fins[i]);
+            this.fins[i].attr({
+                id: 'g' + i,
+                class: 'fin',
+            });
+            this.fins[i].appendTo(this.g);
 
         };
-        if (i != 0) {
-            var wrapper = this.g.g();
-            wrapper.attr({
-                id: 'g' + i,
-                class: 'path_wrapper',
-            });
-            // var finlogo = this.fin.clone();
-            // finlogo.attr('path', logo);
-            // wrapper.add(finlogo);
-            this.fins[i] = this.fin.clone();
-            wrapper.add(this.fins[i]);
-        };
-        this.grades[i] = star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(000,000,000,1)');
+        //  adding logo here
+        this.logos[i] = this.star.select('#l' + i).attr({
+            transform: 'r(-' + ((360 / 6) * i) + ',507.47,260)',
+        });
+        // this.fins[i].select("").remove();
+        this.grades[i] = this.star.gradient('l(0,0,0,1)' + shades[i] + '-rgba(0,0,0,1)');
         this.fins[i].attr({
             fill: this.grades[i],
-            'fill-opacity': 0.5
+            'fill-opacity': 0.8
         });
+
     }
 }
-
-
-
-Star.prototype._addShades = function(shades) {
-    for (var i = this.sub_menus - 1; i >= 0; i--) {
-        this.shades[i] = shades[i];
-    };
-};
 
 
 
@@ -82,125 +68,190 @@ Star.prototype._unwind = function(link) {
     classie.removeClass(this.viewport, 'winded');
     classie.addClass(this.viewport, 'unwinded');
     for (var i = this.sub_menus - 1; i >= 0; i--) {
-        var wrapper = Snap.select('#g' + i);
+        var wrapper = this.star.select('#g' + i);
+        var angle = (360 / this.sub_menus);
         wrapper.animate({
-            transform: 's2.0' + 'r' + (i * (360 / this.sub_menus)) + 't' + this.pivots[0] + ',-' + this.pivots[1],
-            // transform: 's2.0' + 'r' + (i * (360 / VALUES.sub)) + 't' + (VALUES.pivots[0] - 2) + ',-' + (VALUES.pivots[1] + 2),
+            transform: 'r(' + ((i) * angle) + ',300,300)' + 't' + this.pivots[0] + ',-' + this.pivots[1],
             opacity: 1,
             'box-shadow': '5px'
         }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
         //adding event handlers
+        // star.logo[j] = elem.select('#l' + j).remove();
+        this.fins[i].append(this.logos[i]);
 
         this.fins[i].click(function(event) {
-            //for node id
-            // console.log(this.parent().node.id);
-            var myregExp = /\d/;
-            no = Number(myregExp.exec(this.parent().node.id)[0]);
-            //alert("Let the force be with you :"+i+'');
-            self._wind(this);
-            setTimeout(overlay, 1300);
-
-            function overlay(argument) {
-                loader.show();
-                // after some time hide loader
-                setTimeout(function() {
-                    loader.hide();
-                    if (loader.current_page != -1) {
-                        classie.removeClass(loader.pages[loader.current_page], 'show');
-                    }
-                    loader.current_page = no;
-                    // console.log('asdsfdf');
-                    classie.addClass(loader.pages[loader.current_page], 'show');
-                }, 1000);
-            }
-
-            // console.log(leaf);
+            // console.log(this);
+            var fin = this,
+                id = fin.attr('id'),
+                myregExp = /\d/,
+                no = Number(myregExp.exec(id)[0])
+                stateObject = {},
+                baseUrl = "/" + main_menu[no],
+                ajaxUrl = "/" + main_menu[no] + '/ajax',
+                dynamic = document.getElementById('dynamic');
+            console.log(no);
+            self.wind(this);
+            mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
+
+            setTimeout(function(argument) {
+                ajaxLoader.show()
+
+                // var testURL = '/ajaxtest/creatives';
+                ajax.get(ajaxUrl, {}, function(data) {
+                    if (data) {
+                        var stateObject = {
+                            url: baseUrl,
+                            content: dynamic.innerHTML,
+                            current: data,
+                            title: document.title
+                        };
+                    };
+                    dynamic.innerHTML = data;
+                    document.title = main_menu[no];
+                    updateLinks();
+                    history.pushState(stateObject, main_menu[no], baseUrl);
+                    setTimeout(function() {
+                        ajaxLoader.hide();
+                    }, 1000);
+                });
+            }, 800);
+
+
+
+
+
+
         });
+
+
         this.fins[i].hover(function() {
-            //     /* Stuff to do when the mouse enters the element */
             showMenuText(this);
         }, function() {
-            //     /* Stuff to do when the mouse leaves the element */
             hideMenuText(this);
         }, this.fins[i], this.fins[i]);
     };
 };
+//call this if fin is clicked
+Star.prototype.wind = function(el) {
+    if (el) {
+        var fin = el,
+            id = fin.attr('id'),
+            myregExp = /\d/,
+            no = Number(myregExp.exec(id)[0]),
+            color = shades[no];
+    };
 
-Star.prototype._wind = function(el) {
-    var id = el.parent().attr('id');
     for (var j = this.sub_menus - 1; j >= 0; j--) {
         var elem = Snap.select('#g' + j);
-        var transformedMatrix = elem.attr('transform')['diffMatrix'];
-        var inverseMatrix = transformedMatrix.invert();
-        inverseMatrix.translate(380, 135);
-        inverseMatrix.scale(3, 3, 50, 200);
-        if (elem[1]) {
-            elem[0].remove();
-        };
-
-        elem[0].unhover();
-        elem[0].unclick();
         var aCallback = '';
         if (j == 0) {
             aCallback = next;
         };
-
+        if (Snap.select('#l' + j)) {
+            this.logos[j] = Snap.select('#l' + j).remove();
+            // this.parent().select('#svgTextElement').remove();
+        };
+        elem.unhover();
+        elem.unclick();
         elem.animate({
-                // fill: grad,
-                // 'fill-opacity': 1,
-                'fill-opacity': 0.4,
-                transform: inverseMatrix.toTransformString(),
+                'fill-opacity': 0.6,
+                transform: 'r(0,300,300)',
             },
-            220 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
-        //,wind_star_callback
+            120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
     };
-    // }, 1400)
+
+
     function next() {
         classie.removeClass(star.viewport, 'unwinded');
         classie.addClass(star.viewport, 'winded');
-        // callback();
+    }
+};
+
+Star.prototype._wind = function() {
+
+    for (var j = this.sub_menus - 1; j >= 0; j--) {
+        var elem = Snap.select('#g' + j);
+        var aCallback = '';
+        if (j == 0) {
+
+            aCallback = next;
+        };
+        if (Snap.select('#l' + j)) {
+            this.logos[j] = Snap.select('#l' + j).remove();
+            // this.parent().select('#svgTextElement').remove();
+        };
+        elem.unhover();
+        elem.unclick();
+        elem.animate({
+                'fill-opacity': 0.6,
+                transform: 'r(0,300,300)',
+            },
+            120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
+    };
+
+    function next() {
+        classie.removeClass(star.viewport, 'unwinded');
+        classie.addClass(star.viewport, 'winded');
     }
     //  TODO :bind click even handlers for open_next_menu
 };
 
 
 showMenuText = function(el) {
-    el.animate({
-        'fill-opacity': 0.9
-    }, 100);
-    var leaf = el.parent();
-    id = "" + leaf.node.id;
+
+    var fin = el;
+    id = fin.attr('id');
+    // console.log(id);
     var myregExp = /\d/;
     no = Number(myregExp.exec(id)[0]);
-    leaf_rotaton = leaf.transform()['globalMatrix'].split()['rotate'];
-    text_rotation = [0, 60, -60, 0, 60, -60];
-    var svgTextElement = leaf.text(0, 0, textArray[no]).attr({
-        fill: 'white',
+
+    leaf_rotaton = fin.transform()['globalMatrix'].split()['rotate'];
+    //console.log(leaf_rotaton);
+
+    if (leaf_rotaton < 0) {
+        leaf_rotaton += 360;
+    };
+
+    var svgTextElement = fin.text(530, 330, textArray[no]).attr({
+        fill: '#fff',
         id: 'svgTextElement',
         fontSize: '30px',
-        opacity: 0,
+        opacity: 1,
         "text-anchor": "middle",
-        // transform: 't70,200' + 'r' + ((-leaf_rotaton))
-        transform: 't70,200' + 'r' + ((-leaf_rotaton))
+        transform: 'r(-' + leaf_rotaton + ',530,330)'
 
     });
     Snap.animate(0, 1, function(value) {
-        //svgTextElement.transform('s' + value   );                          // Animate by transform
+        el.animate({
+            'fill-opacity': value
+        }, 100);
         svgTextElement.attr({
-            'font-size': value * 12,
+            'font-size': value * 30,
             opacity: value,
-            transform: 't70,200' + 'r' + ((-leaf_rotaton) + ((value) * text_rotation[no]))
+            //transform: 'r(' + (-leaf_rotaton) * (value) + ',530,330)'
+
         }); // Animate by font-size ?
-    }, timing, mina.bounce);
-    //TODO ADD TEXT,SHADOW,SOME BLUR ON HOVER
+    }, timing, mina.easeout);
+
 }
 
 hideMenuText = function(el) {
     el.animate({
-        'fill-opacity': 0.5
+        'fill-opacity': 0.8
     }, 100);
-    el.parent().select('#svgTextElement').remove();
+    if (el.parent().select('#svgTextElement')) {
+        el.parent().select('#svgTextElement').remove()
+    };
 }
 
 Star.prototype._next_menu = function() {};
+
+Star.prototype.ajax_linking = function() {
+
+    var stateObject = {};
+    var title = "Wow Title";
+    var newUrl = "/my/awesome/url";
+    history.pushState(stateObject, title, newUrl);
+
+};

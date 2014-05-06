@@ -26,6 +26,14 @@ class Welcome extends CI_Controller {
         }
     }
 
+
+  function ajax(){
+      
+        // print categories of all the events
+        $this->load->view('welcome_view');
+        //$this->load->template(EVENTVIEW,$data);
+     
+  }
     function logout() {
         $this->session->unset_userdata('logged_in');
         session_destroy();
@@ -34,21 +42,21 @@ class Welcome extends CI_Controller {
 
 }
 
-function ajax($eventid = 0) {
-    $name = __FUNCTION__;
-    if (!$eventid) {
-        // Print all the events
-        print_r($this->event->getEvents($name));
-    } else {
-        $event = $this->event->getEvent($name, $eventid);
-        $len = sizeof($event);
-        if ($len) {
-            print_r($event);
-        } else {
-            show_404();
-        }
-    }
-}
+// function ajax($eventid = 0) {
+//     $name = __FUNCTION__;
+//     if (!$eventid) {
+//         // Print all the events
+//         print_r($this->event->getEvents($name));
+//     } else {
+//         $event = $this->event->getEvent($name, $eventid);
+//         $len = sizeof($event);
+//         if ($len) {
+//             print_r($event);
+//         } else {
+//             show_404();
+//         }
+//     }
+// }
 
 
 ?>
