@@ -13,7 +13,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/codeShode">
+                        <a class="icallajax" href="/events/codeshode">
                             <div class="ca-content">
                                 <h2 class="ca-main">CodeShode</h2>
                                 <h3 class="ca-sub">#define BattleOCode()</h3>
@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/fixerElixer">
+                        <a class="icallajax" href="/events/fixerelixer">
                             <div class="ca-content">
                                 <h2 class="ca-main">Fixer Elixer</h2>
                                 <h3 class="ca-sub">Mix it Fix it</h3>
@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/robonoids">
+                        <a class="icallajax" href="/events/robonoid">
                             <div class="ca-content">
                                 <h2 class="ca-main">Robonoids</h2>
                                 <h3 class="ca-sub">Bot are coming</h3>

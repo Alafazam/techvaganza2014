@@ -6,8 +6,16 @@
 <file name="normalize.css" server="C:/xampp/htdocs/" local="130428912022004293" remote="130428912020000000" Dst="0" />
 <file name="component.css" server="C:/xampp/htdocs/" local="130438864729788457" remote="130438864720000000" Dst="0" />
 <file name="icons.css" server="C:/xampp/htdocs/" local="130438806036551396" remote="130438806030000000" Dst="0" />
-<file name="main.css" server="C:/xampp/htdocs/" local="130438836906377049" remote="130438836900000000" Dst="0" />
+<file name="main.css" server="C:/xampp/htdocs/" local="130438876337012352" remote="130438876330000000" Dst="0" />
 <file name="comingsoon.css" server="C:/xampp/htdocs/" local="130435002586113842" remote="130435002580000000" Dst="0" />
-<file name="component.css" server="techvaganza.org/httpdocs/" local="130438800359936712" remote="130437661800000000" Dst="0" />
+<file name="component.css" server="techvaganza.org/httpdocs/" local="130438864729788457" remote="130438694400000000" Dst="0" />
 <file name="hexaflip.css" server="C:/xampp/htdocs/" local="130437945542782438" remote="130437945540000000" Dst="0" />
+<file name="login_form.css" server="techvaganza.org/httpdocs/" local="130434066323372738" remote="130438694400000000" Dst="0" />
+<file name="main-mobile.css" server="techvaganza.org/httpdocs/" local="130436778359222234" remote="130438694400000000" Dst="0" />
+<file name="bootstrap.min.css" server="techvaganza.org/httpdocs/" local="130435002586103841" remote="130438694400000000" Dst="0" />
+<file name="normalize.css" server="techvaganza.org/httpdocs/" local="130428912022004293" remote="130438694400000000" Dst="0" />
+<file name="icons.css" server="techvaganza.org/httpdocs/" local="130438806036551396" remote="130438694400000000" Dst="0" />
+<file name="main.css" server="techvaganza.org/httpdocs/" local="130438876337012352" remote="130438694400000000" Dst="0" />
+<file name="comingsoon.css" server="techvaganza.org/httpdocs/" local="130435002586113842" remote="130438694400000000" Dst="0" />
+<file name="hexaflip.css" server="techvaganza.org/httpdocs/" local="130438898525731474" remote="130438702200000000" Dst="0" />
 </dwsync>

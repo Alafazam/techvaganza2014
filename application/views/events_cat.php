@@ -8,7 +8,16 @@
 						foreach( $events as $event){
 					?>                    
                     	<li class="ca-menu li">
-                            <a class="icallajax" href="/events/<?php echo $event['category']."/".$event['event_id'] ?>">
+                            <a class="icallajax" href="<?php 
+							
+							if (file_exists(APPPATH."views/events/".$event['view_name'].".php"))
+							{							    
+								echo "/events/".$event['category']."/".$event['event_id'];
+							} 
+							else{
+								echo "/comingsoon";
+							}
+							?>">
                                 <div class="ca-content">
                                     <h2 class="ca-main"><?=$event['name']?></h2>
                                 </div>

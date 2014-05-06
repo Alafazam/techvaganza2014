@@ -1,30 +1,3 @@
-<style>
-*{ 
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#content{
-  max-width: 750px;
-  margin-left:auto;
-  margin-right:auto;
-  padding:20px; 
-}
-
-#content p{
-	margin:15px;
-}
-#content h2{
-	margin:20px 30px;
-	margin-bottom:5px;
-}
-
-h2{
-	text-align: left;
-	color:#CCE;
-}
-
-</style>
-     
       <div id="content">
         <div class="page-header container-fluid">
           <h1 class="center">Techvaganza 2014</h1>
