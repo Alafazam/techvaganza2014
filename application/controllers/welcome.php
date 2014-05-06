@@ -11,9 +11,10 @@ class Welcome extends CI_Controller {
 
     function index() {
         if ($this->session->userdata('logged_in')) {
-            $user = $this->user->getUser();
+            $username = $this->user->getUsername();
             //print_r($user);
-			
+			$user =array();
+			$user['username'] = $username;
 			$user['home'] = 'yes';
 			
             $this->load->template('welcome_view', $user);
@@ -29,10 +30,8 @@ class Welcome extends CI_Controller {
 
   function ajax(){
       
-        // print categories of all the events
-        $this->load->view('welcome_view');
-        //$this->load->template(EVENTVIEW,$data);
-     
+      
+            $this->load->view('welcome_view', $user);
   }
     function logout() {
         $this->session->unset_userdata('logged_in');
