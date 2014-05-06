@@ -1,11 +1,4 @@
- <style type="text/css">
-#content{
-/*max-width: 750px;*/
-margin-left: auto;
-margin-right: auto;
-padding: 20px;}
-</style>
-    <div id="content">
+    <div id="events">
         <div class="page-header container-fluid">
           <h1 class="center">Events</h1>
         </div>

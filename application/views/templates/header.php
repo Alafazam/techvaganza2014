@@ -37,7 +37,7 @@
                         <li><a class="icon icon-shop" href="/">Home</a></li>
                         <li><a class="icon icon-shop icallajax" href="/aboutus">About Us</a></li>                        
                         <li><a class="icon icon-display" <?php 
-                                            if(isset($first_name))
+                                            if(isset($username))
                                             {
                                                 echo    ' href="/home/logout">Logout';
                                             }

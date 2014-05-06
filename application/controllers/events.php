@@ -26,9 +26,17 @@ class Events extends CI_Controller {
   function codeshode($eventid=0,$register=0){
 	  $name=__FUNCTION__;
 	  
-	  if(!$eventid){ 
+	  if($eventid==='ajax'){ 
 		  // Print all the events
 	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
 	  }
 	  else{
 		  $event = $this->event->getEvent($name,$eventid);
@@ -54,17 +62,38 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function creatives($eventid=0){
+  function creatives($eventid=0,$register=0){
 	  $name=__FUNCTION__;
-	  if(!$eventid){ 
+	  
+	  if($eventid==='ajax'){ 
 		  // Print all the events
-	  	print_r($this->event->getEvents($name));
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
 	  }
 	  else{
 		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
 		  if($len){
-			  print_r($event);
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],$event);
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],$event);
+			  }
 		  }
 		  else{
 			  show_404();
@@ -72,17 +101,38 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function builder($eventid=0){
-	  $name=__FUNCTION__;
-	  if(!$eventid){ 
+  function builder($eventid=0,$register=0){
+	 $name=__FUNCTION__;
+	  
+	  if($eventid==='ajax'){ 
 		  // Print all the events
-	  	print_r($this->event->getEvents($name));
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
 	  }
 	  else{
 		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
 		  if($len){
-			  print_r($event);
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],$event);
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],$event);
+			  }
 		  }
 		  else{
 			  show_404();
@@ -90,17 +140,38 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function autodrift($eventid=0){
-	  $name=__FUNCTION__;
-	  if(!$eventid){ 
+  function fixerelixir($eventid=0,$register=0){
+	 $name=__FUNCTION__;
+	  
+	  if($eventid==='ajax'){ 
 		  // Print all the events
-	  	print_r($this->event->getEvents($name));
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
 	  }
 	  else{
 		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
 		  if($len){
-			  print_r($event);
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],$event);
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],$event);
+			  }
 		  }
 		  else{
 			  show_404();
@@ -108,17 +179,38 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function robonoid($eventid=0){
+  function robonoid($eventid=0,$register=0){
 	  $name=__FUNCTION__;
-	  if(!$eventid){ 
+	  
+	  if($eventid==='ajax'){ 
 		  // Print all the events
-	  	print_r($this->event->getEvents($name));
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
 	  }
 	  else{
 		  $event = $this->event->getEvent($name,$eventid);
 		  $len =sizeof($event);
 		  if($len){
-			  print_r($event);
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],$event);
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],$event);
+			  }
 		  }
 		  else{
 			  show_404();
