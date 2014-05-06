@@ -58,11 +58,11 @@
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="pageload-link" href="/events/codeShode/androidAdb">Android Anatomy</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/androidAdvance">Android Advance</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/goFixIt">Go fix It</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/deVardadIngeniero">De vardad Ingeniero</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/codeMania">CodoMania</a></li>
+                                                <li><a class="icallajax" href="/events/codeShode/androidAdb">Android Anatomy</a></li>
+                                                <li><a class="icallajax" href="/events/codeShode/androidAdvance">Android Advance</a></li>
+                                                <li><a class="icallajax" href="/events/codeShode/goFixIt">Go fix It</a></li>
+                                                <li><a class="icallajax" href="/events/codeShode/deVardadIngeniero">De vardad Ingeniero</a></li>
+                                                <li><a class="icallajax" href="/events/codeShode/codeMania">CodoMania</a></li>
 
                                             </ul>
                                         </div>
