@@ -52,14 +52,15 @@ function init() {
             ajaxLoader.show();
             },600);
             mlPushMenu._resetMenu();
-            var hash = trigger.hash,
-                pat = /(\w+)(\/\w+)*/,
-                stateObject = {},
-                title = hash.match(pat)[0],
+            var hash = trigger.href,
+            //     pat = /(\w+)(\/\w+)*/,
+            //     stateObject = {};
+            // console.log(hash.match(pat));
+                title = hash,
                 currentpath = window.location.pathname;
-                if (currentpath==='/') {currentpath=''};
-            var ajaxUrl = currentpath+"/" + title+'/ajax',
-                newUrl = currentpath+"/" + title,
+                // if (currentpath==='/') {currentpath=''};
+            var ajaxUrl =  title+'/ajax',
+                newUrl =  title,
                 testURL = '/ajaxtest/creatives';
                 console.log("zdvsvc"+newUrl);
             ajax.get(ajaxUrl, {}, function(data) {
@@ -73,9 +74,9 @@ function init() {
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 2000);
+            history.pushState(stateObject, title, newUrl);
             });
 
-            history.pushState(stateObject, title, newUrl);
         });
     });
 }
@@ -84,7 +85,7 @@ init();
 
 
 function updateLinks() {
-    var content = document.getElementById('content');
+    var content = document.getElementById('dynamic');
     ajaxTriggerLevelLoading = [].slice.call(content.querySelectorAll('a.icallajax'));
     ajaxTriggerLevelLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
@@ -93,16 +94,16 @@ function updateLinks() {
                 ajaxLoader.show();
             }, 600);
             mlPushMenu._resetMenu();
-            var hash = trigger.hash,
-                pat = /(\w+)(\/\w+)*/,
+            var hash = trigger.href,
+                // pat = /(\w+)(\/\w+)*/,
                 stateObject = {},
-                title = hash.match(pat)[0],
-                currentpath = window.location.pathname;
-            if (currentpath === '/') {
-                currentpath = ''
-            };
-            var ajaxUrl = currentpath + "/" + title + '/ajax',
-                newUrl = currentpath + "/" + title,
+                title = hash,
+            //     currentpath = window.location.pathname;
+            // if (currentpath === '/') {
+            //     currentpath = ''
+            // };
+            ajaxUrl = title + '/ajax',
+                newUrl =  title,
                 testURL = '/ajaxtest/creatives';
             console.log(newUrl);
             ajax.get(ajaxUrl, {}, function(data) {

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+	$username= $this->session->userdata('logged_in');
+	$username=$username['username'];
+?><!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Techvaganza</title>
@@ -46,9 +49,9 @@ a:hover{text-decoration: none;}
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" <?php 						if(isset($first_name))
+          <a class="navbar-brand" <?php if(isset($username))
                                             {
-                                                echo    'href="/home">Welcome '.$first_name ;
+                                                echo    'href="/home">Welcome '.$username ;
                                             }
                                             else
                                             {
@@ -72,27 +75,27 @@ a:hover{text-decoration: none;}
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bob the builder <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Builder <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Konstructure</a></li>
                       <li><a href="#">Bridge the gap</a></li>
                       <li><a href="#">College planning</a></li>
                       <li><a href="#">Reser-where</a></li>
-                      <li><a href="#">Truss-o-meniac</a></li>
+                      <li><a href="#">Truss-o-maniac</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code-shode <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Android-Basics</a></li>
-                      <li><a href="#">Android-Advance</a></li>
+                      <li><a href="#">Android Anatomy</a></li>
+                      <li><a href="#">Android Advance</a></li>
                       <li><a href="#">Go-fix-it</a></li>
-                      <li><a href="#">De varded junginerio</a></li>
-                      <li><a href="#">Trouble-shooting</a></li>
+                      <li><a href="#">De varded Inginerio</a></li>
+                      <li><a href="#">CodoMania</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fixer-Elixer <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fixer Elixir<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Junkyard</a></li>
                       <li><a href="#">Transform-it</a></li>
@@ -100,11 +103,11 @@ a:hover{text-decoration: none;}
                       <li><a href="#">The Estimator</a></li>
                       <li><a href="#">Traffixing</a></li>
                       <li><a href="#">Minimal motor</a></li>
-                      <li><a href="#">Filter-the-litter</a></li>
+                      <li><a href="#">Filter the litre</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Robonoids <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Robonoid<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="#">SmackDown</a></li>
                       <li><a href="#">Rescue-bot</a></li>

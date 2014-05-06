@@ -16,18 +16,14 @@ class Events extends CI_Controller {
 	 
   }
   
- 
-  function ajax(){
-	  
-	  	// print categories of all the events
-		$this->load->view('events_view');
-		//$this->load->template(EVENTVIEW,$data);
-	 
+
+  function ajax($value='')
+  {
+  			$this->load->view('events_view');
   }
- 
-  
-/*
-  function creatives($eventid=0,$register=0){
+
+
+  function codeshode($eventid=0,$register=0){
 	  $name=__FUNCTION__;
 	  
 	  if(!$eventid){ 
@@ -40,11 +36,9 @@ class Events extends CI_Controller {
 		  if($len){
 			  
 			  if($register==="register"){ // if user wants to register for that event
-			  	echo 'registered';
 				  $this->event->register($eventid);
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
-			  	echo 'unregistered';
 				  $this->event->unregister($eventid);
 			  }
 			  
@@ -57,7 +51,7 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function technophoria($eventid=0){
+  function creatives($eventid=0){
 	  $name=__FUNCTION__;
 	  if(!$eventid){ 
 		  // Print all the events
@@ -75,7 +69,7 @@ class Events extends CI_Controller {
 	  }
   } 
   
-  function preciphers($eventid=0){
+  function builder($eventid=0){
 	  $name=__FUNCTION__;
 	  if(!$eventid){ 
 		  // Print all the events
@@ -128,7 +122,7 @@ class Events extends CI_Controller {
 		  }
 	  }
   }
-  */ 
+
 }
 
 

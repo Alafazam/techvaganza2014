@@ -12,42 +12,42 @@ padding: 20px;}
             <div class="">
                 <ul class="ca-menu">
                     <li>
-                        <a class="icallajax" href="#creatives">
+                        <a class="icallajax" href="/events/creatives">
                             <div class="ca-content">
                                 <h2 class="ca-main">Creatives</h2>
-                                <h3 class="ca-sub">Personalized to your needs</h3>
+                                <h3 class="ca-sub">Invention,creation,innovation</h3>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="#codeShode">
+                        <a class="icallajax" href="/events/codeShode">
                             <div class="ca-content">
                                 <h2 class="ca-main">CodeShode</h2>
-                                <h3 class="ca-sub">Personalized to your needs</h3>
+                                <h3 class="ca-sub">#define BattleOCode()</h3>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="#bob">
+                        <a class="icallajax" href="/events/builder">
                             <div class="ca-content">
-                                <h2 class="ca-main">Bob-the-builder</h2>
-                                <h3 class="ca-sub">Personalized to your needs</h3>
+                                <h2 class="ca-main">Builder</h2>
+                                <h3 class="ca-sub">Aao kuch Build karein</h3>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="#fixer_Elixer">
+                        <a class="icallajax" href="/events/fixerElixer">
                             <div class="ca-content">
                                 <h2 class="ca-main">Fixer Elixer</h2>
-                                <h3 class="ca-sub">Personalized to your needs</h3>
+                                <h3 class="ca-sub">Mix it Fix it</h3>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="#robonoids">
+                        <a class="icallajax" href="/events/robonoids">
                             <div class="ca-content">
                                 <h2 class="ca-main">Robonoids</h2>
-                                <h3 class="ca-sub">Personalized to your needs</h3>
+                                <h3 class="ca-sub">Bot are coming</h3>
                             </div>
                         </a>
                     </li>

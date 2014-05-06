@@ -200,11 +200,11 @@
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-vbnxv9');
-	src:url('../fonts/icomoon.eot?#iefix-vbnxv9') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-vbnxv9') format('woff'),
-		url('../fonts/icomoon.ttf?-vbnxv9') format('truetype'),
-		url('../fonts/icomoon.svg?-vbnxv9#icomoon') format('svg');
+	src:url('../fonts/ico/icomoon.eot?-vbnxv9');
+	src:url('../fonts/ico/icomoon.eot?#iefix-vbnxv9') format('embedded-opentype'),
+		url('../fonts/ico/icomoon.woff?-vbnxv9') format('woff'),
+		url('../fonts/ico/icomoon.ttf?-vbnxv9') format('truetype'),
+		url('../fonts/ico/icomoon.svg?-vbnxv9#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

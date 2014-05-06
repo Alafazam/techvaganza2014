@@ -6,16 +6,20 @@
     <a  class="btn btn-default" href="/contacts">Contact Us</a>
   </div>
   <div class="btn-group">
-    <a class="btn btn-default" <?php 
-                                            if(isset($first_name))
-                                            {
-                                                echo    ' href="/home/logout">Logout';
-                                            }
-                                            else
-                                            {
-                                                echo    ' href="/login">Login';
-                                            }
-                                            ?>
+    <a class="btn btn-default" 
+<?php 
+	
+	$username= $this->session->userdata('logged_in');
+	$username=$username['username'];
+	if(isset($username))
+	{
+		echo    ' href="/home/logout">Logout';
+	}
+	else
+	{
+		echo    ' href="/login">Login';
+	}
+?>
       </a>
   </div>
 </div>
