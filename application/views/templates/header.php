@@ -1,6 +1,6 @@
 <?php
-	$username= $this->session->userdata('logged_in');
-	$username=$username['username'];
+    $username= $this->session->userdata('logged_in');
+    $username=$username['username'];
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,7 +37,7 @@
                         <li><a class="icon icon-shop" href="/">Home</a></li>
                         <li><a class="icon icon-shop icallajax" href="/aboutus">About Us</a></li>                        
                         <li><a class="icon icon-display" <?php 
-                                            if(isset($username))
+                                            if(isset($first_name))
                                             {
                                                 echo    ' href="/home/logout">Logout';
                                             }
@@ -53,16 +53,16 @@
                                 <a class="mp-back" href="#">back</a>
                                 <ul>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-phone " href="#events/codeShode">CodeShode</a>
+                                        <a class="icon icon-phone " href="#events/codeshode">CodeShode</a>
                                         <div class="mp-level">
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="pageload-link" href="/events/codeShode/androidAdb">Android Anatomy</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/androidAdvance">Android Advance</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/goFixIt">Go fix It</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/deVardadIngeniero">De vardad Ingeniero</a></li>
-                                                <li><a class="pageload-link" href="/events/codeShode/codeMania">CodoMania</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/androidadb">Android Anatomy</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/androidadvance">Android Advance</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/gofixit">Go fix It</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/devard">De vardad Ingeniero</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/codomania">CodoMania</a></li>
 
                                             </ul>
                                         </div>
@@ -73,56 +73,57 @@
                                             <h2>Creatives</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/events/creatives/heatExachange">Heat Exachange</a></li>
-                                                <li><a class="icallajax" href="/events/creatives/coptiveDynax">Captive Dynax</a></li>
-                                                <li><a class="icallajax" href="/events/creatives/chemeSepestor">Cheme-sepestor</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/heatexachange">Heat Exachange</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/coptivedynax">Captive Dynax</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-separator</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/fulcrum">Fulcrum</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/witricity">Witricity</a></li>
-                                                <li><a class="icallajax" href="/events/creatives/optroAcoustics">Optro-acoustics</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/optroacoustics">Optro-acoustics</a></li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="#">Builder</a>
+                                        <a class="icon icon-camera " href="#events/builder">Builder</a>
                                         <div class="mp-level">
                                             <h2>Builder</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/events/bob/konstructor">Konstructor</a></li>
-                                                <li><a class="icallajax" href="/events/bob/bridgeTheGorge">Bridge the gorge</a></li>
-                                                <li><a class="icallajax" href="/events/bob/collegePlanning">College Planning</a></li>
-                                                <li><a class="icallajax" href="/events/bob/reserWhere">Reser-where</a></li>
-                                                <li><a class="icallajax" href="/events/bob/truss">Truss-o-maniac</a></li>
+                                                <li><a class="icallajax" href="/events/builder/konstructor">Konstructor</a></li>
+                                                <li><a class="icallajax" href="/events/builder/bridgethegorge">Bridge the gorge</a></li>
+                                                <li><a class="icallajax" href="/events/builder/collegeplanning">College Planning</a></li>
+                                                <li><a class="icallajax" href="/events/builder/reserwhere">Reser-where</a></li>
+                                                <li><a class="icallajax" href="/events/builder/truss">Truss-o-maniac</a></li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="#events/fixer_Elixer">Fixer Elixir</a>
+                                        <a class="icon icon-camera " href="#events/fixerelixer">Fixer Elixir</a>
                                         <div class="mp-level">
                                             <h2>Fixer Elixir</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/events/fixerElixir/Junkyard">Junkyard</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/Transform_It">Transform_It</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/Sanrachna">Sanrachna</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/Nirman">Nirman</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/theEstimator">The Estimator</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/traffixing">Traffixing</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/minimalMotor">Minimal motor</a></li>
-                                                <li><a class="icallajax" href="/events/fixerElixir/filterTheLitre">Filter the Litre</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/junkyard">Junkyard</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/transformit">Transform_It</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/sanrachna">Sanrachna</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/nirman">Nirman</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/theestimator">The Estimator</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/traffixing">Traffixing</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/minimalmotor">Minimal motor</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/filterthelitre">Filter the Litre</a></li>
                                             </ul>
                                         </div>
                                     </li>
+                                    <li class="icon icon-arrow-left">
                                         <a class="icon icon-camera " href="#events/robonoids">Robonoids</a>
                                         <div class="mp-level">
-                                            <h2>Robonoid</h2>
+                                            <h2>Robonoids</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/events/robonoids/smackDown">Smack Down</a></li>
-                                                <li><a class="icallajax" href="/events/robonoids/rescueBot">Rescue Bot</a></li>
-                                                <li><a class="icallajax" href="/events/robonoids/lineFollower">Line Follower</a></li>
-                                                <li><a class="icallajax" href="/events/robonoids/mystryBox<">Mystry Box</a></li>
-                                                <li><a class="icallajax" href="/events/robonoids/embeSys">Embe-sys</a></li>
+                                                <li><a class="icallajax" href="/events/robonoids/smackdown">Smack Down</a></li>
+                                                <li><a class="icallajax" href="/events/robonoids/rescuebot">Rescue Bot</a></li>
+                                                <li><a class="icallajax" href="/events/robonoids/linefollower">Line Follower</a></li>
+                                                <li><a class="icallajax" href="/events/robonoids/mystrybox<">Mystry Box</a></li>
+                                                <li><a class="icallajax" href="/events/robonoids/embesys">Embe-sys</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -135,13 +136,13 @@
                                 <h2 class="icon icon-news">Workshops</h2>
                                 <a class="mp-back" href="#">back</a>
                                 <ul>
-                                    <li><a class="icallajax" href="#workshops/">CS/IT</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Mechanical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Electrical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Metallurgy</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Civil</a></li>
-                                    <li><a class="icallajax" href="#workshops/">Chemical</a></li>
-                                    <li><a class="icallajax" href="#workshops/">EC</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">CS/IT</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">Mechanical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">Electrical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">Metallurgy</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">Civil</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">Chemical</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">EC</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -172,7 +173,6 @@
                                             <span class="right"><a <?php 
                                             if(isset($username))
                                             {
-
                                                 echo    'href="/home"><span>Welcome '.$username ;
                                             }
                                             else
