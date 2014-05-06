@@ -16,6 +16,16 @@ class Events extends CI_Controller {
 	 
   }
   
+ 
+  function ajax(){
+	  
+	  	// print categories of all the events
+		$this->load->view('events_view');
+		//$this->load->template(EVENTVIEW,$data);
+	 
+  }
+ 
+  
 /*
   function creatives($eventid=0,$register=0){
 	  $name=__FUNCTION__;

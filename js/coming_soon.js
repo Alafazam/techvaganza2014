@@ -84,7 +84,7 @@ Star.prototype._unwind = function(link) {
             transform: 'r(' + ((i) * angle) + ',300,300)' + 't' + this.pivots[0] + ',-' + this.pivots[1],
             opacity: 1,
             'box-shadow': '5px'
-        }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
+        }, 320 + (i * (360 / this.ssub_menus)), mina.easeout);
         //adding event handlers
         this.fins[i].click(function(event) {
             self._wind(this);
@@ -96,7 +96,8 @@ Star.prototype._unwind = function(link) {
                     loader.hide();
                     star.coming_soon = true;
                     classie.addClass(pages[loader.current_page], 'show');
-                }, 1000);
+
+                }, 2000);
             }
             this.parent().select('#svgTextElement').remove();
         });

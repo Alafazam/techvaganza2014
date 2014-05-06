@@ -86,7 +86,8 @@ Star.prototype._unwind = function(link) {
                 myregExp = /\d/,
                 no = Number(myregExp.exec(id)[0])
                 stateObject = {},
-                ajaxUrl = "/" + main_menu[no],
+                baseUrl = "/" + main_menu[no],
+                ajaxUrl = "/" + main_menu[no] + '/ajax',
                 dynamic = document.getElementById('dynamic');
             console.log(no);
             self.wind(this);
@@ -100,7 +101,7 @@ Star.prototype._unwind = function(link) {
                 ajax.get(ajaxUrl, {}, function(data) {
                     if (data) {
                         var stateObject = {
-                            url: ajaxUrl,
+                            url: baseUrl,
                             content: dynamic.innerHTML,
                             current: data,
                             title: document.title
@@ -108,7 +109,8 @@ Star.prototype._unwind = function(link) {
                     };
                     dynamic.innerHTML = data;
                     document.title = main_menu[no];
-                    history.pushState(stateObject, main_menu[no], ajaxUrl);
+                    updateLinks();
+                    history.pushState(stateObject, main_menu[no], baseUrl);
                     setTimeout(function() {
                         ajaxLoader.hide();
                     }, 1000);
@@ -238,7 +240,9 @@ hideMenuText = function(el) {
     el.animate({
         'fill-opacity': 0.8
     }, 100);
-    el.parent().select('#svgTextElement').remove();
+    if (el.parent().select('#svgTextElement')) {
+        el.parent().select('#svgTextElement').remove()
+    };
 }
 
 Star.prototype._next_menu = function() {};

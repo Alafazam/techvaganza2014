@@ -1,16 +1,7 @@
+                        </div>
                     </div>
                 </div><!-- /scroller-inner -->
-                        <?php
-                            if(isset($home)){
-                                echo "<script>var curtime =" .(time()*1000)."</script>"
-                        ?>  
-                            <div id="timer-wrapper" >
-                                <div id="tvza-timer"></div>                
-                            </div>
-                            <script src="/js/hexaflip.js"></script>
-                        <?php
-                            }
-                        ?>  
+                          
             </div><!-- /scroller -->
         </div><!-- /pusher -->
         </div><!-- /container -->
@@ -29,15 +20,16 @@
 <script>
 
 var mlPushMenu = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'));
-
-var navMenu = document.getElementById('mp-menu'),
+var body = document.body,
     ajaxPages = [],
     currentPage = 0,
-    ajaxTriggerLoading = [].slice.call(navMenu.querySelectorAll('a.icallajax')),
+    ajaxTriggerLoading = [].slice.call(body.querySelectorAll('a.icallajax')),
     ajaxLoader = new SVGLoader(document.getElementById('loader'), ajaxPages, 0, {
         speedIn: 500,
         easingIn: mina.easeIn
     });
+
+
 // ajaxTriggerLoading.push(document.getElementById('csgo'));
 
 // Update the page content.
@@ -46,9 +38,13 @@ var updateContent = function(stateObj) {
   if (stateObj) {
     dynamic.innerHTML = stateObj.content;
   }
+  updateLinks();
 };
 
 function init() {
+       
+
+
     ajaxTriggerLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
             ev.preventDefault();
@@ -60,18 +56,19 @@ function init() {
                 pat = /(\w+)(\/\w+)*/,
                 stateObject = {},
                 title = hash.match(pat)[0],
-                ajaxUrl = "/" + title+'/ajax',
-                newUrl = "/" + title,
+                currentpath = window.location.pathname;
+                if (currentpath==='/') {currentpath=''};
+            var ajaxUrl = currentpath+"/" + title+'/ajax',
+                newUrl = currentpath+"/" + title,
                 testURL = '/ajaxtest/creatives';
-            ajax.get(testURL, {}, function(data) {
+                console.log("zdvsvc"+newUrl);
+            ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
                     url: newUrl,
                     content: data,
                     title: title
                 };
-                setTimeout(function(argument) {
-                updateContent(stateObject);	// body...
-                },600);
+                updateContent(stateObject);                
                 star.wind();
                 setTimeout(function() {
                     ajaxLoader.hide();
@@ -81,18 +78,54 @@ function init() {
             history.pushState(stateObject, title, newUrl);
         });
     });
-    // triggerLoading.forEach(function(trigger) {
-    //     trigger.addEventListener('click', function(ev) {
-    //         ajaxLoader.show();
-    //         mlPushMenu._resetMenu();
-    //         setTimeout(function() {
-    //             ajaxLoader.hide();
-    //         }, 2000);
-    //     });
-    // });
 }
 
 init();
+
+
+function updateLinks() {
+    var content = document.getElementById('content');
+    ajaxTriggerLevelLoading = [].slice.call(content.querySelectorAll('a.icallajax'));
+    ajaxTriggerLevelLoading.forEach(function(trigger) {
+        trigger.addEventListener('click', function(ev) {
+            ev.preventDefault();
+            setTimeout(function(argument) {
+                ajaxLoader.show();
+            }, 600);
+            mlPushMenu._resetMenu();
+            var hash = trigger.hash,
+                pat = /(\w+)(\/\w+)*/,
+                stateObject = {},
+                title = hash.match(pat)[0],
+                currentpath = window.location.pathname;
+            if (currentpath === '/') {
+                currentpath = ''
+            };
+            var ajaxUrl = currentpath + "/" + title + '/ajax',
+                newUrl = currentpath + "/" + title,
+                testURL = '/ajaxtest/creatives';
+            console.log(newUrl);
+            ajax.get(ajaxUrl, {}, function(data) {
+                var stateObject = {
+                    url: newUrl,
+                    content: data,
+                    title: title
+                };
+                setTimeout(function(argument) {
+                    updateContent(stateObject); // body...
+                }, 600);
+                star.wind();
+                init();
+                setTimeout(function() {
+                    ajaxLoader.hide();
+                }, 2000);
+            });
+
+            history.pushState(stateObject, title, newUrl);
+        });
+    });
+}
+
 
 
 </script>
@@ -103,6 +136,8 @@ init();
 window.onload = function() {
     var viewport = document.getElementById('viewport');
     if (window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome') {
+        classie.removeClass(viewport, 'winded');
+        classie.addClass(viewport, 'unwinded');
         star = new Star(viewport, menu_Items);
         window.star = star;
         star._unwind();
@@ -125,17 +160,22 @@ window.onload = function() {
 
 };
 // Update the page content when the popstate event is called.
-window.onpopstate  =function(event) {
+window.onpopstate  = function(event) {
+  console.log(event);
+  // console.log(event.stateObject.content);
+  // console.log(event.state.content);
 
   if (!event.state) {
-  star._unwind();
-  updateContent({content:" "});
+    star._unwind();
+    ajax.get('welcome/ajax', {}, function(data) {
+    updateContent({content:data});
+        });
+
   // ajaxLoader.hide();
 
   }else{
   updateContent(event.state);
   };
-  console.log(event);
 
 };
     </script>
