@@ -12,8 +12,9 @@ class Home extends CI_Controller {
   {
     if($this->session->userdata('logged_in'))
     {
-		$this->profile();
-	  
+		$this->load->model('event','',TRUE);
+		//$this->profile();
+	  	print_r($this->event->getRegistrations('codomania'));
     }
     else
     {

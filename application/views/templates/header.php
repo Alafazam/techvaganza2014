@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+	$username= $this->session->userdata('logged_in');
+	$username=$username['username'];
+?><!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Techvaganza</title>
@@ -34,7 +37,7 @@
                         <li><a class="icon icon-shop" href="/">Home</a></li>
                         <li><a class="icon icon-shop" href="/aboutus">About Us</a></li>                        
                         <li><a class="icon icon-display" <?php 
-                                            if(isset($first_name))
+                                            if(isset($username))
                                             {
                                                 echo    ' href="/home/logout">Logout';
                                             }
@@ -55,11 +58,11 @@
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="pageload-link" href="#">Android Basics</a></li>
+                                                <li><a class="pageload-link" href="#">Android Anatomy</a></li>
                                                 <li><a class="pageload-link" href="#">Android Advance</a></li>
                                                 <li><a class="pageload-link" href="#">Go fix It</a></li>
-                                                <li><a class="pageload-link" href="#">De vardad juginerio</a></li>
-                                                <li><a class="pageload-link" href="#">CodeMania</a></li>
+                                                <li><a class="pageload-link" href="#">De vardad Ingeniero</a></li>
+                                                <li><a class="pageload-link" href="#">CodoMania</a></li>
 
                                             </ul>
                                         </div>
@@ -71,7 +74,7 @@
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="pageload-link" href="#">Heat Exachange</a></li>
-                                                <li><a class="pageload-link" href="#">Coptive Dynax</a></li>
+                                                <li><a class="pageload-link" href="#">Captive Dynax</a></li>
                                                 <li><a class="pageload-link" href="#">Cheme-sepestor</a></li>
                                                 <li><a class="pageload-link" href="#">Fulcrum</a></li>
                                                 <li><a class="pageload-link" href="#">Witricity</a></li>
@@ -80,46 +83,46 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera" href="#">Bob-the-builder</a>
+                                        <a class="icon icon-camera" href="#">Builder</a>
                                         <div class="mp-level">
-                                            <h2>Bob-the-builder</h2>
+                                            <h2>Builder</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="pageload-link" href="#">Konstructor</a></li>
-                                                <li><a class="pageload-link" href="#">Bridge the gap</a></li>
+                                                <li><a class="pageload-link" href="#">Bridge the Gap</a></li>
                                                 <li><a class="pageload-link" href="#">College Planning</a></li>
                                                 <li><a class="pageload-link" href="#">Reser-where</a></li>
-                                                <li><a class="pageload-link" href="#">Truss-o-meniac</a></li>
+                                                <li><a class="pageload-link" href="#">Truss-o-maniac</a></li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera" href="#">Fixer Elixer</a>
+                                        <a class="icon icon-camera" href="#">Fixer Elixir</a>
                                         <div class="mp-level">
-                                            <h2>Fixer Elixer</h2>
+                                            <h2>Fixer Elixir</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="pageload-link" href="#">Junkyard</a></li>
-                                                <li><a class="pageload-link" href="#">Transform_It</a></li>
+                                                <li><a class="pageload-link" href="#">Transform It</a></li>
                                                 <li><a class="pageload-link" href="#">Sanrachna</a></li>
                                                 <li><a class="pageload-link" href="#">Nirman</a></li>
                                                 <li><a class="pageload-link" href="#">The Estimator</a></li>
                                                 <li><a class="pageload-link" href="#">Traffixing</a></li>
-                                                <li><a class="pageload-link" href="#">Minimal motor</a></li>
-                                                <li><a class="pageload-link" href="#">Filter the Litter</a></li>
+                                                <li><a class="pageload-link" href="#">Minimal Motor</a></li>
+                                                <li><a class="pageload-link" href="#">Filter the Litre</a></li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera" href="#">Robonoids</a>
+                                        <a class="icon icon-camera" href="#">Robonoid</a>
                                         <div class="mp-level">
-                                            <h2>Robonoids</h2>
+                                            <h2>Robonoid</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="pageload-link" href="#">Smack Down</a></li>
                                                 <li><a class="pageload-link" href="#">Rescue Bot</a></li>
                                                 <li><a class="pageload-link" href="#">Line Follower</a></li>
-                                                <li><a class="pageload-link" href="#">Mystry Box</a></li>
+                                                <li><a class="pageload-link" href="#">Mystery Box</a></li>
                                                 <li><a class="pageload-link" href="#">Embe-sys</a></li>
                                             </ul>
                                         </div>
@@ -158,7 +161,7 @@
                     
                                             <span class="right"><a
                                             <?php 
-                                            if(isset($first_name))
+                                            if(isset($username))
                                             {
                                                 echo    ' href="/home/logout"<span>Logout';
                                             }
@@ -168,9 +171,9 @@
                                             }
                                             ?></span></a></span>
                                             <span class="right"><a <?php 
-                                            if(isset($first_name))
+                                            if(isset($username))
                                             {
-                                                echo    'href="/home"><span>Welcome '.$first_name ;
+												echo    'href="/home"><span>Welcome '.$username ;
                                             }
                                             else
                                             {

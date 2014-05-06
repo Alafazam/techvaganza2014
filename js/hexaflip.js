@@ -439,7 +439,7 @@ var settings = {
     makeObject = function(a){
         var o = {};
         var num = [];
-        var others = ['d','h','m','s','yet','to','go'];
+        var others = ['d','h','m','s','to','go','...'];
         var all = [];
         for (var i = 1; i <= 60; i++) {
             num.push(i);  
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', function(){
         else{
             if(timeDiff>=0)
                 hflp =  {
-                    x1: diffDays, x2: 'd', x3: diffHours, x4: 'h', x5: diffMin, x6: 'm', x7: diffSec, x8: 's', x9: 'yet', x10: 'to', x11: 'go'
+                    x1: diffDays, x2: 'd', x3: diffHours, x4: 'h', x5: diffMin, x6: 'm', x7: diffSec, x8: 's', x9: 'to', x10: 'go', x11: '...'
                 }
             x++;
         }

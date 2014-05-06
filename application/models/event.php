@@ -13,7 +13,7 @@ Class Event extends CI_Model
 		$query=$this->db->get_where('events',array(
 			'event_id'=> $event_id,
 			'category'=> $category
-		));
+		),1);
 		$data= array();
 		$result = $query->result();
 		foreach( $result as $row){
@@ -22,7 +22,8 @@ Class Event extends CI_Model
 				'event_id'=> $event_id, 
 				'view_name' => $row->view_name,
 				'time' => strtotime($row->time),
-				'category' => $row->category
+				'category' => $row->category,
+				'description' => $row->description
 			);
 		}
 		return $data;
@@ -48,7 +49,8 @@ Class Event extends CI_Model
 				'event_id'=> $row->event_id, 
 				'view_name' => $row->view_name,
 				'time' => strtotime($row->time),
-				'category' => $row->category
+				'category' => $row->category,
+				'description' => $row->description
 			);
 		}
 		return $data;
@@ -60,7 +62,7 @@ Class Event extends CI_Model
 			$query= $this->db->get_where('events_registration',array(
 				'username' => $session_data['username'],
 				'event_id' =>$eventid
-			));
+			),1);
 			
 			if($query->num_rows()==0)			
 				$this->db->insert('events_registration',array(
@@ -77,6 +79,15 @@ Class Event extends CI_Model
 				'event_id' =>$eventid
 			));
 		}		
+	}
+	
+	function getRegistrations($eventid){
+		$query = $this->db->select('*')
+		->from('events_registration')
+		->join('users','events_registration.username=users.username')
+		->where(array('event_id'=>$eventid))->get();
+		
+		return $query;
 	}
 	
 }

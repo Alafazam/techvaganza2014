@@ -11,10 +11,10 @@ class Welcome extends CI_Controller {
 
     function index() {
         if ($this->session->userdata('logged_in')) {
-            $user = $this->user->getUser();
+            $username = $this->user->getUsername();
             //print_r($user);
-			
-			$user['home'] = 'yes';
+			$username['username'] = $username;
+			$username['home'] = 'yes';
 			
             $this->load->template('welcome_view', $user);
 

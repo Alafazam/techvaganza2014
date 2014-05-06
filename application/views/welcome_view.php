@@ -314,6 +314,9 @@
 											top:10px;
 											left:100px;
 										}
+										#techv{
+											margin-left:82px
+										}
 										#click-here{
 											background:url(/images/clickhere.png);
 											width:185px;
@@ -323,11 +326,11 @@
 										}
 									</style>
 									<div id='top-sticky'>
-                                    	<div id="click-here"></div>
+                                    	<div id="click-here"></div>                                        
+										<img id="techv" src="/images/tv.jpg"/>
 										<div id='nitlogo'>
 										  <div>
-											National Institute of Technology Srinagar<br/> <span>Presents</span>
+											National Institute of Technology Srinagar
 										  </div>
 										</div>
-										<img id="techv" src="/images/tv.jpg"/>
 									</div>
