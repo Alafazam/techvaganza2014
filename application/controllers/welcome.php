@@ -29,9 +29,7 @@ class Welcome extends CI_Controller {
 
 
   function ajax(){
-      
-      
-            $this->load->view('welcome_view', $user);
+            $this->load->view('welcome_view');
   }
     function logout() {
         $this->session->unset_userdata('logged_in');
