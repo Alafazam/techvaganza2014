@@ -61,7 +61,7 @@
                                                 <li><a class="icallajax" href="/comingsoon">Android Anatomy</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Android Advance</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/gofixit">Go fix It</a></li>
-                                                <li><a class="icallajax" href="/events/codeshode/devard">De vardad Ingeniero</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/devardad">De vardad Ingeniero</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/codomania">CodoMania</a></li>
 
                                             </ul>
@@ -74,7 +74,7 @@
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/comingsoon">Heat Exachange</a></li>
-                                                <li><a class="icallajax" href="/events/creatives/coptivedynax">Captive Dynax</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/captivedynax">Captive Dynax</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-separator</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Fulcrum</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Witricity</a></li>
@@ -89,7 +89,7 @@
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/builder/konstructor">Konstructor</a></li>
-                                                <li><a class="icallajax" href="/events/builder/bridgethegap">Bridge the gorge</a></li>
+                                                <li><a class="icallajax" href="/events/builder/bridgegap">Bridge the gorge</a></li>
                                                 <li><a class="icallajax" href="/events/builder/collegeplanning">College Planning</a></li>
                                                 <li><a class="icallajax" href="/events/builder/reserwhere">Reser-where</a></li>
                                                 <li><a class="icallajax" href="/events/builder/trussomaniac">Truss-o-maniac</a></li>
@@ -103,7 +103,7 @@
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/comingsoon">Junkyard</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Transform_It</a></li>
+                                                <li><a class="icallajax" href="/comingsoon">Transform It</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/theestimator">The Estimator</a></li>
