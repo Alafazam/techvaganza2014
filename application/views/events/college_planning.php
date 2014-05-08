@@ -2,7 +2,12 @@
         <div class="page-header container-fluid">
           <h1 class="center">College Planning</h1>
         </div>
-        <div class="col glass"> 
+        <div class="col glass">
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
+ 
         	<div class="e_text">
 				<h2>Introduction : </h2>
 				<p>Planners share a belief that something can be done about improving and maintaining our human-made and natural environments. The purpose of this event is to develop an appreciation of the role of proper planning in avoiding chaotic and destructive consequences of random construction methods.</p>

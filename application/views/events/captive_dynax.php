@@ -2,7 +2,12 @@
         <div class="page-header container-fluid">
           <h1 class="center">CAPTiVE  DYNAX</h1>
         </div>
-        <div class="col glass"> 
+        <div class="col glass">
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
+ 
         	<div class="e_text">
 				<h2>Event Description</h2>
 				<p>Introduction about the theme of the event:</p>

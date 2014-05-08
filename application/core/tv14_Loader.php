@@ -24,13 +24,20 @@ class tv14_Loader extends CI_Loader {
         $CI->load->library("user_agent");
 
         if($CI->agent->is_mobile()){
-        $content  = $this->view('mobile/templates/header', $vars, $return);
-        $content .= $this->view('mobile/'.$template_name, $vars, $return);
-        $content .= $this->view('mobile/templates/footer', $vars, $return);
+			if(preg_match('/^events/',$template_name)){
+				$content  = $this->view('mobile/templates/header', $vars, $return);
+				$content .= $this->view($template_name, $vars, $return);
+				$content .= $this->view('mobile/templates/footer', $vars, $return);				
+			}
+			else{
+				$content  = $this->view('mobile/templates/header', $vars, $return);
+				$content .= $this->view('mobile/'.$template_name, $vars, $return);
+				$content .= $this->view('mobile/templates/footer', $vars, $return);
+			}
         }else{
-        $content  = $this->view('templates/header', $vars, $return);
-        $content .= $this->view($template_name, $vars, $return);
-        $content .= $this->view('templates/footer', $vars, $return);
+			$content  = $this->view('templates/header', $vars, $return);
+			$content .= $this->view($template_name, $vars, $return);
+			$content .= $this->view('templates/footer', $vars, $return);
 		}
 		
         if ($return)
@@ -39,17 +46,17 @@ class tv14_Loader extends CI_Loader {
         }
     }
 	
-	public function opera($template_name, $vars = array(), $return = FALSE)
-    {
-        $content  = $this->view('opera/templates/header', $vars, $return);
-        $content .= $this->view('opera/'.$template_name, $vars, $return);
-        $content .= $this->view('opera/templates/footer', $vars, $return);
+	// public function opera($template_name, $vars = array(), $return = FALSE)
+ //    {
+ //        $content  = $this->view('opera/templates/header', $vars, $return);
+ //        $content .= $this->view('opera/'.$template_name, $vars, $return);
+ //        $content .= $this->view('opera/templates/footer', $vars, $return);
 
-        if ($return)
-        {
-            return $content;
-        }
-    }
+ //        if ($return)
+ //        {
+ //            return $content;
+ //        }
+ //    }
 	
 }
 

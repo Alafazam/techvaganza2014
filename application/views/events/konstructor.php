@@ -3,6 +3,11 @@
           <h1 class="center">Konstructor</h1>
         </div>
         <div class="col glass"> 
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
+
         	<div class="e_text">
 				<h2>Introduction : </h2>
 				<p>Civil engineering nurtures upon innovations pertaining sustainable development alongside this technocratic world. Eradicate your anxiety and construct any civil engineering model which will be admired by others. This competition will test the creativity, dexterity and aesthetic sense of the participants. </p>

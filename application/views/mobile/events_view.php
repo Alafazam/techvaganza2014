@@ -26,12 +26,11 @@ padding-bottom: 0px;
           <div class="nav nav-tabs nav-justified">
             <ul class="list-group center">
               <li class="list-group-item"><a href="/">Home</a>         </li>
-              <li class="list-group-item"><a href="/aboutus">About Us</a>      </li>
-              <li class="list-group-item"><a href="/events">Events</a>       </li>
-              <li class="list-group-item"><a href="/comingsoon">Workshops</a>    </li>
-              <li class="list-group-item"><a href="/comingsoon">Technofun</a>    </li>
-              <li class="list-group-item"><a href="/comingsoon">Hospitality</a>  </li>
-              <li class="list-group-item"><a href="/contacts">Contact</a>      </li>
+              <li class="list-group-item"><a href="/comingsoon">Creatives</a>      </li>
+              <li class="list-group-item"><a href="/comingsoon">CodeShode</a>       </li>
+              <li class="list-group-item"><a href="/comingsoon">Builder</a>    </li>
+              <li class="list-group-item"><a href="/comingsoon">Fixer Elixer</a>    </li>
+              <li class="list-group-item"><a href="/comingsoon">Robonoid</a>  </li>
 
             </ul>
           </div>

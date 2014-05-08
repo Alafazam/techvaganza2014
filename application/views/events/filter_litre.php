@@ -3,6 +3,11 @@
           <h1 class="center">Filter the Litter</h1>
         </div>
         <div class="col glass"> 
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
+
         	<div class="e_text">
 				<h2>Introduction : </h2>
 				<p>Participants in the event will be subjected to a challenge to make a sand filter that can clean translucent water to make it look transparent with naked eyes. Such a sand filter must filter water at fastest rate to be itself best of the rest.</p>

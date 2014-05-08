@@ -29,9 +29,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="icallajax" href="/events/fixerelixer">
+                        <a class="icallajax" href="/events/fixerelixir">
                             <div class="ca-content">
-                                <h2 class="ca-main">Fixer Elixer</h2>
+                                <h2 class="ca-main">Fixer Elixir</h2>
                                 <h3 class="ca-sub">Mix it Fix it</h3>
                             </div>
                         </a>

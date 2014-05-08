@@ -2,7 +2,12 @@
         <div class="page-header container-fluid">
           <h1 class="center">The Estimator</h1>
         </div>
-        <div class="col glass"> 
+        <div class="col glass">
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
+ 
         	<div class="e_text">
 				<h2>Objective : </h2>
 				<p>As this event is based on the estimation skills and observation power which is the basic need in civil engineering, it judges the estimating ability of the participants for better accuracy and precision. 

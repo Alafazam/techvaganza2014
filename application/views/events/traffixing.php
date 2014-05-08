@@ -2,7 +2,11 @@
         <div class="page-header container-fluid">
           <h1 class="center">Traffixing</h1>
         </div>
-        <div class="col glass"> 
+        <div class="col glass">
+        	<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div> 
         	<div class="e_text">
 				<h2>Problem Statement : </h2>
 				<p>To come up with an innovative solution for overcoming the traffic mess at Jehangir Chowk Intersection and make a model of the proposed solution. </p> 

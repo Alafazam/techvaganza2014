@@ -14,7 +14,6 @@
 
 			.bold{
 				font-weight:bold;
-				color:#fff;
 			}
 
 			.italic{
@@ -119,6 +118,7 @@
 				<div class="contact">
 				    <div class='bold'>Faizan</div>
 				    <div>Phone No:<a class='bold' href="tel:09622640523">+919622640523</a></div>
+				    <div>Email- <a href="mailto:faizancvl@gmail.com">faizancvl@gmail.com</a></div>
 				</div>
 				<div class="contact">
 				    <div class='bold'>Komal Sharma</div>

@@ -16,7 +16,7 @@ function Star(viewport, menu_Items) {
     this.viewport = viewport;
     this.sub_menus = menu_Items;
     this.star = Snap.select('#star');
-    // console.log(star);
+    this.open = false;
     this.fin = this.star.select('#g0');
     this.g = this.star.g();
     this.fins = [];
@@ -29,7 +29,8 @@ function Star(viewport, menu_Items) {
     this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
     this.coming_soon = false;
 
-    for (var i = (this.sub_menus - 1); i >= 0; i--) {
+    // for (var i = (this.sub_menus - 1); i >= 0; i--) {
+    for (var i = 0; i < (this.sub_menus); i++) {
         if (i == 0) {
             this.fin.appendTo(this.g);
             this.fins[0] = this.fin;
@@ -66,10 +67,11 @@ Star.prototype._unwind = function(link) {
     classie.removeClass(this.viewport, 'winded');
     classie.addClass(this.viewport, 'unwinded');
     for (var i = this.sub_menus - 1; i >= 0; i--) {
+        // for (var i = 0; i < (this.sub_menus); i++) {
         var wrapper = this.star.select('#g' + i);
         var angle = (360 / this.sub_menus);
         wrapper.animate({
-            transform: 'r(' + ((i) * angle) + ',300,300)' + 't' + this.pivots[0] + ',-' + this.pivots[1],
+            transform: 'r(' + ((i) * angle) + ',300,300)',
             opacity: 1,
             'box-shadow': '5px'
         }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
@@ -84,42 +86,32 @@ Star.prototype._unwind = function(link) {
                 myregExp = /\d/,
                 no = Number(myregExp.exec(id)[0])
                 stateObject = {},
-                baseUrl = "/" + main_menu[no],
+                newUrl = "/" + main_menu[no],
                 ajaxUrl = "/" + main_menu[no] + '/ajax',
                 dynamic = document.getElementById('dynamic');
-            console.log(no);
             self.wind(this);
             mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
 
             setTimeout(function(argument) {
                 ajaxLoader.show()
-
-                // var testURL = '/ajaxtest/creatives';
                 ajax.get(ajaxUrl, {}, function(data) {
                     if (data) {
                         var stateObject = {
-                            url: baseUrl,
-                            content: dynamic.innerHTML,
-                            current: data,
-                            title: document.title
+                            'content': dynamic.innerHTML,
+                            'url': newUrl,
+                            'oldurl': location.pathname
                         };
                     };
                     dynamic.innerHTML = data;
-                    document.title = main_menu[no];
                     updateLinks();
-                    history.pushState(stateObject, main_menu[no], baseUrl);
+                    history.pushState(stateObject, main_menu[no], newUrl);
                     setTimeout(function() {
                         ajaxLoader.hide();
                     }, 1000);
+
                 });
             }, 800);
-
-
-
-
-
-
         });
 
 
@@ -161,6 +153,7 @@ Star.prototype.wind = function(el) {
 
 
     function next() {
+
         classie.removeClass(star.viewport, 'unwinded');
         classie.addClass(star.viewport, 'winded');
     }
@@ -200,10 +193,14 @@ showMenuText = function(el) {
 
     var fin = el;
     id = fin.attr('id');
-    // console.log(id);
+    el.animate({
+        // stroke: 'none',
+        'fill-opacity': 1,
+    }, 100);
+
     var myregExp = /\d/;
     no = Number(myregExp.exec(id)[0]);
-
+    // 
     leaf_rotaton = fin.transform()['globalMatrix'].split()['rotate'];
     //console.log(leaf_rotaton);
 
@@ -221,9 +218,6 @@ showMenuText = function(el) {
 
     });
     Snap.animate(0, 1, function(value) {
-        el.animate({
-            'fill-opacity': value
-        }, 100);
         svgTextElement.attr({
             'font-size': value * 30,
             opacity: value,
@@ -235,21 +229,38 @@ showMenuText = function(el) {
 }
 
 hideMenuText = function(el) {
+
     el.animate({
-        'fill-opacity': 0.8
+        // stroke: 'none',
+        'fill-opacity': 0.8,
     }, 100);
     if (el.parent().select('#svgTextElement')) {
         el.parent().select('#svgTextElement').remove()
     };
+    // if (el.parent().parent().select('#filter')) {
+    //     el.parent().parent().select('#filter').remove()
+    // };
+
 }
 
-Star.prototype._next_menu = function() {};
 
-Star.prototype.ajax_linking = function() {
 
-    var stateObject = {};
-    var title = "Wow Title";
-    var newUrl = "/my/awesome/url";
-    history.pushState(stateObject, title, newUrl);
+// s = Snap(700, 620);
 
-};
+// s.rect(0, 0, 700, 620).attr({
+//     fill : 'black',
+//     stroke : 'black'
+// });
+
+// s.rect(50, 200, 100, 400, 8, 8).attr({
+//     fill : 'green',
+//     transform : 'rotate(180, 100, 400)',
+//     filter : s.filter(Snap.filter.shadow(2, 3, 3, 'white'))
+// });
+
+// s.rect(250, 200, 100, 400, 8, 8).attr({
+//     fill : 'red',
+//     stroke:'black',
+//     transform : 'rotate(560, 350, 400)',
+//     filter : s.filter(Snap.filter.shadow(0.1, 0.1,2.4, 'white'))
+// });
