@@ -32,5 +32,17 @@
         <p>Q. Neearby ATMs?<br />A. College campus have a SBI and a JK Bank ATM. The nearby areas also have two HDFC and SBI ATMs each.</p>
 
       </div>
+      
+      <div class="e_text">
+        <h2>Contact : </h2>
+        <ul>
+            <li>U Santosh Pawan	9086665136<br/>
+            	&lt;usantoshpawan@gmail.com&gt;	
+            </li>
+            <li>Shriya Dalmotra<br/>
+            	&lt;shriya.dalmotra18@gmail.com&gt;	
+            </li>
+        </ul>
+    </div>
     </div>    
     </div>

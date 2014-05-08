@@ -14,8 +14,6 @@ var main_menu = ['events', 'workshops', 'hospitality', 'contacts', 'sponsors', '
 function Star(viewport, menu_Items) {
     this._Star = this;
     this.viewport = viewport;
-    classie.removeClass(this.viewport, 'winded');
-    classie.addClass(this.viewport, 'unwinded');
     this.sub_menus = menu_Items;
     this.star = Snap.select('#star');
     // console.log(star);
