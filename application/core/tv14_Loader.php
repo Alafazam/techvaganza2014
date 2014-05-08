@@ -39,17 +39,17 @@ class tv14_Loader extends CI_Loader {
         }
     }
 	
-	public function opera($template_name, $vars = array(), $return = FALSE)
-    {
-        $content  = $this->view('opera/templates/header', $vars, $return);
-        $content .= $this->view('opera/'.$template_name, $vars, $return);
-        $content .= $this->view('opera/templates/footer', $vars, $return);
+	// public function opera($template_name, $vars = array(), $return = FALSE)
+ //    {
+ //        $content  = $this->view('opera/templates/header', $vars, $return);
+ //        $content .= $this->view('opera/'.$template_name, $vars, $return);
+ //        $content .= $this->view('opera/templates/footer', $vars, $return);
 
-        if ($return)
-        {
-            return $content;
-        }
-    }
+ //        if ($return)
+ //        {
+ //            return $content;
+ //        }
+ //    }
 	
 }
 

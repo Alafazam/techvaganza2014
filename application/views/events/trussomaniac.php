@@ -2,7 +2,12 @@
         <div class="page-header container-fluid">
           <h1 class="center">Truss-o-Maniac</h1>
         </div>
-        <div class="col glass"> 
+        <div class="col glass">
+			<div  style="float:right;max-width:100px">
+	        <!-- Check with php if user is registered -->
+	            <input id="reg_button"type="submit" name="submit" value="Register">
+	        </div>	
+
         	<div class="e_text">
 				
 				<p>The truss, a hollowed-out beam with the forces concentrated in a triangulated network of linear members, was apparently a Roman invention. No evidence of their theoretical understanding of it exists, but nevertheless they were able. Bending leads to compression in the top chords (or horizontal members), tension in the bottom chords, and either tension or compression in the vertical and diagonal members, depending on their orientation. Trusses are popular because they use a relatively small amount of material to carry.</p> 

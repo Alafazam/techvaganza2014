@@ -1,6 +1,6 @@
     <div id="events">
         <div class="page-header container-fluid">
-          <h1 class="center">Events</h1>
+          <h1 class="center">Events </h1>
         </div>
             <div class="">
                 <ul class="ca-menu">

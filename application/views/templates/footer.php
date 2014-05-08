@@ -42,39 +42,28 @@ var updateContent = function(stateObj) {
 };
 
 function init() {
-       
-
-
+    var dynamic = document.getElementById('dynamic');
     ajaxTriggerLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
             ev.preventDefault();
-            setTimeout(function(argument) {
             ajaxLoader.show();
-            },600);
             mlPushMenu._resetMenu();
-            var hash = trigger.href,
-            //     pat = /(\w+)(\/\w+)*/,
-            //     stateObject = {};
-            // console.log(hash.match(pat));
-                title = hash,
-                currentpath = window.location.pathname;
-                // if (currentpath==='/') {currentpath=''};
-            var ajaxUrl =  title+'/ajax',
-                newUrl =  title,
-                testURL = '/ajaxtest/creatives';
-                console.log("zdvsvc"+newUrl);
+            var title = trigger.href,
+                ajaxUrl =  title+'/ajax',
+                newUrl =  title;
             ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    content: data
-                };
-                updateContent(stateObject);                
+                    'content': dynamic.innerHTML,
+                    'url':newUrl,
+                    'oldurl':location.pathname
+                	};
+                updateContent({'content':data});                
+            	history.pushState(stateObject, title, newUrl);
                 star.wind();
                 setTimeout(function() {
-                    ajaxLoader.hide();
-                }, 2000);
-            history.pushState(stateObject, title, newUrl);
+                ajaxLoader.hide();
+                }, 1000);
             });
-
         });
     });
 }
@@ -83,41 +72,46 @@ init();
 
 
 function updateLinks() {
-    var content = document.getElementById('dynamic');
-    ajaxTriggerLevelLoading = [].slice.call(content.querySelectorAll('a.icallajax'));
+        
+    // if (document.getElementById('reg_button')) {
+    //     reg_button = document.getElementById('reg_button');
+    //     reg_button.onclick = function(ev) {
+    //     ev.preventDefault();
+    //     var loc = location.pathname.match(/^(\/\w+)+(\/\w+)+(\/\w+)$/);
+    //     // loc[0]==/events ,loc[1]=cat, loc[1]= event_name
+    //         if (reg_button.value==='Register') {
+    //             ajax.post(location.pathname+'register');
+    //         };
+    //     }
+    // };
+
+                // pat = /(\w+)(\/\w+)*/,
+
+
+    var dynamic = document.getElementById('dynamic');
+    ajaxTriggerLevelLoading = [].slice.call(dynamic.querySelectorAll('a.icallajax'));
     ajaxTriggerLevelLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
             ev.preventDefault();
-            setTimeout(function(argument) {
-                ajaxLoader.show();
-            }, 600);
+            ajaxLoader.show();
             mlPushMenu._resetMenu();
-            var hash = trigger.href,
-                // pat = /(\w+)(\/\w+)*/,
-                stateObject = {},
-                title = hash,
-            //     currentpath = window.location.pathname;
-            // if (currentpath === '/') {
-            //     currentpath = ''
-            // };
-            ajaxUrl = title + '/ajax',
-                newUrl =  title,
-                testURL = '/ajaxtest/creatives';
-            console.log(newUrl);
-            ajax.get(ajaxUrl, {}, function(data) {
+            var title = trigger.href,
+	            ajaxUrl = title + '/ajax',
+                newUrl =  title;
+    	        ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    content: data
+                    'content': dynamic.innerHTML,
+                	'url':newUrl,
+                    'oldurl':location.pathname
                 };
-                setTimeout(function(argument) {
-                    updateContent(stateObject); // body...
-                }, 600);
-                star.wind();
+                updateContent({'content':data}); 
+            	history.pushState(stateObject, title, newUrl);
+                // star.wind();
                 setTimeout(function() {
                     ajaxLoader.hide();
-                }, 2000);
+                }, 1000);
             });
 
-            history.pushState(stateObject, title, newUrl);
         });
     });
 }
@@ -132,18 +126,18 @@ function updateLinks() {
 window.onload = function() {
     var viewport = document.getElementById('viewport');
     if (window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome') {
-        classie.removeClass(viewport, 'winded');
-        classie.addClass(viewport, 'unwinded');
         star = new Star(viewport, menu_Items);
         window.star = star;
         star._unwind();
         //star._wind();
     }else{
-        classie.removeClass(viewport, 'unwinded');
-        classie.addClass(viewport, 'winded');
+        if (classie.hasClass(this.viewport, 'unwinded')) {
+        classie.removeClass(this.viewport, 'unwinded');
+        classie.addClass(this.viewport, 'winded');
+        };
         star = new Star(viewport, menu_Items);
-        window.star = star;
-        star.wind();
+        // window.star = star;
+        // star.wind();
     }
 
 
@@ -165,22 +159,17 @@ window.onload = function() {
 };
 // Update the page content when the popstate event is called.
 window.onpopstate  = function(event) {
-  console.log(event);
-  // console.log(event.stateObject.content);
-  // console.log(event.state.content);
+ // if (!event.state||window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome')
+  // {
+  	window.location.pathname = '/';
+  // }else{
+  	// ajaxLoader.show();
+   //  ajax.get(location.pathname+'/ajax', {}, function(data) {
+  	// updateContent({content:data});
+   //  })
+	// updateContent(event.state);
 
-  if (!event.state) {
-    star._unwind();
-    ajax.get('welcome/ajax', {}, function(data) {
-    updateContent({content:data});
-        });
-
-  // ajaxLoader.hide();
-
-  }else{
-  updateContent(event.state);
-  };
-
+  // };
 };
     </script>
     </body>
