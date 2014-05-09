@@ -116,6 +116,8 @@ function updateLinks() {
 
     <script>      
 window.onload = function() {
+	console.log("%cIf you can read this, you are cheating! D:", "color: red; font-size: x-large");
+
     var viewport = document.getElementById('viewport');
     if (window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome') {
         star = new Star(viewport, menu_Items);
@@ -160,7 +162,7 @@ window.onpopstate = function(event) {
                 updateContent({
                     'content': data
                 });
-                console.log("data called by ajax")
+				if (star.open) {star.wind()};
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 1000);

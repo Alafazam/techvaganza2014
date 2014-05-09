@@ -34,7 +34,6 @@ function Star(viewport, menu_Items) {
             this.fin.appendTo(this.g);
             this.fins[0] = this.fin;
         };
-
         if (i != 0) {
             this.fins[i] = this.fin.clone();
             // console.log(this.fins[i]);
@@ -43,7 +42,6 @@ function Star(viewport, menu_Items) {
                 class: 'fin',
             });
             this.fins[i].appendTo(this.g);
-
         };
         //  adding logo here
         this.logos[i] = this.star.select('#l' + i).attr({
@@ -90,12 +88,13 @@ Star.prototype._unwind = function(link) {
             self.wind(this);
             mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
-            ajaxLoader.show()
+
+            setTimeout(ajaxLoader.show(), 800);
+
             setTimeout(function(argument) {
                 ajax.get(ajaxUrl, {}, function(data) {
                     if (data) {
                         var stateObject = {
-                            'content': dynamic.innerHTML,
                             'url': newUrl,
                             'oldurl': location.pathname
                         };
@@ -108,7 +107,7 @@ Star.prototype._unwind = function(link) {
                     }, 1000);
 
                 });
-            }, 800);
+            }, 1300);
         });
 
 
@@ -195,22 +194,3 @@ hideMenuText = function(el) {
         el.parent().select('#svgTextElement').remove()
     };
 }
-window.onpopstate = function(event) {
-    if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
-        window.location.pathname = '/';
-    } else {
-        ajaxLoader.show();
-        window.setTimeout(function() {
-            ajax.get(location.pathname + '/ajax', {}, function(data) {
-                updateContent({
-                    'content': data
-                });
-                console.log("data called by ajax")
-                setTimeout(function() {
-                    ajaxLoader.hide();
-                }, 1000);
-            }, false);
-        }, 600);
-
-    };
-};
