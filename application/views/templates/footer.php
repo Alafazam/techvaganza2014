@@ -50,16 +50,15 @@ function init() {
             mlPushMenu._resetMenu();
             var title = trigger.href,
                 ajaxUrl =  title+'/ajax',
-                newUrl =  title;
-            ajax.get(ajaxUrl, {}, function(data) {
-                var stateObject = {
-                    'content': dynamic.innerHTML,
+                newUrl =  title;var stateObject = {
+                    // 'content': dynamic.innerHTML,
                     'url':newUrl,
                     'oldurl':location.pathname
                 	};
+            ajax.get(ajaxUrl, {}, function(data) {
                 updateContent({'content':data});                
             	history.pushState(stateObject, title, newUrl);
-                star.wind();
+                if (star.open) {star.wind()};
                 setTimeout(function() {
                 ajaxLoader.hide();
                 }, 1000);
@@ -100,7 +99,7 @@ function updateLinks() {
                 newUrl =  title;
     	        ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    'content': dynamic.innerHTML,
+                    // 'content': dynamic.innerHTML,
                 	'url':newUrl,
                     'oldurl':location.pathname
                 };
@@ -161,7 +160,8 @@ window.onload = function() {
 window.onpopstate  = function(event) {
  // if (!event.state||window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome')
   // {
-  	window.location.pathname = '/';
+  	console.log(event);
+  	// window.location.pathname = '/';
   // }else{
   	// ajaxLoader.show();
    //  ajax.get(location.pathname+'/ajax', {}, function(data) {
