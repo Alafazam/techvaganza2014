@@ -46,23 +46,28 @@ function init() {
     ajaxTriggerLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
             ev.preventDefault();
-            ajaxLoader.show();
             mlPushMenu._resetMenu();
-            var title = trigger.href,
+            ajaxLoader.show();
+			
+			window.setTimeout(function(){
+				var title = trigger.href,
                 ajaxUrl =  title+'/ajax',
-                newUrl =  title;var stateObject = {
-                    // 'content': dynamic.innerHTML,
-                    'url':newUrl,
-                    'oldurl':location.pathname
-                	};
-            ajax.get(ajaxUrl, {}, function(data) {
-                updateContent({'content':data});                
-            	history.pushState(stateObject, title, newUrl);
-                if (star.open) {star.wind()};
-                setTimeout(function() {
-                ajaxLoader.hide();
-                }, 1000);
-            });
+                newUrl =  title;
+				ajax.get(ajaxUrl, {}, function(data) {
+					var stateObject = {
+						//'content': dynamic.innerHTML,
+						'url':newUrl,
+						'oldurl':location.pathname
+						};
+					updateContent({'content':data});                
+					history.pushState(stateObject, title, newUrl);
+					star.wind();
+					setTimeout(function() {
+					ajaxLoader.hide();
+					}, 1000);
+				});
+			},600);
+            
         });
     });
 }
@@ -94,12 +99,13 @@ function updateLinks() {
             ev.preventDefault();
             ajaxLoader.show();
             mlPushMenu._resetMenu();
+			window.setTimeout(function(){
             var title = trigger.href,
 	            ajaxUrl = title + '/ajax',
                 newUrl =  title;
     	        ajax.get(ajaxUrl, {}, function(data) {
                 var stateObject = {
-                    // 'content': dynamic.innerHTML,
+                   // 'content': dynamic.innerHTML,
                 	'url':newUrl,
                     'oldurl':location.pathname
                 };
@@ -109,6 +115,8 @@ function updateLinks() {
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 1000);
+				
+			},600);
             });
 
         });

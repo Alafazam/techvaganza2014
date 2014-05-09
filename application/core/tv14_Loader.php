@@ -24,13 +24,20 @@ class tv14_Loader extends CI_Loader {
         $CI->load->library("user_agent");
 
         if($CI->agent->is_mobile()){
-        $content  = $this->view('mobile/templates/header', $vars, $return);
-        $content .= $this->view('mobile/'.$template_name, $vars, $return);
-        $content .= $this->view('mobile/templates/footer', $vars, $return);
+			if(preg_match('/^events/',$template_name)){
+				$content  = $this->view('mobile/templates/header', $vars, $return);
+				$content .= $this->view($template_name, $vars, $return);
+				$content .= $this->view('mobile/templates/footer', $vars, $return);				
+			}
+			else{
+				$content  = $this->view('mobile/templates/header', $vars, $return);
+				$content .= $this->view('mobile/'.$template_name, $vars, $return);
+				$content .= $this->view('mobile/templates/footer', $vars, $return);
+			}
         }else{
-        $content  = $this->view('templates/header', $vars, $return);
-        $content .= $this->view($template_name, $vars, $return);
-        $content .= $this->view('templates/footer', $vars, $return);
+			$content  = $this->view('templates/header', $vars, $return);
+			$content .= $this->view($template_name, $vars, $return);
+			$content .= $this->view('templates/footer', $vars, $return);
 		}
 		
         if ($return)

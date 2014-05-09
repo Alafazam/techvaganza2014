@@ -58,8 +58,8 @@
                                             <h2>CodeShode</h2>
                                             <a class="mp-back" href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/comingsoon">Android Anatomy</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Android Advance</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/androidanatomy">Android Anatomy</a></li>
+                                                <li><a class="icallajax" href="/events/codeshode/androidadv">Android Advance</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/gofixit">Go fix It</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/devardad">De vardad Ingeniero</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/codomania">CodoMania</a></li>
@@ -105,7 +105,7 @@
                                                 <li><a class="icallajax" href="/comingsoon">Transform It</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
-                                                <li><a class="icallajax" href="/events/fixerelixir/theestimator">The Estimator</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/estimator">The Estimator</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/traffixing">Traffixing</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Minimal motor</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/filterthelitre">Filter the Litre</a></li>
@@ -113,7 +113,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="/events/robonoids">Robonoid</a>
+                                        <a class="icon icon-camera " href="/events/robonoid">Robonoid</a>
                                         <div class="mp-level">
                                             <h2>Robonoid</h2>
                                             <a class="mp-back" href="#">back</a>
@@ -135,13 +135,15 @@
                                 <h2 class="icon icon-news">Workshops</h2>
                                 <a class="mp-back" href="#">back</a>
                                 <ul>
-                                    <li><a class="icallajax" href="/comingsoon">CS/IT</a></li>
+                                
+                                    <li><a href="#">Coming Soon</a></li>
+                                    <!--<li><a class="icallajax" href="/comingsoon">CS/IT</a></li>
                                     <li><a class="icallajax" href="/comingsoon">Mechanical</a></li>
                                     <li><a class="icallajax" href="/comingsoon">Electrical</a></li>
                                     <li><a class="icallajax" href="/comingsoon">Metallurgy</a></li>
                                     <li><a class="icallajax" href="/comingsoon">Civil</a></li>
                                     <li><a class="icallajax" href="/comingsoon">Chemical</a></li>
-                                    <li><a class="icallajax" href="/comingsoon">EC</a></li>
+                                    <li><a class="icallajax" href="/comingsoon">EC</a></li>-->
                                 </ul>
                             </div>
                         </li>
