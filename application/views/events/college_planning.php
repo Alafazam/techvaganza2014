@@ -15,7 +15,7 @@
 			
 			<div class="e_text">
 				<h2>Problem Statement</h2>
-				<p>A new NIT is going to be setup in a state. And the MHRD wants the college campus to be in the Centre of the city. So the area available is restricted. Area available is around 100000m2. 
+				<p>A new NIT is going to be setup in a state. And the MHRD wants the college campus to be in the Centre of the city. So the area available is restricted. Area available is around 100000m<sup>2</sup>. 
 				The college needs eight departments for a total of 2500 UG students, 400 PG students and 50 PHD students. Design a perfect plan for the construction of the college.
 				</p>
 			</div>

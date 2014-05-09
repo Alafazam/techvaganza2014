@@ -58,16 +58,20 @@ function init() {
 				};               
 			history.pushState(stateObject, title, newUrl);
 			
-			window.setTimeout(function(){
-				
+			window.setTimeout(function(){				
 				ajax.get(ajaxUrl, {}, function(data) {
-					
-					updateContent({'content':data}); 
-					star.wind();
+					var stateObject = {
+						//'content': dynamic.innerHTML,
+						'url':newUrl,
+						'oldurl':location.pathname
+						};
+					updateContent({'content':data});                
+					history.pushState(stateObject, title, newUrl);
+					if (star.open) {star.wind()};
 					setTimeout(function() {
 					ajaxLoader.hide();
 					}, 1000);
-				});
+				},false);
 			},600);
             
         });
@@ -78,22 +82,6 @@ init();
 
 
 function updateLinks() {
-        
-    // if (document.getElementById('reg_button')) {
-    //     reg_button = document.getElementById('reg_button');
-    //     reg_button.onclick = function(ev) {
-    //     ev.preventDefault();
-    //     var loc = location.pathname.match(/^(\/\w+)+(\/\w+)+(\/\w+)$/);
-    //     // loc[0]==/events ,loc[1]=cat, loc[1]= event_name
-    //         if (reg_button.value==='Register') {
-    //             ajax.post(location.pathname+'register');
-    //         };
-    //     }
-    // };
-
-                // pat = /(\w+)(\/\w+)*/,
-
-
     var dynamic = document.getElementById('dynamic');
     ajaxTriggerLevelLoading = [].slice.call(dynamic.querySelectorAll('a.icallajax'));
     ajaxTriggerLevelLoading.forEach(function(trigger) {
@@ -101,32 +89,31 @@ function updateLinks() {
             ev.preventDefault();
             ajaxLoader.show();
             mlPushMenu._resetMenu();
-		    var title = trigger.href,
-			  ajaxUrl = title + '/ajax',
-			  newUrl =  title;
-			var stateObject = {
-                   // 'content': dynamic.innerHTML,
-                	'url':newUrl,
-                    'oldurl':location.pathname
-           	}; 
-            history.pushState(stateObject, title, newUrl);
-			window.setTimeout(function(){
-           
-    	        ajax.get(ajaxUrl, {}, function(data) {
-                
-                updateContent({'content':data});
-                // star.wind();
-                setTimeout(function() {
-                    ajaxLoader.hide();
-                }, 1000);
-				
-			},600);
-            });
-
+            window.setTimeout(function() {
+                var title = trigger.href,
+                    ajaxUrl = title + '/ajax',
+                    newUrl = title;
+                ajax.get(ajaxUrl, {}, function(data) {
+                    var stateObject = {
+                        'url': newUrl,
+                        'oldurl': location.pathname
+                    };
+                    updateContent({
+                        'content': data
+                    });
+                    history.pushState(stateObject, title, newUrl);
+                    if (star.open) {
+                        star.wind()
+                    };
+                    setTimeout(function() {
+                        ajaxLoader.hide();
+                    }, 1000);
+                },false);
+            }, 600);
         });
-    });
-}
 
+    });
+};
 
 
 </script>
@@ -169,19 +156,25 @@ window.onload = function() {
 
 };
 // Update the page content when the popstate event is called.
-window.onpopstate  = function(event) {
- // if (!event.state||window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome')
-  // {
-  	window.location.pathname = '/';
-  // }else{
-  	// ajaxLoader.show();
-   //  ajax.get(location.pathname+'/ajax', {}, function(data) {
-  	// updateContent({content:data});
-   //  })
-	// updateContent(event.state);
+window.onpopstate = function(event) {
+    if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
+        window.location.pathname = '/';
+    } else {
+        ajaxLoader.show();
+        window.setTimeout(function() {
+            ajax.get(location.pathname + '/ajax', {}, function(data) {
+                updateContent({
+                    'content': data
+                });
+                console.log("data called by ajax")
+                setTimeout(function() {
+                    ajaxLoader.hide();
+                }, 1000);
+            }, false);
+        }, 600);
 
-  // };
+    };
 };
-    </script>
+</script>
     </body>
 </html>

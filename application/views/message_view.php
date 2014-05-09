@@ -1,4 +1,5 @@
                         <div class='center glass max-300'>
-                        	<p></p>
-                            <?=$message?>
+                        	<p class='clearfix'>
+                            	<?=$message?>
+                            </p>
                         </div>

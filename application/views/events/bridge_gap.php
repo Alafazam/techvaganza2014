@@ -1,11 +1,29 @@
-	<div id="content">
-        <div class="page-header container-fluid">
-          <h1 class="center">BRIDGE THE GORGE</h1>
-        </div>
-        <div class="col glass">
+	<div id="content">        
+        <div class="col glass">        	
+            <div class="page-header container-fluid">
+              <h1 class="center">BRIDGE THE GORGE</h1>
+            </div>
         	<div  style="float:right;max-width:100px">
-	        <!-- Check with php if user is registered -->
-	            <input id="reg_button"type="submit" name="submit" value="Register">
+            <?php
+				if($username){
+					if(!$isRegistered){
+			?>
+	            <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+            <?php
+					}else{
+			?>
+	            <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+            <?php
+					}
+				}else{
+			?>
+	            <a href="/login"><input type="submit" value="Register"></a>
+            <?php
+				}
+			?>
+            	
+            	
+            
 	        </div> 
         	<div class="e_text">
 				<h2>Purpose:</h2>
@@ -55,5 +73,6 @@
 					<li>Madan Mohan Sharma  :        9086962932</li>
 					<li>Abrar-ul-Hassan      :              8713982872</li>
 				</ul>
-		</div>		
+        	</div>
+		</div>	
     </div>

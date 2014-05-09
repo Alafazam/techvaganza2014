@@ -56,7 +56,7 @@ Class Event extends CI_Model
 		return $data;
 	}
 	
-	function register($eventid){		
+	function register($eventid){
 		if($session_data = $this->session->userdata('logged_in')){
 			
 			$query= $this->db->get_where('events_registration',array(

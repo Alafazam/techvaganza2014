@@ -16,9 +16,9 @@
 */
 
 
-$config['base_url']	= 'http://techvaganza.org/';
+//$config['base_url']	= 'http://techvaganza.org/';
 
-//$config['base_url']	= 'http://localhost/';
+$config['base_url']	= 'http://localhost/';
 
 
 /*

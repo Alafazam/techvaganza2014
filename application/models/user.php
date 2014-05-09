@@ -142,5 +142,22 @@ Class User extends CI_Model
 		}
 	}
 	
+	function isRegistered($event_id){
+		if($username = $this->getUsername()){
+			$query = $this->db 
+					-> where(array('username'=>$username,'event_id'=>$event_id))
+					-> limit(1)
+					-> get('events_registration');
+			if($query->num_rows()>=1){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+	
 }
 ?>

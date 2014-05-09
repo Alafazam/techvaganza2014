@@ -26,7 +26,6 @@ function Star(viewport, menu_Items) {
     this.g.attr({
         id: 'star_g',
     });
-    this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
     this.coming_soon = false;
 
     // for (var i = (this.sub_menus - 1); i >= 0; i--) {
@@ -64,6 +63,7 @@ function Star(viewport, menu_Items) {
 
 Star.prototype._unwind = function(link) {
     var self = this;
+    this.open = true;
     classie.removeClass(this.viewport, 'winded');
     classie.addClass(this.viewport, 'unwinded');
     for (var i = this.sub_menus - 1; i >= 0; i--) {
@@ -75,12 +75,10 @@ Star.prototype._unwind = function(link) {
             opacity: 1,
             'box-shadow': '5px'
         }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
-        //adding event handlers
-        // star.logo[j] = elem.select('#l' + j).remove();
+        //append logo
         this.fins[i].append(this.logos[i]);
-
+        //adding event handlers
         this.fins[i].click(function(event) {
-            // console.log(this);
             var fin = this,
                 id = fin.attr('id'),
                 myregExp = /\d/,
@@ -92,9 +90,8 @@ Star.prototype._unwind = function(link) {
             self.wind(this);
             mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
-
+            ajaxLoader.show()
             setTimeout(function(argument) {
-                ajaxLoader.show()
                 ajax.get(ajaxUrl, {}, function(data) {
                     if (data) {
                         var stateObject = {
@@ -123,25 +120,27 @@ Star.prototype._unwind = function(link) {
     };
 };
 //call this if fin is clicked
+
 Star.prototype.wind = function(el) {
+    this.open = false;
+    var color;
     if (el) {
         var fin = el,
             id = fin.attr('id'),
             myregExp = /\d/,
-            no = Number(myregExp.exec(id)[0]),
-            color = shades[no];
+            no = Number(myregExp.exec(id)[0]);
+        color = shades[no];
     };
-
     for (var j = this.sub_menus - 1; j >= 0; j--) {
         var elem = Snap.select('#g' + j);
         var aCallback = '';
         if (j == 0) {
-            aCallback = next;
+            aCallback = changeClasses;
         };
         if (Snap.select('#l' + j)) {
             this.logos[j] = Snap.select('#l' + j).remove();
-            // this.parent().select('#svgTextElement').remove();
         };
+
         elem.unhover();
         elem.unclick();
         elem.animate({
@@ -151,63 +150,25 @@ Star.prototype.wind = function(el) {
             120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
     };
 
-
-    function next() {
-
+    function changeClasses() {
         classie.removeClass(star.viewport, 'unwinded');
         classie.addClass(star.viewport, 'winded');
     }
-};
-
-Star.prototype._wind = function() {
-
-    for (var j = this.sub_menus - 1; j >= 0; j--) {
-        var elem = Snap.select('#g' + j);
-        var aCallback = '';
-        if (j == 0) {
-
-            aCallback = next;
-        };
-        if (Snap.select('#l' + j)) {
-            this.logos[j] = Snap.select('#l' + j).remove();
-            // this.parent().select('#svgTextElement').remove();
-        };
-        elem.unhover();
-        elem.unclick();
-        elem.animate({
-                'fill-opacity': 0.6,
-                transform: 'r(0,300,300)',
-            },
-            120 + (j * (360 / this.sub_menus)), mina.linear, aCallback);
-    };
-
-    function next() {
-        classie.removeClass(star.viewport, 'unwinded');
-        classie.addClass(star.viewport, 'winded');
-    }
-    //  TODO :bind click even handlers for open_next_menu
 };
 
 
 showMenuText = function(el) {
-
     var fin = el;
     id = fin.attr('id');
     el.animate({
-        // stroke: 'none',
         'fill-opacity': 1,
     }, 100);
-
     var myregExp = /\d/;
     no = Number(myregExp.exec(id)[0]);
-    // 
     leaf_rotaton = fin.transform()['globalMatrix'].split()['rotate'];
-    //console.log(leaf_rotaton);
-
     if (leaf_rotaton < 0) {
         leaf_rotaton += 360;
     };
-
     var svgTextElement = fin.text(530, 330, textArray[no]).attr({
         fill: '#fff',
         id: 'svgTextElement',
@@ -221,46 +182,35 @@ showMenuText = function(el) {
         svgTextElement.attr({
             'font-size': value * 30,
             opacity: value,
-            //transform: 'r(' + (-leaf_rotaton) * (value) + ',530,330)'
-
-        }); // Animate by font-size ?
+        });
     }, timing, mina.easeout);
 
 }
 
 hideMenuText = function(el) {
-
     el.animate({
-        // stroke: 'none',
         'fill-opacity': 0.8,
     }, 100);
     if (el.parent().select('#svgTextElement')) {
         el.parent().select('#svgTextElement').remove()
     };
-    // if (el.parent().parent().select('#filter')) {
-    //     el.parent().parent().select('#filter').remove()
-    // };
-
 }
+window.onpopstate = function(event) {
+    if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
+        window.location.pathname = '/';
+    } else {
+        ajaxLoader.show();
+        window.setTimeout(function() {
+            ajax.get(location.pathname + '/ajax', {}, function(data) {
+                updateContent({
+                    'content': data
+                });
+                console.log("data called by ajax")
+                setTimeout(function() {
+                    ajaxLoader.hide();
+                }, 1000);
+            }, false);
+        }, 600);
 
-
-
-// s = Snap(700, 620);
-
-// s.rect(0, 0, 700, 620).attr({
-//     fill : 'black',
-//     stroke : 'black'
-// });
-
-// s.rect(50, 200, 100, 400, 8, 8).attr({
-//     fill : 'green',
-//     transform : 'rotate(180, 100, 400)',
-//     filter : s.filter(Snap.filter.shadow(2, 3, 3, 'white'))
-// });
-
-// s.rect(250, 200, 100, 400, 8, 8).attr({
-//     fill : 'red',
-//     stroke:'black',
-//     transform : 'rotate(560, 350, 400)',
-//     filter : s.filter(Snap.filter.shadow(0.1, 0.1,2.4, 'white'))
-// });
+    };
+};
