@@ -26,7 +26,6 @@ function Star(viewport, menu_Items) {
     this.g.attr({
         id: 'star_g',
     });
-    this.pivots = [Math.round(this.fin.getBBox().w) / 2, Math.round(this.fin.getBBox().h + 1) / 2];
     this.coming_soon = false;
 
     // for (var i = (this.sub_menus - 1); i >= 0; i--) {
@@ -91,9 +90,8 @@ Star.prototype._unwind = function(link) {
             self.wind(this);
             mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
-
+            ajaxLoader.show()
             setTimeout(function(argument) {
-                ajaxLoader.show()
                 ajax.get(ajaxUrl, {}, function(data) {
                     if (data) {
                         var stateObject = {
@@ -142,9 +140,7 @@ Star.prototype.wind = function(el) {
         if (Snap.select('#l' + j)) {
             this.logos[j] = Snap.select('#l' + j).remove();
         };
-        if (this.parent().select('#svgTextElement')) {
-            this.parent().select('#svgTextElement').remove();
-        };
+
         elem.unhover();
         elem.unclick();
         elem.animate({
@@ -199,25 +195,22 @@ hideMenuText = function(el) {
         el.parent().select('#svgTextElement').remove()
     };
 }
+window.onpopstate = function(event) {
+    if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
+        window.location.pathname = '/';
+    } else {
+        ajaxLoader.show();
+        window.setTimeout(function() {
+            ajax.get(location.pathname + '/ajax', {}, function(data) {
+                updateContent({
+                    'content': data
+                });
+                console.log("data called by ajax")
+                setTimeout(function() {
+                    ajaxLoader.hide();
+                }, 1000);
+            }, false);
+        }, 600);
 
-
-
-// s = Snap(700, 620);
-
-// s.rect(0, 0, 700, 620).attr({
-//     fill : 'black',
-//     stroke : 'black'
-// });
-
-// s.rect(50, 200, 100, 400, 8, 8).attr({
-//     fill : 'green',
-//     transform : 'rotate(180, 100, 400)',
-//     filter : s.filter(Snap.filter.shadow(2, 3, 3, 'white'))
-// });
-
-// s.rect(250, 200, 100, 400, 8, 8).attr({
-//     fill : 'red',
-//     stroke:'black',
-//     transform : 'rotate(560, 350, 400)',
-//     filter : s.filter(Snap.filter.shadow(0.1, 0.1,2.4, 'white'))
-// });
+    };
+};
