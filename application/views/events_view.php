@@ -39,7 +39,7 @@
                     <li>
                         <a class="icallajax" href="/events/robonoid">
                             <div class="ca-content">
-                                <h2 class="ca-main">Robonoids</h2>
+                                <h2 class="ca-main">Robonoid</h2>
                                 <h3 class="ca-sub">Bot are coming</h3>
                             </div>
                         </a>

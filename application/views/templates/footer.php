@@ -48,11 +48,17 @@ function init() {
             ev.preventDefault();
             mlPushMenu._resetMenu();
             ajaxLoader.show();
-			
-			window.setTimeout(function(){
-				var title = trigger.href,
+			var title = trigger.href,
                 ajaxUrl =  title+'/ajax',
                 newUrl =  title;
+			var stateObject = {
+				//'content': dynamic.innerHTML,
+				'url':newUrl,
+				'oldurl':location.pathname
+				};               
+			history.pushState(stateObject, title, newUrl);
+			
+			window.setTimeout(function(){				
 				ajax.get(ajaxUrl, {}, function(data) {
 					var stateObject = {
 						//'content': dynamic.innerHTML,

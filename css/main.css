@@ -125,6 +125,11 @@
 	text-align:center;
 }
 
+.italic{
+	font:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+}
+
 .left{
 	float:left;
 }
@@ -188,6 +193,7 @@
     transition : rotateX(0deg);
 }   
 #viewport.winded{
+	position:fixed;
     left : 0;
     top : 0;
     margin-left: -356px;

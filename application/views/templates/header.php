@@ -96,7 +96,7 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="/events/fixerelixer">Fixer Elixir</a>
+                                        <a class="icon icon-camera " href="/events/fixerelixir">Fixer Elixir</a>
                                         <div class="mp-level">
                                             <h2>Fixer Elixir</h2>
                                             <a class="mp-back" href="#">back</a>

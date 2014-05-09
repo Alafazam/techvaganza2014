@@ -6,6 +6,7 @@ class Events extends CI_Controller {
   {
     parent::__construct();
 	$this->load->model('event','',TRUE);
+	$this->load->model('user');
   }
   
   function index(){
@@ -50,10 +51,14 @@ class Events extends CI_Controller {
 				  $this->event->unregister($eventid);
 			  }
 			  else if($register==="ajax"){
-				  $this->load->view('events/'.$event['view_name'],$event);
+				  $this->load->view('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['name']),
+					'username' => $this -> user ->getUsername()
+				));
 			  }
 			  else{
-				  $this->load->template('events/'.$event['view_name'],$event);
+				  $this->load->template('events/'.$event['view_name'],array('event'=>$event));
 			  }
 		  }
 		  else{
@@ -63,7 +68,7 @@ class Events extends CI_Controller {
   } 
   
   function creatives($eventid=0,$register=0){
-	  $name=__FUNCTION__;
+	   $name=__FUNCTION__;
 	  
 	  if($eventid==='ajax'){ 
 		  // Print all the events
@@ -89,10 +94,14 @@ class Events extends CI_Controller {
 				  $this->event->unregister($eventid);
 			  }
 			  else if($register==="ajax"){
-				  $this->load->view('events/'.$event['view_name'],$event);
+				  $this->load->view('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['name']),
+					'username' => $this -> user ->getUsername()
+				));
 			  }
 			  else{
-				  $this->load->template('events/'.$event['view_name'],$event);
+				  $this->load->template('events/'.$event['view_name'],array('event'=>$event));
 			  }
 		  }
 		  else{
@@ -102,84 +111,6 @@ class Events extends CI_Controller {
   } 
   
   function builder($eventid=0,$register=0){
-	 $name=__FUNCTION__;
-	  
-	  if($eventid==='ajax'){ 
-		  // Print all the events
-	  	//print_r($this->event->getEvents($name));
-		$events= $this->event->getEvents($name);
-		
-		$this->load->view('events_cat',array('events'=>$events));
-	  }
-	  else if($eventid===0){
-		$events= $this->event->getEvents($name);
-		
-		$this->load->template('events_cat',array('events'=>$events));
-	  }
-	  else{
-		  $event = $this->event->getEvent($name,$eventid);
-		  $len =sizeof($event);
-		  if($len){
-			  
-			  if($register==="register"){ // if user wants to register for that event
-				  $this->event->register($eventid);
-			  }
-			  else if($register==="unregister"){ // if user wants to unregister for that event
-				  $this->event->unregister($eventid);
-			  }
-			  else if($register==="ajax"){
-				  $this->load->view('events/'.$event['view_name'],$event);
-			  }
-			  else{
-				  $this->load->template('events/'.$event['view_name'],$event);
-			  }
-		  }
-		  else{
-			  show_404();
-		  }
-	  }
-  } 
-  
-  function fixerelixir($eventid=0,$register=0){
-	 $name=__FUNCTION__;
-	  
-	  if($eventid==='ajax'){ 
-		  // Print all the events
-	  	//print_r($this->event->getEvents($name));
-		$events= $this->event->getEvents($name);
-		
-		$this->load->view('events_cat',array('events'=>$events));
-	  }
-	  else if($eventid===0){
-		$events= $this->event->getEvents($name);
-		
-		$this->load->template('events_cat',array('events'=>$events));
-	  }
-	  else{
-		  $event = $this->event->getEvent($name,$eventid);
-		  $len =sizeof($event);
-		  if($len){
-			  
-			  if($register==="register"){ // if user wants to register for that event
-				  $this->event->register($eventid);
-			  }
-			  else if($register==="unregister"){ // if user wants to unregister for that event
-				  $this->event->unregister($eventid);
-			  }
-			  else if($register==="ajax"){
-				  $this->load->view('events/'.$event['view_name'],$event);
-			  }
-			  else{
-				  $this->load->template('events/'.$event['view_name'],$event);
-			  }
-		  }
-		  else{
-			  show_404();
-		  }
-	  }
-  } 
-  
-  function robonoid($eventid=0,$register=0){
 	  $name=__FUNCTION__;
 	  
 	  if($eventid==='ajax'){ 
@@ -201,15 +132,111 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  $this->load->template('message_view',array('message'=>'You have been registered!'));
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['event_id']),
+					'username' => $this -> user ->getUsername()
+				));
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['event_id']),
+					'username' => $this -> user ->getUsername()
+				));
+			  }
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
+  } 
+  
+  function fixerelixir($eventid=0,$register=0){
+		$name=__FUNCTION__;
+	  
+	  if($eventid==='ajax'){ 
+		  // Print all the events
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
 			  }
 			  else if($register==="ajax"){
-				  $this->load->view('events/'.$event['view_name'],$event);
+				  $this->load->view('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['name']),
+					'username' => $this -> user ->getUsername()
+				));
 			  }
 			  else{
-				  $this->load->template('events/'.$event['view_name'],$event);
+				  $this->load->template('events/'.$event['view_name'],array('event'=>$event));
+			  }
+		  }
+		  else{
+			  show_404();
+		  }
+	  }
+  } 
+  
+  function robonoid($eventid=0,$register=0){
+	   $name=__FUNCTION__;
+	  
+	  if($eventid==='ajax'){ 
+		  // Print all the events
+	  	//print_r($this->event->getEvents($name));
+		$events= $this->event->getEvents($name);
+		
+		$this->load->view('events_cat',array('events'=>$events));
+	  }
+	  else if($eventid===0){
+		$events= $this->event->getEvents($name);
+		
+		$this->load->template('events_cat',array('events'=>$events));
+	  }
+	  else{
+		  $event = $this->event->getEvent($name,$eventid);
+		  $len =sizeof($event);
+		  if($len){
+			  
+			  if($register==="register"){ // if user wants to register for that event
+				  $this->event->register($eventid);
+			  }
+			  else if($register==="unregister"){ // if user wants to unregister for that event
+				  $this->event->unregister($eventid);
+			  }
+			  else if($register==="ajax"){
+				  $this->load->view('events/'.$event['view_name'],array(
+				  	'event'=>$event,
+					'isRegistered'=>$this->user->isRegistered($event['name']),
+					'username' => $this -> user ->getUsername()
+				));
+			  }
+			  else{
+				  $this->load->template('events/'.$event['view_name'],array('event'=>$event));
 			  }
 		  }
 		  else{
