@@ -2,13 +2,25 @@
     $username= $this->session->userdata('logged_in');
     $username=$username['username'];
 ?><!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="en"><head>
         <title>Techvaganza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Techvaganza'13 is an annual national level technical Festival of National Institute of Technology, Srinagar">
+        <meta name="keywords" content="NIT,Srinagar,Techvaganza,National Institute of Technology, Techfest, Blind Alley,Sniperbot,Smack Down,The Arduous,Maglev,Storm Warriors,Transform It,Dirt,Mad 4 Cad,CE Brains,Town Planning, Brick Wall Erection,Structurite,Shot Circuit,Digitronics,FPGA,Fulcrum,Circuit Bizz,Vikings,MATLAB Forum,Botorace,IDP,T3RM1N4L_G33K,</Design>,algobat{i,c,s[101]},De'C-Coding,GoFixit,Animation,Techtonic,Quiz,Metallomania,P3,register" />
         <script src="/js/snap.svg-min.js"></script>
 		<script src="/js/modernizr.custom.js"></script>
 		<script src="/js/svgLoader.js"></script>
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#ff0000">    
+        
         <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="/css/icons.css" />	
@@ -31,32 +43,22 @@
 			<!-- mp-menu -->
             <nav id="mp-menu" class="mp-menu">
                 <div class="mp-level">
-                    <h2 class="icon icon-world">All Categories</h2>
-                    <a class="mp-back" href="#">back</a>
+                    <h2 class="icon-globe">Menu</h2>
+                    <a class="mp-back " href="#">back</a>
                     <ul>
-                        <li><a class="icon icon-shop" href="/">Home</a></li>
-                        <li><a class="icon icon-shop icallajax" href="/aboutus">About Us</a></li>                        
-                        <li><a class="icon icon-display" <?php 
-                                            if(isset($username))
-                                            {
-                                                echo    ' href="/home/logout">Logout';
-                                            }
-                                            else
-                                            {
-                                                echo    ' href="/login">Login';
-                                            }
-                                            ?></a></li>
-                        <li class="icon icon-arrow-left">
-                            <a class="icon icon-display" href="/events">Events</a>
+                        <li><a class="icon-home" href="/">Home</a></li>
+                        <li><a class="icon-map icallajax" href="/aboutus">About Us</a></li>
+                        <li class="icon-arrow-left">
+                            <a class="icon-calendar" href="/events">Events</a>
                             <div class="mp-level">
-                                <h2 class="icon icon-display">Events</h2>
-                                <a class="mp-back" href="#">back</a>
+                                <h2 class="icon-calendar">Events</h2>
+                                <a class="mp-back " href="#">back</a>
                                 <ul>
-                                    <li class="icon icon-arrow-left">
-                                        <a class="icon icon-phone " href="/events/codeshode">CodeShode</a>
+                                    <li class="icon-arrow-left">
+                                        <a class="icon-internet" href="/events/codeshode">CodeShode</a>
                                         <div class="mp-level">
                                             <h2>CodeShode</h2>
-                                            <a class="mp-back" href="#">back</a>
+                                            <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/codeshode/androidanatomy">Android Anatomy</a></li>
                                                 <li><a class="icallajax" href="/events/codeshode/androidadv">Android Advance</a></li>
@@ -68,10 +70,10 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-tv " href="/events/creatives">Creatives</a>
+                                        <a class="icon-brain" href="/events/creatives">Creatives</a>
                                         <div class="mp-level">
                                             <h2>Creatives</h2>
-                                            <a class="mp-back" href="#">back</a>
+                                            <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/creatives/captivedynax">Captive Dynax</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-separator</a></li>
@@ -82,10 +84,10 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="/events/builder">Builder</a>
+                                        <a class="icon-tools" href="/events/builder">Builder</a>
                                         <div class="mp-level">
                                             <h2>Builder</h2>
-                                            <a class="mp-back" href="#">back</a>
+                                            <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/builder/konstructor">Konstructor</a></li>
                                                 <li><a class="icallajax" href="/events/builder/bridgegap">Bridge the gorge</a></li>
@@ -96,12 +98,12 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="/events/fixerelixir">Fixer Elixir</a>
+                                        <a class="icon-coffee" href="/events/fixerelixir">Fixer Elixir</a>
                                         <div class="mp-level">
                                             <h2>Fixer Elixir</h2>
-                                            <a class="mp-back" href="#">back</a>
+                                            <a class="mp-back " href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/comingsoon">Junkyard</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/junkyard">Junkyard</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Transform It</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
@@ -113,10 +115,10 @@
                                         </div>
                                     </li>
                                     <li class="icon icon-arrow-left">
-                                        <a class="icon icon-camera " href="/events/robonoid">Robonoid</a>
+                                        <a class="icon-robo" href="/events/robonoid">Robonoid</a>
                                         <div class="mp-level">
                                             <h2>Robonoid</h2>
-                                            <a class="mp-back" href="#">back</a>
+                                            <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/comingsoon">Smack Down</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Rescue Bot</a></li>
@@ -129,11 +131,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="icon icon-arrow-left">
-                            <a class="icon icon-news" href="#">Workshops</a>
+                        <li class="icon-arrow-left">
+                            <a class="icon-hammer" href="#">Workshops</a>
                             <div class="mp-level">
-                                <h2 class="icon icon-news">Workshops</h2>
-                                <a class="mp-back" href="#">back</a>
+                                <h2 class="icon-hammer">Workshops</h2>
+                                <a class="mp-back " href="#">back</a>
                                 <ul>
                                 
                                     <li><a href="#">Coming Soon</a></li>
@@ -147,9 +149,19 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="icon icon-photo icallajax" href="/hospitality">Hospitality</a></li>
-                        <li><a class="icon icon-photo icallajax" href="/contacts">Contacts</a></li>
-                        <li><a class="icon icon-wallet icallajax" href="/comingsoon">Sponsors</a></li>
+                        <li><a class="icon-food icallajax" href="/hospitality">Hospitality</a></li>
+                        <li><a class="icon-address-book icallajax" href="/contacts">Contacts</a></li>
+                        <li><a class="icon-coin icallajax" href="/comingsoon">Sponsors</a></li> 
+                        <li><a class="icon-key" <?php 
+                                            if(isset($username))
+                                            {
+                                                echo    ' href="/home/logout">Logout';
+                                            }
+                                            else
+                                            {
+                                                echo    ' href="/login">Login';
+                                            }
+                                            ?></a></li>
         
                     </ul>
                         
@@ -475,4 +487,5 @@
                                         </svg>
                         </div>
                         <div id="dynamic">
+                        	
                         

@@ -1,13 +1,3 @@
-
-
-*,
-*:after,
-*::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 html, body, .container, .scroller {
 	height: 100%;
 }
@@ -258,7 +248,7 @@ a:hover, a:focus {
 	color: rgba(0,0,0,0.4);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .mp-menu.mp-overlap h2::before {
@@ -299,8 +289,13 @@ a:hover, a:focus {
 	padding: 0.7em 1em 0.7em 1.8em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	font-size: 1.2em;
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		color:#dddddd;
+		text-shadow: #2E5F09 0px 1px 5px;
+
+	font-size: 1.1em;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	-moz-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
@@ -311,7 +306,7 @@ a:hover, a:focus {
 	left: 10px;
 	z-index: -1;
 	color: rgba(0,0,0,0.6);
-	line-height: 3.5;
+	line-height: 3.0;
 }
 
 .mp-level > ul > li:first-child > a {
@@ -347,9 +342,9 @@ a:hover, a:focus {
 }
 
 .mp-back::after {
-	font-family: 'linecons';
+	font-family: 'icomoon';
 	position: absolute;
-	content: "\e037";
+	content: "\e612";
 	right: 10px;
 	font-size: 1.3em;
 	color: rgba(0,0,0,0.3);
@@ -481,7 +476,7 @@ a:hover, a:focus {
 }
 .ca-menu li{
     width: 200px;
-    height: 100px;/*300px;*/
+    height: 300px;
     overflow: hidden;
     position: relative;
     float:left;
@@ -502,13 +497,12 @@ a:hover, a:focus {
 .ca-menu li a{
     text-align: left;
     width: 100%;
-    height: 0; /*100%;*/
+    height: 100%;
     display: block;
     color: #333;
     position: relative;
 }
 .ca-icon{
-    font-family: 'WebSymbolsRegular', cursive;
     font-size: 60px;
     color: #333;
     text-shadow: 0px 0px 1px #333;
@@ -546,7 +540,11 @@ a:hover, a:focus {
     text-align:center;
     font-size: 14px;
     color: #666;
+    position: absolute;
+    bottom: 25px;
     line-height: 40px;
+    width: 100%;
+    left: 0px;
     opacity: 0.8;
     -webkit-transition: all 200ms linear;
     -moz-transition: all 200ms linear;
@@ -556,45 +554,57 @@ a:hover, a:focus {
 }
 .ca-menu li:hover{
     background-color: #000;
+    z-index:999;
+    -webkit-transform: scale(1.1);  
+    -moz-transform: scale(1.1);  
+    -ms-transform: scale(1.1);   
+    -o-transform: scale(1.1);   
+    transform: scale(1.1);  
 }
 .ca-menu li:hover .ca-icon{
-    color: #fff;
+    color: #ccff00;
     font-size: 90px;
+    opacity:0.7;
+}
+.ca-menu li:hover .ca-icon#heart{
+    -webkit-animation: smallToBig 900ms alternate infinite ease;
+    -moz-animation: smallToBig 900ms alternate infinite ease;
+    -ms-animation: smallToBig 900ms alternate infinite ease;
 }
 .ca-menu li:hover .ca-main{
-    color: #00ccff;
-    -webkit-animation: moveFromLeftRotate 300ms ease;
-    -moz-animation: moveFromLeftRotate 300ms ease;
-    -ms-animation: moveFromLeftRotate 300ms ease;
+    color: #ccff00;
+    -webkit-animation: smallToBig 300ms ease;
+    -moz-animation: smallToBig 300ms ease;
+    -ms-animation: smallToBig 300ms ease;
 }
 .ca-menu li:hover .ca-sub{
-    color: #fff;
+    color: #ccff00;
     -webkit-animation: moveFromBottom 500ms ease;
     -moz-animation: moveFromBottom 500ms ease;
     -ms-animation: moveFromBottom 500ms ease;
 }
-@-webkit-keyframes moveFromLeftRotate{
+@-webkit-keyframes smallToBig{
     from {
-        -webkit-transform: translateX(-100%) rotate(-90deg);
+        -webkit-transform: scale(0.1);
     }
     to {
-        -webkit-transform: translateX(0%) rotate(0deg);
+        -webkit-transform: scale(1);
     }
 }
-@-moz-keyframes moveFromLeftRotate{
+@-moz-keyframes smallToBig{
     from {
-        -moz-transform: translateX(-100%) rotate(-90deg);
+        -moz-transform: scale(0.1);
     }
     to {
-        -moz-transform: translateX(0%) rotate(0deg);
+        -moz-transform: scale(1);
     }
 }
-@-ms-keyframes moveFromLeftRotate{
+@-ms-keyframes smallToBig{
     from {
-        -ms-transform: translateX(-100%) rotate(-90deg);
+        -ms-transform: scale(0.1);
     }
     to {
-        -ms-transform: translateX(0%) rotate(0deg);
+        -ms-transform: scale(1);
     }
 }
 

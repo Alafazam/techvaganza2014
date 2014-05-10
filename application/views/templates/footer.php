@@ -121,9 +121,9 @@ function updateLinks() {
     <script src="/js/star.js"></script>
 
     <script>      
-window.onload = function() {
-	console.log("%cIf you can read this, you are cheating! D:", "color: red; font-size: x-large");
-
+// window.onload = function() {
+    window.addEventListener('onload',function () {
+        
     var viewport = document.getElementById('viewport');
     if (window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome') {
         star = new Star(viewport, menu_Items);
@@ -156,7 +156,7 @@ window.onload = function() {
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
 
-};
+)};
 // Update the page content when the popstate event is called.
 window.onpopstate = function(event) {
     if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
