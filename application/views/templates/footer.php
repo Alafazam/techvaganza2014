@@ -121,8 +121,8 @@ function updateLinks() {
     <script src="/js/star.js"></script>
 
     <script>      
-// window.onload = function() {
-    window.addEventListener('onload',function () {
+window.onload = function() {
+    // window.addEventListener('onload',function () {
         
     var viewport = document.getElementById('viewport');
     if (window.location.pathname==='/'||window.location.pathname==='index'||window.location.pathname==='index.php'||window.location.pathname==='welcome') {
@@ -156,7 +156,7 @@ function updateLinks() {
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
 
-)};
+};
 // Update the page content when the popstate event is called.
 window.onpopstate = function(event) {
     if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
