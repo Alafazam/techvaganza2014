@@ -1,14 +1,27 @@
 	<div id="content">
+        <div class="col glass"> 
         <div class="page-header container-fluid">
           <h1 class="center">Codo-Mania</h1>
         </div>
-        <div class="col glass"> 
-        	<div  style="float:right;max-width:100px">
-	        <!-- Check with php if user is registered -->
-	            <input id="reg_button"type="submit" name="submit" value="Register">
-	        </div> 
-
-        	<div class="e_text">
+        <div  style="float:right;max-width:100px">
+            <?php
+                if($username){
+                    if(!$isRegistered){
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+            <?php
+                    }else{
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+            <?php
+                    }
+                }else{
+            ?>
+                <a href="/login"><input type="submit" value="Register"></a>
+            <?php
+                }
+            ?>        
+        </div>         	<div class="e_text">
 				<p>Do you think you can code..?? Time to check..!! Get ready for the C/C++ event to test the depth of your programming skills…!!! So gear up with the knowledge and practice to become the  code master. Inside every large problem is a small problem struggling to get out. Of the time a programmer spends developing an application, a large portion is usually spent debugging it.Do you think you have the knowledge and passion to find those bugs? If your answer is yes, then this is your arena. Get down to those basics to find those pesky bugs before we need a pest control.</p>
 			</div>
 			<div class="e_text">

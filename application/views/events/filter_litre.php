@@ -1,8 +1,8 @@
 <div id="content">
+        <div class="col glass"> 
         <div class="page-header container-fluid">
           <h1 class="center">Filter the Litter</h1>
         </div>
-        <div class="col glass"> 
         	<div  style="float:right;max-width:100px">
 	        <!-- Check with php if user is registered -->
 	            <input id="reg_button"type="submit" name="submit" value="Register">

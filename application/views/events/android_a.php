@@ -1,8 +1,30 @@
 	<div id="content">
+        <div class="col glass">
         <div class="page-header container-fluid">
-          <h1 class="center">Android Anatomy</h1>
+          <h1 class="center">Android Advance</h1>
         </div>
-        <div class="col glass"> 
+        <div  style="float:right;max-width:100px">
+            <?php
+                if($username){
+                    if(!$isRegistered){
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+            <?php
+                    }else{
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+            <?php
+                    }
+                }else{
+            ?>
+                <a href="/login"><input type="submit" value="Register"></a>
+            <?php
+                }
+            ?>
+                
+                
+            
+            </div>
         	<div class="e_text">
                 <p>This is an Android Development Event being organized by Google Students Club under Google Students Ambassador Program. This Event will consist of both workshop and competition, with a chance to win cash and Google Goodies. The worskshop will be taken by a member of Google Developer Groups. There is a lot of experience to capture. Limited seats available. The winners of Android basic will get a direct entry to Android Advance.</p>
 				

@@ -1,13 +1,27 @@
 	<div id="content">
+        <div class="col glass">
         <div class="page-header container-fluid">
           <h1 class="center">Cheme separators</h1>
         </div>
-        <div class="col glass">
-        	<div  style="float:right;max-width:100px">
-	        <!-- Check with php if user is registered -->
-	            <input id="reg_button"type="submit" name="submit" value="Register">
-	        </div> 
- 
+        <div  style="float:right;max-width:100px">
+            <?php
+                if($username){
+                    if(!$isRegistered){
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+            <?php
+                    }else{
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+            <?php
+                    }
+                }else{
+            ?>
+                <a href="/login"><input type="submit" value="Register"></a>
+            <?php
+                }
+            ?>        
+        </div>  
         	<div class="e_text">
 				<h2>Industrial problems-</h2>
 				<p>In industries we don't get 100% pure product (raw material)

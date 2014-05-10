@@ -1,8 +1,27 @@
-	<div id="content">
+    <div id="content">
+        <div class="col glass">
         <div class="page-header container-fluid">
           <h1 class="center">Android Anatomy</h1>
         </div>
-        <div class="col glass"> 
+        <div  style="float:right;max-width:100px">
+            <?php
+                if($username){
+                    if(!$isRegistered){
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+            <?php
+                    }else{
+            ?>
+                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+            <?php
+                    }
+                }else{
+            ?>
+                <a href="/login"><input type="submit" value="Register"></a>
+            <?php
+                }
+            ?>        
+        </div> 
         	<div class="e_text">
 				
 				<p>Android Anatomy is a three day National Workshop cum competition under Techfest-2K14 at NIT Srinagar. Each day of the event is unique in terms of learning and competition.</p>
