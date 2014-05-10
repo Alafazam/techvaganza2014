@@ -1,9 +1,9 @@
 	<div id="content">
         <div class="col glass">   
         <div class="page-header container-fluid">
-          <h1 class="center">De-vardad inqineivce</h1>
+          <h1 class="center">De-vardad ingeniero</h1>
         </div>
-             <div  style="float:right;max-width:100px">
+             <div  style="float:right;max-width:100px;margin:20px">
             <?php
                 if($username){
                     if(!$isRegistered){

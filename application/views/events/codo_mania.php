@@ -3,7 +3,7 @@
         <div class="page-header container-fluid">
           <h1 class="center">Codo-Mania</h1>
         </div>
-        <div  style="float:right;max-width:100px">
+        <div  style="float:right;max-width:100px;margin:20px">
             <?php
                 if($username){
                     if(!$isRegistered){
