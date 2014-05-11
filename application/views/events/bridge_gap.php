@@ -21,6 +21,7 @@
 			?>
 	        </div> 
         	<div class="e_text">
+                <p></p>
 				<h2>Purpose:</h2>
 				<p>To bring your own innovative bridge model and create a revolution in field of civil engineering.</p>
 			</div>

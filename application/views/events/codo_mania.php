@@ -19,7 +19,8 @@
             <?php
                 }
             ?>        
-        </div>         	<div class="e_text">
+        </div>         	
+        <div class="e_text">
 				<p>Do you think you can code..?? Time to check..!! Get ready for the C/C++ event to test the depth of your programming skills…!!! So gear up with the knowledge and practice to become the  code master. Inside every large problem is a small problem struggling to get out. Of the time a programmer spends developing an application, a large portion is usually spent debugging it.Do you think you have the knowledge and passion to find those bugs? If your answer is yes, then this is your arena. Get down to those basics to find those pesky bugs before we need a pest control.</p>
 			</div>
 			<div class="e_text">

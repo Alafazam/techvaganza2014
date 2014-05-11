@@ -21,6 +21,7 @@
             ?>        
         </div>  
         	<div class="e_text">
+        	    <p></p>
 				<h2>Objective : </h2>
 				<p>As this event is based on the estimation skills and observation power which is the basic need in civil engineering, it judges the estimating ability of the participants for better accuracy and precision. 
 				The final round will judge the accuracy and speed of the engineers in various fields like traffic engineering and logistics while testing their mental strength and sharpness in different situations.</p> 

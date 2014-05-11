@@ -21,6 +21,7 @@
             ?>        
         </div>  
         	<div class="e_text">
+                <p></p>
 				<h2>Industrial problems-</h2>
 				<p>In industries we don't get 100% pure product (raw material)
 				<br>So separation plays an important role in a range of industrial processes.</p>

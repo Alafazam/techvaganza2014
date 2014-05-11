@@ -1,5 +1,6 @@
 var textArray = ['Events', 'Workshops', 'Hospitality', 'Contacts', 'Sponsors', 'Gallery']
 var shades = ['#fe9601', '#D92B48', '#00A03E', '#0241E2', '#ED00F4', '#00d2f1', '#6ABED8', '#D92B48', '#00A03E', '#0241E2', ]
+// var shades = ['#689257', '#BD8736', '#B1512E', '#6998AC', '#689257', '#BD8736', '#B1512E', '#6998AC']
 var menu_Items = 6;
 var timing = 170;
 var main_menu = ['events', 'workshops', 'hospitality', 'contacts', 'sponsors', 'gallery'];

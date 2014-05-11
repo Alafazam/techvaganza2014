@@ -21,6 +21,7 @@
             ?>        
         </div> 
         	<div class="e_text">
+                <p></p>
 				<h2>Event Description</h2>
 				<p>Introduction about the theme of the event:</p>
 				<p>Who is not aware about the miserable condition of Kashmir in winters?
@@ -35,9 +36,8 @@
 </li>
 				</ul>
 				<p>Even in the home with no energy and with energy loss too with time.
-The only solution is to preserve/capture this energy rather than looking for more energy resources-
-Thus solution to this engineering problem leaves us with:
-</p>
+				The only solution is to preserve/capture this energy rather than looking for more energy resources-
+				Thus solution to this engineering problem leaves us with:</p>
 <ul>
 	<li>How to improve overall thermal performance of a room, </li>
 	<li>Making it more comfortable in terms of heat resisting with respect to economical available resources and consequently less energy dependent.</li>

@@ -20,8 +20,8 @@
                 }
             ?>        
         </div> 
- 
         	<div class="e_text">
+        	    <p></p>
 				<h2>Introduction : </h2>
 				<p>Planners share a belief that something can be done about improving and maintaining our human-made and natural environments. The purpose of this event is to develop an appreciation of the role of proper planning in avoiding chaotic and destructive consequences of random construction methods.</p>
 			</div>

@@ -22,6 +22,7 @@
         </div>  
 
         	<div class="e_text">
+        	    <p></p>
 				<h2>Introduction : </h2>
 				<p>Participants in the event will be subjected to a challenge to make a sand filter that can clean translucent water to make it look transparent with naked eyes. Such a sand filter must filter water at fastest rate to be itself best of the rest.</p>
 			</div>

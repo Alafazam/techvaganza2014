@@ -21,6 +21,7 @@
             ?>        
         </div>  
         	<div class="e_text">
+        	    <p></p>
 				<h2>About : </h2>
 				<p>This event is about construction of masonry reservoir whose capacity should be 120 liters. It is a team event and each team will comprise of 2 or 3 members.</p>
 			</div>

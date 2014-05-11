@@ -166,6 +166,7 @@ window.onpopstate = function(event) {
         if (iamOpen) {
 
         }else{
+        // ajaxLoader.show();
         window.location.pathname='/';
         }
 

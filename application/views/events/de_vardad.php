@@ -22,6 +22,7 @@
         </div> 
  
         	<div class="e_text">
+        	    <p></p>
 			<h2>Introduction</h2>
 				<p>This event combines the idea of Electrical Engg., Electronics & Communication Engg. , Computer Science Engg. and Information Technology . It is mainly focus on practicability of a participant. It is complete in three stages or rounds.
 				</p>

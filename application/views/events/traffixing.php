@@ -21,6 +21,7 @@
             ?>        
         </div> 
         	<div class="e_text">
+        	    <p></p>
 				<h2>Problem Statement : </h2>
 				<p>To come up with an innovative solution for overcoming the traffic mess at Jehangir Chowk Intersection and make a model of the proposed solution. </p> 
 				

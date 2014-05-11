@@ -21,6 +21,7 @@
             ?>        
         </div> 
         	<div class="e_text">
+        	    <p></p>
 				<h2>Introduction : </h2>
 				<p>Civil engineering nurtures upon innovations pertaining sustainable development alongside this technocratic world. Eradicate your anxiety and construct any civil engineering model which will be admired by others. This competition will test the creativity, dexterity and aesthetic sense of the participants. </p>
 			</div>

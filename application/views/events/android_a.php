@@ -21,6 +21,7 @@
                 ?>
             </div>
         	<div class="e_text">
+                <p></p>
                 <h2>Intro</h2>
                 <p>This is an Android Development Event being organized by Google Students Club under Google Students Ambassador Program. This Event will consist of both workshop and competition, with a chance to win cash and Google Goodies. The worskshop will be taken by a member of Google Developer Groups. There is a lot of experience to capture. Limited seats available. The winners of Android basic will get a direct entry to Android Advance.</p>
 				

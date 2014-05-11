@@ -21,6 +21,7 @@
             ?>        
         </div> 
         	<div class="e_text">
+                <p></p>
 				<h2>Intro</h2>
 				<p>Android Anatomy is a three day National Workshop cum competition under Techfest-2K14 at NIT Srinagar. Each day of the event is unique in terms of learning and competition.</p>
                 <p>The Android Anatomy Event is a national event and will fetch technical brains from every nook and corner of the country. The event will serve as a good learning platform for beginners.</p> 

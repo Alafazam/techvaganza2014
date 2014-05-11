@@ -21,6 +21,7 @@
             ?>        
         </div> 
         	<div class="e_text">
+        	    <p></p>
 				<h2>Fix it...Win it!!</h2>
 				<p>The only thing worse than a troubled PC is a troubled PC without a troubleshooter. This event is for those of you, who have the knack, the understanding and the skills that go into troubleshooting the trouble.
 				</p>
