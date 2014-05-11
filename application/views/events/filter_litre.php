@@ -2,8 +2,6 @@
         <div class="col glass"> 
         <div class="page-header container-fluid">
           <h1 class="center">Filter the Litter</h1>
-        </div>
-        	<div  style="float:right;max-width:100px;margin:20px">
             <?php
                 if($username){
                     if(!$isRegistered){

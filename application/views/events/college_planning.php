@@ -2,22 +2,20 @@
         <div class="col glass">       
         <div class="page-header container-fluid">
           <h1 class="center">College Planning</h1>
-        </div>
-         <div  style="float:right;max-width:100px;margin:20px">
             <?php
                 if($username){
                     if(!$isRegistered){
             ?>
-                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+                <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
             <?php
                     }else{
             ?>
-                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+                <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
             <?php
                     }
                 }else{
             ?>
-                <a href="/login"><input type="submit" value="Register"></a>
+                <a class="reg_button_class" href="/login"><input type="submit" value="Register"></a>
             <?php
                 }
             ?>        

@@ -2,31 +2,29 @@
         <div class="col glass">
         <div class="page-header container-fluid">
           <h1 class="center">Truss-o-Maniac</h1>
-        </div>
-			        <div  style="float:right;max-width:100px;margin:20px">
             <?php
                 if($username){
                     if(!$isRegistered){
             ?>
-                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+                <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
             <?php
                     }else{
             ?>
-                <a href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+                <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
             <?php
                     }
                 }else{
             ?>
-                <a href="/login"><input type="submit" value="Register"></a>
+                <a class="reg_button_class" href="/login"><input type="submit" value="Register"></a>
             <?php
                 }
             ?>        
         </div> 
 
         	<div class="e_text">
-				
+				<h2>Intro</h2>
 				<p>The truss, a hollowed-out beam with the forces concentrated in a triangulated network of linear members, was apparently a Roman invention. No evidence of their theoretical understanding of it exists, but nevertheless they were able. Bending leads to compression in the top chords (or horizontal members), tension in the bottom chords, and either tension or compression in the vertical and diagonal members, depending on their orientation. Trusses are popular because they use a relatively small amount of material to carry.</p> 
-				
+			</div>	
 				
 			
 			<div class="e_text">
@@ -75,8 +73,7 @@
 				<h2>Prize Money</h2>
 				<ul>
 					<li>Winner Team–Rs.4000/-</li>
-					<li>First runner up team - Rs.3000/-
-</li>
+					<li>First runner up team - Rs.3000/-</li>
 					<li>Second runner up team-Rs.2000/-</li>
 				</ul>
 			</div>

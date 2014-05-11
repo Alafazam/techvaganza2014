@@ -18,7 +18,7 @@
 <script src="/js/mlpushmenu.js"></script>
 
 <script>
-
+    iamOpen=1;
 var mlPushMenu = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'));
 var body = document.body,
     ajaxPages = [],
@@ -34,7 +34,7 @@ var body = document.body,
 
 // Update the page content.
 var updateContent = function(stateObj) {
-	dynamic = document.getElementById('dynamic');
+    dynamic = document.getElementById('dynamic');
   if (stateObj) {
     dynamic.innerHTML = stateObj.content;
   }
@@ -42,6 +42,7 @@ var updateContent = function(stateObj) {
 };
 
 function init() {
+    
     var dynamic = document.getElementById('dynamic');
     ajaxTriggerLoading.forEach(function(trigger) {
         trigger.addEventListener('click', function(ev) {
@@ -58,7 +59,8 @@ function init() {
 				};               
 			history.pushState(stateObject, title, newUrl);
 			
-			window.setTimeout(function(){				
+			window.setTimeout(function(){
+                iamOpen=0;				
 				ajax.get(ajaxUrl, {}, function(data) {
 					var stateObject = {
 						//'content': dynamic.innerHTML,
@@ -159,8 +161,14 @@ window.onload = function() {
 };
 // Update the page content when the popstate event is called.
 window.onpopstate = function(event) {
+    
     if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
-        window.location.pathname = '/';
+        if (iamOpen) {
+
+        }else{
+        window.location.pathname='/';
+        }
+
     } else {
         ajaxLoader.show();
         window.setTimeout(function() {
@@ -168,13 +176,14 @@ window.onpopstate = function(event) {
                 updateContent({
                     'content': data
                 });
-				if (star.open) {star.wind()};
+                if (star.open) {star.wind()};
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 1000);
             }, false);
         }, 600);
-
+    
+        
     };
 };
 </script>

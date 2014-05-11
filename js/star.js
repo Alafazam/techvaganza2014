@@ -88,26 +88,29 @@ Star.prototype._unwind = function(link) {
             self.wind(this);
             mlPushMenu._resetMenu();
             this.parent().select('#svgTextElement').remove();
-
-            setTimeout(ajaxLoader.show(), 800);
+            iamOpen = 0;
 
             setTimeout(function(argument) {
-                ajax.get(ajaxUrl, {}, function(data) {
-                    if (data) {
-                        var stateObject = {
-                            'url': newUrl,
-                            'oldurl': location.pathname
+                ajaxLoader.show()
+                setTimeout(function(argument) {
+                    ajax.get(ajaxUrl, {}, function(data) {
+                        if (data) {
+                            var stateObject = {
+                                'url': newUrl,
+                                'oldurl': location.pathname
+                            };
                         };
-                    };
-                    dynamic.innerHTML = data;
-                    updateLinks();
-                    history.pushState(stateObject, main_menu[no], newUrl);
-                    setTimeout(function() {
-                        ajaxLoader.hide();
-                    }, 1000);
+                        dynamic.innerHTML = data;
+                        updateLinks();
+                        history.pushState(stateObject, main_menu[no], newUrl);
+                        setTimeout(function() {
+                            ajaxLoader.hide();
+                        }, 1000);
 
-                });
-            }, 1300);
+                    });
+                }, 1300);
+            }, 900);
+
         });
 
 

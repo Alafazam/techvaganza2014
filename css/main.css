@@ -381,6 +381,17 @@
 	
 }
 
+#content a.reg_button_class{
+float: right;
+max-width: 100px;
+
+}
+
+#content .page-header h1{
+    display: inline;
+    
+}
+
 /* Low End mobiles */
 
 @media all and (max-width:270px) {
