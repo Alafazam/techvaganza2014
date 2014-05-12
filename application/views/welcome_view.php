@@ -2,7 +2,7 @@
                                 <img id="techv" src="/images/tv.png"/>
                                 <div>
                                     <span>TECHVAGANZA</span>
-                                    <p>2013</p>
+                                    <p>2014</p>
                                 </div>                                        
                             </div><?php
 										if(isset($home)){

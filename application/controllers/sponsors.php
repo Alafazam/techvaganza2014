@@ -11,14 +11,14 @@ class Sponsors extends CI_Controller {
   function index(){
 	  
 	  	// print categories of all the events
-		$this->load->template('coming_soon_view');
+		$this->load->template('sponsors_view');
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }
   function ajax(){
 	  
 	  	// print categories of all the events
-		$this->load->view('coming_soon_view');
+		$this->load->view('sponsors_view');
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }

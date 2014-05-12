@@ -75,17 +75,19 @@
   text-shadow: none;
 }
 #tvza-timer .hexaflip-cube > div:nth-child(1n+1){
-  background-color: #069ad5;
+  background-color: #111;
+  color:#fff;
 }
 #tvza-timer .hexaflip-cube > div:nth-child(2n+2) {
-  background-color: #eee;
-  color: #069ad5;
+  background-color: #fff;
+  color: #111;
 }
 #tvza-timer .hexaflip-cube > div:nth-child(3n+3) {
-  background-color: #069ad5;
+  background-color: #111;
+  color:#fff;
 }
 #tvza-timer .hexaflip-cube > div:nth-child(4n+4){
-  background-color: #eee;
-  color: #069ad5;
+  background-color: #fff;
+  color: #111;
 }
 

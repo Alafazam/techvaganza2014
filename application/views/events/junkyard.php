@@ -1,17 +1,35 @@
 	<div id="content">
-        <div class="page-header container-fluid">
-          <h1 class="center">Junkyard</h1>
-        </div>
-        <p class="center italic">Cash your trash</p>
+        
         <div class="col glass"> 
+            <div class="page-header container-fluid">
+              <h1 class="center">Junkyard</h1>
+              <?php
+				  if($username){
+					  if(!$isRegistered){
+			  ?>
+				  <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+			  <?php
+					  }else{
+			  ?>
+				  <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+			  <?php
+					  }
+				  }else{
+			  ?>
+				  <a class="reg_button_class" href="/login"><input type="submit" value="Register"></a>
+			  <?php
+				  }
+			  ?>  
+        	  <p class="italic">Cash your trash</p>  
+            </div>
+            <hr />
         	<div class="e_text">				
 				<p>Are you ready to unleash your creative side?.  Ever heard of Best out of waste?</p>
                 <p>Ever thought about designing something useful from scrap? Well, here's your chance to create something innovative and useful from junk. </p>
 				<p>The event Junkyard is a fun engineering challenge where you need to summon your designing abilities and create a working model from the junk materials provided to you.</p>
                 <p>Here is a challenge that provides the perfect platform to test your creative and material management.</p>
 				<p>So, come on guys....What are you waiting for? Do you have what it takes to compete with the best?</p>
-				<p>Feeling excited.....Proceed to the registration link. </p>
-                <p>The Android Anatomy Event is a national event and will fetch technical brains from every nook and corner of the country. The event will serve as a good learning platform for beginners.</p>		
+				<p>Feeling excited.....Proceed to the registration link. </p>	
 			<div class="e_text">
 				<h2>EVENT FORMAT:</h2>
                 <ul>
