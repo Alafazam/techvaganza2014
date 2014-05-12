@@ -159,34 +159,42 @@ window.onload = function() {
     ga('send', 'pageview');
 
 };
-// Update the page content when the popstate event is called.
+// Used to detect initial (useless) popstate.
+// If history.state exists, assume browser isn't going to fire initial popstate.
+var popped = ('state' in window.history),
+    initialURL = location.href;
+// popstate handler takes care of the back and forward buttons
+
 window.onpopstate = function(event) {
-    
-    if (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome') {
-        if (iamOpen) {
+    // Ignore inital popstate that some browsers fire on page load
+    var initialPop = !popped && (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome')
+    popped = true
+    if (initialPop) return
 
-        }else{
-        // ajaxLoader.show();
-        window.location.pathname='/';
-        }
+    var state = event.state
 
-    } else {
+    if (state) {
+
         ajaxLoader.show();
         window.setTimeout(function() {
             ajax.get(location.pathname + '/ajax', {}, function(data) {
+               console.log('ajax called');
                 updateContent({
                     'content': data
                 });
-                if (star.open) {star.wind()};
+                if (star.open) {
+                    star.wind()
+                };
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 1000);
             }, false);
         }, 600);
-    
-        
-    };
-};
+
+    }
+
+}
+
 </script>
     </body>
 </html>
