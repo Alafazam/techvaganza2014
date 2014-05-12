@@ -30,7 +30,7 @@ padding-bottom: 0px;
               <li class="list-group-item"><a href="/events">Events</a>       </li>
               <li class="list-group-item"><a href="/comingsoon">Workshops</a>    </li>
               <li class="list-group-item"><a href="/comingsoon">Technofun</a>    </li>
-              <li class="list-group-item"><a href="/comingsoon">Hospitality</a>  </li>
+              <li class="list-group-item"><a href="/hospitality">Hospitality</a>  </li>
               <li class="list-group-item"><a href="/contacts">Contact</a>      </li>
 
             </ul>

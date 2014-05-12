@@ -1,12 +1,12 @@
 <?php
-	$username= $this->session->userdata('logged_in');
-	$username=$username['username'];
+  $username= $this->session->userdata('logged_in');
+  $username=$username['username'];
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Techvaganza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	    <link href="/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/login_form.css" />
     <link rel="stylesheet" type="text/css" href="/css/main-mobile.css" />
 
@@ -61,71 +61,10 @@ a:hover{text-decoration: none;}
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Creatives <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Heat Exchange</a></li>
-                      <li><a href="#">Captive Dynamics</a></li>
-                      <li><a href="#">Fulcrum</a></li>
-                      <li><a href="#">Witricity</a></li>
-                      <li><a href="#">Optro-Acoustics</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Builder <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Konstructure</a></li>
-                      <li><a href="#">Bridge the gap</a></li>
-                      <li><a href="#">College planning</a></li>
-                      <li><a href="#">Reser-where</a></li>
-                      <li><a href="#">Truss-o-maniac</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code-shode <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Android Anatomy</a></li>
-                      <li><a href="#">Android Advance</a></li>
-                      <li><a href="#">Go-fix-it</a></li>
-                      <li><a href="#">De varded Inginerio</a></li>
-                      <li><a href="#">CodoMania</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fixer Elixir<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Junkyard</a></li>
-                      <li><a href="#">Transform-it</a></li>
-                      <li><a href="#">Nirman</a></li>
-                      <li><a href="#">The Estimator</a></li>
-                      <li><a href="#">Traffixing</a></li>
-                      <li><a href="#">Minimal motor</a></li>
-                      <li><a href="#">Filter the litre</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Robonoid<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">SmackDown</a></li>
-                      <li><a href="#">Rescue-bot</a></li>
-                      <li><a href="#">Line-follower</a></li>
-                      <li><a href="#">Mystry-Box</a></li>
-                      <li><a href="#">Ember-sys</a></li>
-                    </ul>
-                  </li>
-              </ul>
-            </li>
-            <li><a href="#Hospitality">Hospitality</a></li>
+            <li ><a href="/events">Events</a></li>
+            <li><a href="/hospitality">Hospitality</a></li>
             <li><a href="/contacts">Contact</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Workshops<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Coming soon</a></li>
-              </ul>
-            </li>
+            <li><a href="/comingsoon">Workshops</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

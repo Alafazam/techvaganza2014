@@ -18,7 +18,6 @@
 <script src="/js/mlpushmenu.js"></script>
 
 <script>
-    iamOpen=1;
 var mlPushMenu = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'));
 var body = document.body,
     ajaxPages = [],
@@ -60,8 +59,7 @@ function init() {
 			history.pushState(stateObject, title, newUrl);
 			
 			window.setTimeout(function(){
-                iamOpen=0;				
-				ajax.get(ajaxUrl, {}, function(data) {
+            ajax.get(ajaxUrl, {}, function(data) {
 					var stateObject = {
 						//'content': dynamic.innerHTML,
 						'url':newUrl,
@@ -161,13 +159,14 @@ window.onload = function() {
 };
 // Used to detect initial (useless) popstate.
 // If history.state exists, assume browser isn't going to fire initial popstate.
-var popped = ('state' in window.history),
+var popped = ('state' in window.history  && window.history.state !== null),
     initialURL = location.href;
 // popstate handler takes care of the back and forward buttons
 
 window.onpopstate = function(event) {
+      // console.log(location.href);
     // Ignore inital popstate that some browsers fire on page load
-    var initialPop = !popped && (window.location.pathname === '/' || window.location.pathname === 'index' || window.location.pathname === 'index.php' || window.location.pathname === 'welcome')
+    var initialPop = !popped && location.href == initialURL
     popped = true
     if (initialPop) return
 
