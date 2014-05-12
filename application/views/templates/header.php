@@ -120,7 +120,7 @@
                                             <h2>Robonoid</h2>
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
-                                                <li><a class="icallajax" href="/comingsoon">Smack Down</a></li>
+                                                <li><a class="icallajax" href="/events/robonoid/smackdown">Smack Down</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Rescue Bot</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Line Follower</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Mystry Box</a></li>
@@ -151,7 +151,7 @@
                         </li>
                         <li><a class="icon-food icallajax" href="/hospitality">Hospitality</a></li>
                         <li><a class="icon-address-book icallajax" href="/contacts">Contacts</a></li>
-                        <li><a class="icon-coin icallajax" href="/comingsoon">Sponsors</a></li> 
+                        <li><a class="icon-coin icallajax" href="/sponsors">Sponsors</a></li> 
                         <li><a class="icon-key" <?php 
                                             if(isset($username))
                                             {

@@ -35,7 +35,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-	background:url(/images/bg.gif)#000 no-repeat;
+	background:#000 no-repeat;
 	background-position:bottom right;
 	background-attachment:fixed;
 	background-size:cover;
@@ -82,38 +82,28 @@
 
 #akt_content{
 	margin:80px 15px 15px 15px;
-	color:#eee;
+	color:#fff;
 }
 
 #akt_content h1{
-	text-shadow: 0 1px 0 #ccc, 
-               0 2px 0 #aaa,
-               0 3px 0 #777,
-               0 4px 0 #444,
-               0 6px 1px rgba(255,255,255,.1),
-               0 0 5px rgba(255,255,255,.1);
+	text-shadow: 0 1px 5px #888;
 }
 
 
 /* content  styling*/
-
-hr{
-	height:0;
-	border-top: 1px solid #CCC;
-	margin-bottom:40px;
-}
 
 #dynamic{
 	width:100%;
 }
 
 #dynamic #content{
-}
-
-#dynamic .col{
 	max-width:960px;
 	margin-left:auto;
-	margin-right:auto;	
+	margin-right:auto;
+}
+
+#content .col{
+	
 	padding:30px;
 }
 
@@ -306,6 +296,12 @@ hr{
 }
 
 
+.sponsor{
+	float:left;
+	margin:10px;
+}
+
+
 /* rules for Desktop Resolutions */
 
 @media all and (min-width: 960px) {
@@ -384,17 +380,6 @@ hr{
 		width:80% !important;
 	}
 	
-}
-
-#content a.reg_button_class{
-float: right;
-max-width: 100px;
-
-}
-
-#content .page-header h1{
-    display: inline;
-    
 }
 
 /* Low End mobiles */

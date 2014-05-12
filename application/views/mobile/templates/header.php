@@ -9,6 +9,7 @@
       <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/login_form.css" />
     <link rel="stylesheet" type="text/css" href="/css/main-mobile.css" />
+    <link rel="stylesheet" type="text/css" href="/css/icons.css" />
 
 <style type="text/css">
   body{
