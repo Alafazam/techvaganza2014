@@ -1,5 +1,5 @@
 <div id="content">
-        <div class="page-header container-fluid">
+        <div class="container-fluid">
           <h1 class="center">The Hosts</h1>
         </div>
         <div class="col glass">      

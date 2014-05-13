@@ -2,7 +2,7 @@
         
         <div class="col glass"> 
             <div class="page-header container-fluid">
-              <h1 class="center">Junkyard</h1>
+              <h1 class="center">Junkyard </h1><a href="/pdfs/smackdown.pdf" target="new"> [pdf]</a>
               <?php
 				  if($username){
 					  if(!$isRegistered){

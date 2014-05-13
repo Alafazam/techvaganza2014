@@ -128,6 +128,17 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    <li class="icon icon-arrow-left">
+                                        <a class="icon-football" href="/events/crossfire">Crossfire</a>
+                                        <div class="mp-level">
+                                            <h2>Crossfire</h2>
+                                            <a class="mp-back " href="#">back</a>
+                                            <ul>
+                                                <li><a class="icallajax" href="/events/crossfire/cs">Counter Strike 1.6</a></li>
+                                                <li><a class="icallajax" href="/events/crossfire/nfs">NFS-MW</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
