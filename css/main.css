@@ -57,7 +57,7 @@
     padding: 0 1em;
     color: #fff;
     text-decoration: none;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
 }
 
 .top_header a:hover {
@@ -69,6 +69,19 @@
     border-radius: 0 3px;
 
 }
+
+#date{
+	background: #AC0029;
+    color: #fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.8);
+    box-shadow: inset 0 1px 0 rgba(255,130,3,0.3),
+    inset 0 10px 10px rgba(180,100,2,0.1);
+    border-radius: 0 3px;
+    letter-spacing: 0.1em;
+	margin:0 5px;
+	padding:0 10px;
+}
+	
 
 .top_header span.right {
     float: right;
