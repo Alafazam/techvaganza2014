@@ -1,29 +1,29 @@
-<div id="content">
-	<div class="col glass">
-		<div class="page-header container-fluid">
-			<h1 class="center">Smackdown</h1>
-			<?php
-							if($username){
-								if(!$isRegistered){
-			?>
-			<a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
-			<?php
-					}else{
-			?>
-			<a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
-			<?php
-					}
-				}else{
-			?>
-			<a class="reg_button_class" href="/login"><input type="submit" value="Register"></a>
-			<?php
-				}
-			?>
-			<p class="italic">Crazy for fighting!!!</p>
-		</div>
-		<hr />
-		<div class="e_text">
-			<p>Experience the new kind "Clash of Bots". Design a robo having brute strength, cat like reflexe and thus be ready for the ultimate battle. This competition is to bring out your enthusiasm in the field of robotics through Smack down where you can show your creativity by designing a robot. This has ability to tackle another robot and having brute strength, cat-like reflexes combine to create the ultimate battle! <br />The purpose of this competition is to push, Throw, flip, drag or otherwise move your opponent out of a 1.6 meter diameter Circular ring within 3 minute. <br/>This competition is the most popular of the events both to watch and to participate in.</p>
+	<div id="content">        
+        <div class="col glass">
+            <div class="page-header container-fluid">
+              <h1 class="center">Smackdown </h1><a href="/pdfs/smackdown.pdf" target="new"> [pdf]</a>
+              <?php
+				  if($username){
+					  if(!$isRegistered){
+			  ?>
+				  <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/register"><input id="reg_button" type="submit" name="submit" value="Register"></a>
+			  <?php
+					  }else{
+			  ?>
+				  <a class="reg_button_class" href="/events/<?=$event['category']?>/<?=$event['event_id']?>/unregister"><input id="unreg_button" type="submit" name="submit" value="Unregister"></a>
+			  <?php
+					  }
+				  }else{
+			  ?>
+				  <a class="reg_button_class" href="/login"><input type="submit" value="Register"></a>
+			  <?php
+				  }
+			  ?>  
+              <p class="italic">Crazy for fighting!!!</p>
+            </div>
+            <hr />
+        	<div class="e_text">				
+				<p>Experience the new kind "Clash of Bots". Design a robo having brute strength, cat like reflexe and thus be ready for the ultimate battle. This competition is to bring out your enthusiasm in the field of robotics through Smack down where you can show your creativity by designing a robot. This has ability to tackle another robot and having brute strength, cat-like reflexes combine to create the ultimate battle! <br />The purpose of this competition is to push, Throw, flip, drag or otherwise move your opponent out of a 1.6 meter diameter Circular ring within 3 minute. <br/>This competition is the most popular of the events both to watch and to participate in.</p> 			
 			<div class="e_text">
 				<h2>THE PLOT:</h2>
 				<ul>

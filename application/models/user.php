@@ -159,5 +159,17 @@ Class User extends CI_Model
 		}
 	}
 	
+	function getEvents($event_id){
+		if($session_data = $this->session->userdata('logged_in')){
+			$query = $this->db 
+					-> where(array('username'=>$session_data['username'],'event_id'=>$event_id))
+					-> get('events_registration');
+			if($query->num_rows()>=1){
+				return $query;
+			}					
+		}
+		return false;
+	}
+	
 }
 ?>

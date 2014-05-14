@@ -1,5 +1,5 @@
       <div id="content">
-        <div class="page-header container-fluid">
+        <div class="container-fluid">
           <h1 class="center">Techvaganza 2014</h1>
         </div>
         <div class="col glass">

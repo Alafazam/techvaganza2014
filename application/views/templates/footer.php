@@ -165,12 +165,11 @@ window.onpopstate = function(event) {
     popped = true
 
 
-    if (!initialPop&&(window.location.pathname=='/'||window.location.pathname=='index'||window.location.pathname=='welcome'||window.location.pathname=='index.php'||window.location.pathname=='welcome.php')) 
-    {// window.location = '/';return  
+    if (!initialPop&& window.location.pathname=='/') 
+    { 
     ajaxLoader.show();
         window.setTimeout(function() {
             ajax.get('/welcome/ajax', {}, function(data) {
-               console.log('ajax called');
                 updateContent({
                     'content': data
                 });

@@ -104,7 +104,7 @@
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/fixerelixir/junkyard">Junkyard</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Transform It</a></li>
+                                                <li><a class="icallajax" href="/comingsoon">Rock it up</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/estimator">The Estimator</a></li>
@@ -121,10 +121,22 @@
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/robonoid/smackdown">Smack Down</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Rescue Bot</a></li>
+                                                <li><a class="icallajax" href="/events/robonoid/rescuebot">Rescue Bot</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Line Follower</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Mystry Box</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Embe-sys</a></li>
+                                                <li><a class="icallajax" href="/events/robonoid/embesys">Embesys</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="icon icon-arrow-left">
+                                        <a class="icon-football" href="/events/crossfire">Crossfire</a>
+                                        <div class="mp-level">
+                                            <h2>Crossfire</h2>
+                                            <a class="mp-back " href="#">back</a>
+                                            <ul>
+                                                <li><a class="icallajax" href="/events/crossfire/cs">Counter Strike 1.6</a></li>
+                                                <li><a class="icallajax" href="/events/crossfire/nfs">NFS-MW</a></li>
+                                                <li><a class="icallajax" href="/events/crossfire/fifa">FIFA 13</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -194,6 +206,11 @@
                                             }
                                             ?>
                                             </span></a></span>
+                    <?php
+                    	if(isset($home)){
+                    ?>	
+						<span id="date" class="right">24 to 26 May, 2014</span>
+                    <?php } ?>
                     </div>
                     <div class="block">
                         <a href="#" id="trigger" class="bt-menu-trigger"><span>Menu</span></a>
