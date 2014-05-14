@@ -5,19 +5,19 @@
                 <h2 class="center">Stay Tuned</h2>
 			</div>
             -->
-            <h1 class="center">Past Sponsors</h1>
+            <h1 class="center">Media Partners</h1>
         	<div class="e_text clearfix center">
                 <div class="sponsor">
-                	<img src="/images/sponsors/sbi.png" alt="State Bank of India" />
+                	<img src="/images/sponsors/jns.jpg" alt="JEO News Services" />
                 </div>
                 <div class="sponsor">
-                	<img src="/images/sponsors/aircel.png" alt="Aircel" />
+                	<img src="/images/sponsors/counsellor.jpg" alt="The Counsellor" />
                 </div>
                 <div class="sponsor">
-                	<img src="/images/sponsors/tribune.png" alt="The Tribune" />
+                	<img src="/images/sponsors/u4uvoice.png" alt="u4voice.com" />
                 </div>
                 <div class="sponsor">
-                	<img src="/images/sponsors/bigfm.jpg" alt="Big FM" />
+                	<img src="/images/sponsors/onlykashmir.png" alt="Only Kashmir" />
                 </div>
 			</div>	
     </div>

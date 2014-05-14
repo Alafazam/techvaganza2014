@@ -5,7 +5,7 @@
 <html lang="en"><head>
         <title>Techvaganza</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Techvaganza'13 is an annual national level technical Festival of National Institute of Technology, Srinagar">
+        <meta name="description" content="Techvaganza'14 is an annual national level technical Festival of National Institute of Technology, Srinagar">
         <meta name="keywords" content="NIT,Srinagar,Techvaganza,National Institute of Technology, Techfest, Blind Alley,Sniperbot,Smack Down,The Arduous,Maglev,Storm Warriors,Transform It,Dirt,Mad 4 Cad,CE Brains,Town Planning, Brick Wall Erection,Structurite,Shot Circuit,Digitronics,FPGA,Fulcrum,Circuit Bizz,Vikings,MATLAB Forum,Botorace,IDP,T3RM1N4L_G33K,</Design>,algobat{i,c,s[101]},De'C-Coding,GoFixit,Animation,Techtonic,Quiz,Metallomania,P3,register" />
         <script src="/js/snap.svg-min.js"></script>
 		<script src="/js/modernizr.custom.js"></script>
