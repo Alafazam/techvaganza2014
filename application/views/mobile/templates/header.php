@@ -66,6 +66,7 @@ a:hover{text-decoration: none;}
             <li><a href="/hospitality">Hospitality</a></li>
             <li><a href="/contacts">Contact</a></li>
             <li><a href="/comingsoon">Workshops</a></li>
+            <!-- <li><a href="/sponsors">Sponsors</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
