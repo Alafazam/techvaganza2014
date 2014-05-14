@@ -1,7 +1,7 @@
 <div id="content">
 	<div class="col glass">
 		<div class="page-header container-fluid">
-			<h1 class="center">Fifa 13</h1>
+			<h1 class="center">Fifa 13 </h1><a href="/pdfs/fifa13.pdf" target="new"> [pdf]</a>
 			<?php
 			if($username){
 			if(!$isRegistered){

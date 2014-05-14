@@ -24,9 +24,7 @@
 			<p></p>
 			<h2>Aim</h2>
 			<p class='italic'>To design a ecofriendly prototype car, which can attain a maximum velocity. </p>
-		</div>
-		
-		
+		</div>		
 		<div class="e_text">
 			<h2>Description &amp; rules-</h2>
 			<ul>

@@ -1,7 +1,7 @@
 <div id="content">
 	<div class="col glass">
 		<div class="page-header container-fluid">
-			<h1 class="center">Optocoustics</h1>
+			<h1 class="center">Optocoustics </h1><a href="/pdfs/optocoustics.pdf" target="new"> [pdf]</a>
 			<?php
 			if($username){
 			if(!$isRegistered){
