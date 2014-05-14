@@ -1,5 +1,8 @@
 <h1 class="center">My Profile</h1>
 <div id="profile" class="max-480 glass">
+<?php if($id==7){ ?>
+	<P>HI</P>
+<?php } ?>
 	<table>
     	<tr>
         	<td>First Name</td>

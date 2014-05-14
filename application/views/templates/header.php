@@ -76,10 +76,10 @@
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/creatives/captivedynax">Captive Dynax</a></li>
-                                                <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-separator</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-cars</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Fulcrum</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Witricity</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Optro-acoustics</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/optocoustics">Optocoustics</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -104,13 +104,13 @@
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/fixerelixir/junkyard">Junkyard</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Rock it up</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/rockitup">Rock-it Up</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/estimator">The Estimator</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/traffixing">Traffixing</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Minimal motor</a></li>
-                                                <li><a class="icallajax" href="/events/fixerelixir/filterthelitre">Filter the Litre</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/filterthelitre">Filter the Litter</a></li>
                                             </ul>
                                         </div>
                                     </li>

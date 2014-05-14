@@ -31,6 +31,7 @@ Class User extends CI_Model
 			$result = $query->result();
 			foreach($result as $row){
 				$data =array(
+					'id'=> $row->id,
 					'username' => $row->username,
 					'first_name' => $row->first_name,
 					'last_name' => $row->last_name,
