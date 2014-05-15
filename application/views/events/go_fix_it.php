@@ -75,7 +75,7 @@
 			<p>Duration: 1.5 hours</p>
 			<ul>
 				<li>This Round will test Hardware/software troubleshooting skills of the teams.</li>
-				<li>The participants will be given a 'dead' PC which doesn't seem to load the OS.</li>
+				<li>The participants will be given a 'dead' PC which doesn't seems to load the OS.</li>
 				<li>They have to deal with the:
 					# Start Up of the System
 					# Bootmgr

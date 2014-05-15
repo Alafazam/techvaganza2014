@@ -24,14 +24,14 @@
 		<div class="e_text">
 			<p></p>
 			<h2>Introduction</h2>
-			<p>This event combines the idea of Electrical Engg., Electronics & Communication Engg. , Computer Science Engg. and Information Technology . It is mainly focus on practicability of a participant. It is complete in three stages or rounds.
+			<p>This event combines the idea of Electrical Engg., Electronics & Communication Engg., Computer Science Engg. and Information Technology . It is mainly focus on practicability of a participant. It has three rounds.
 			</p>
 		</div>
 		
 		
 		<div class="e_text">
 			<h2>Design the Circuit</h2>
-			<p> This round is time based. In this round each participant or each group of participant providing some wire, circuit board, clock and all necessary equipment. With the help of provided thing they have to make circuit with following characteristics:
+			<p> This round is time based. In this round each participant or each group of participants will be provided with some wire, circuit board, clock and all necessary equipment. With the help of provided equipment they will have to make a circuit with the following characteristics:
 			</p>
 			<ul>
 				<li>Clock is running according to the circuit.
@@ -42,13 +42,13 @@
 		</div>
 		<div class="e_text">
 			<h2>Assemble the CPU</h2>
-			<p> This round is also time-based.   Each team have to assemble a CPU as fast as they can. Three teams are qualified for final round.
+			<p> This round is also time-based. Each team will have to assemble a CPU as fast as they can. Three teams will qualify for the final round.
 			</p>
 			
 		</div>
 		<div class="e_text">
-			<h2>Friend become your enemy</h2>
-			<p>  As the name suggest, you have to compete with your teammate for wining. Participant will have to complete with other participant to win. In this round, programming knowledge of each participant is tested.
+			<h2>Friends become your enemy</h2>
+			<p>  As the name suggest, you have to compete with your team-mate for winning. Participant will have to complete with other participant to win. In this round, programming knowledge of each participant is tested.
 			</p>
 			
 		</div>
@@ -56,9 +56,9 @@
 			<h2>Rules</h2>
 			<ul>
 				<li>Each team must contain maximum of two members.</li>
-				<li>In case of tie (for round 2), scores of previous round is tally for ranking.</li>
-				<li>You have to use items that are provide by us. You cannot use item of your own.</li>
-				<li>Involving in any illegal activity brings you for disqualification.</li>
+				<li>In case of tie (for round 2), scores of previous round will be used for ranking.</li>
+				<li>You have to use items that are provided by us. You cannot use any item of your own.</li>
+				<li>Involving in any illegal activity automatically disqualifies you.</li>
 			</ul>
 		</div>
 		<div class="e_text">

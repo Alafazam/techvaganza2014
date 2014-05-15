@@ -23,12 +23,12 @@
         <div class="e_text">
             <p></p>
             <h2>Intro</h2>
-            <p>This is an Android Development Event being organized by Google Students Club under Google Students Ambassador Program. This Event will consist of both workshop and competition, with a chance to win cash and Google Goodies. The worskshop will be taken by a member of Google Developer Groups. There is a lot of experience to capture. Limited seats available. The winners of Android basic will get a direct entry to Android Advance.</p>
+            <p>This is an Android Development Event being organized by Google Students Club under Google Students Ambassador Program. This event will consist of both workshop and competition, with a chance to win cash and Google Goodies. The worskshop will be taken by a member of Google Developer Groups. There is a lot of experience to capture. Limited seats available. The winners of Android basic will get a direct entry to Android Advance.</p>
             
         </div>
         <div class="e_text">
             <h2>Problem Statement</h2>
-            <p>The world of cell phones has been hugely transformed by the ascend of Android OS. We all have got a lot of stuff to remember these days. Remembering all of that stuff is not so easy. The aim of this competition is to create an android app that can manage your Notes. The application is supposed to let you create, edit and save your Notes. Any additional feature is a plus</p>
+            <p>The world of cell phones has been hugely transformed by the ascent of Android OS. We all have got lot of stuff to remember these days. Remembering all that stuff is not so easy. The aim of this competition is to create an android app that can manage your Notes. The application is supposed to let you create, edit and save your Notes. Any additional features are a plus.</p>
         </div>
         
         <div class="e_text">

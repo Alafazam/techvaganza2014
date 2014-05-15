@@ -23,21 +23,18 @@
 		<div class="e_text">
 			<p></p>
 			<h2>Event Description</h2>
-			<p>Introduction about the theme of the event:</p>
 			<p>Who is not aware about the miserable condition of Kashmir in winters?
 			</p>
 			<ul>
-				<li>No electricity
+				<li>No electricity!
 				</li>
-				<li>Snowfall all time, no day or night only snow and snow
+				<li>Snowfall all the time, it becomes hard to distinguish between day and night. 
 				</li>
-				<li>Conventional solutions or alternatives which need a drastic improvement</li>
-				<li>'Life' ceases to exist
+				<li>'Life' ceases to exist as we sit sit huddled in a corner near the fireplace 
 				</li>
 			</ul>
-			<p>Even in the home with no energy and with energy loss too with time.
-			The only solution is to preserve/capture this energy rather than looking for more energy resources-
-			Thus solution to this engineering problem leaves us with:</p>
+			<p>Even in the home with no light and increasing cold, the house loses energy in many forms.
+			The only solution is to preserve or capture this escaping energy rather than looking for more energy resources. Thus the questions this engineering problem leaves us with are:</p>
 			<ul>
 				<li>How to improve overall thermal performance of a room, </li>
 				<li>Making it more comfortable in terms of heat resisting with respect to economical available resources and consequently less energy dependent.</li>
@@ -54,9 +51,9 @@
 			<p>The judges will evaluate the model/project based on the following criteria :
 			</p>
 			<ul>
-				<li>background Study</li>
+				<li>Background Study</li>
 				<li>Originality of Work </li>
-				<li>Volume of work carried out
+				<li>Amount of work carried out
 				</li>
 				<li>Novelty in thinking
 				</li>
@@ -73,14 +70,14 @@
 			<ul>
 				<li>Only team entries are eligible. A team shall consist of maximum two members.
 				</li>
-				<li>Participants are not allowed to communicate between groups.
+				<li>Teams are not allowed to communicate between themselves.
 				</li>
 				<li>Replacement of any participant of a team is not allowed after registration.
 					
 				</li>
 				<li>The decision of quiz master will be final and binding.
 				</li>
-				<li>This event comprises two rounds.
+				<li>This event comprises of two rounds.
 				</li>
 			</ul>
 		</div>
