@@ -46,11 +46,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -95,11 +97,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -144,11 +148,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -193,11 +199,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -242,11 +250,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -291,11 +301,13 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
+				  redirect("/events/".$event['category']."/".$event['event_id']);
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));
+				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
 				  $this->load->view('events/'.$event['view_name'],array(
@@ -317,7 +329,6 @@ class Events extends CI_Controller {
 		  }
 	  }
   }
-
 }
 
 

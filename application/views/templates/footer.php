@@ -1,5 +1,5 @@
-                        </div>
-                    </div>
+                        </div><!-- /dynamic -->
+                    </div><!-- /Akt_content -->
                 </div><!-- /scroller-inner -->
                           
             </div><!-- /scroller -->
@@ -56,22 +56,17 @@ function init() {
 				'url':newUrl,
 				'oldurl':location.pathname
 				};               
-			history.pushState(stateObject, title, newUrl);
-			
-			window.setTimeout(function(){
-            ajax.get(ajaxUrl, {}, function(data) {
-					var stateObject = {
-						//'content': dynamic.innerHTML,
-						'url':newUrl,
-						'oldurl':location.pathname
-						};
-					updateContent({'content':data});                
-					history.pushState(stateObject, title, newUrl);
-					if (star.open) {star.wind()};
-					setTimeout(function() {
-					ajaxLoader.hide();
-					}, 1000);
-				},false);
+            
+            history.pushState(stateObject, title, newUrl);
+            window.setTimeout(function(){
+                ajax.get(ajaxUrl, {}, function(data) {
+                        updateContent({'content':data});                
+                        // history.pushState(stateObject, title, newUrl);
+                        if (star.open) {star.wind()};
+    					setTimeout(function() {
+    					ajaxLoader.hide();
+    					}, 1000);
+    				},false);
 			},600);
             
         });
@@ -89,19 +84,19 @@ function updateLinks() {
             ev.preventDefault();
             ajaxLoader.show();
             mlPushMenu._resetMenu();
+            var stateObject = {
+                'url': newUrl,
+                'oldurl': location.pathname
+            };
+            var title = trigger.href,
+                ajaxUrl = title + '/ajax',
+                newUrl = title;
+            history.pushState(stateObject, title, newUrl);
             window.setTimeout(function() {
-                var title = trigger.href,
-                    ajaxUrl = title + '/ajax',
-                    newUrl = title;
                 ajax.get(ajaxUrl, {}, function(data) {
-                    var stateObject = {
-                        'url': newUrl,
-                        'oldurl': location.pathname
-                    };
                     updateContent({
                         'content': data
                     });
-                    history.pushState(stateObject, title, newUrl);
                     if (star.open) {
                         star.wind()
                     };
@@ -168,7 +163,27 @@ window.onpopstate = function(event) {
     // Ignore inital popstate that some browsers fire on page load
     var initialPop = !popped && location.href == initialURL
     popped = true
-    if (initialPop) return
+
+
+    if (!initialPop&& window.location.pathname=='/') 
+    { 
+    ajaxLoader.show();
+        window.setTimeout(function() {
+            ajax.get('/welcome/ajax', {}, function(data) {
+                updateContent({
+                    'content': data
+                });
+                if (!star.open) {
+                    star._unwind()
+                };
+                eval(document.getElementById("runscript").innerHTML);
+                setTimeout(function() {
+                    ajaxLoader.hide();
+                }, 1000);
+            }, false);
+        }, 600);
+    }
+    if (initialPop) return;
 
     var state = event.state
 

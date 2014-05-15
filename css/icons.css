@@ -30,6 +30,48 @@
 	-moz-osx-font-smoothing: grayscale;
 	
 }
+.icon-witricity:before {
+	content: "\e613";
+}
+.icon-smack_down:before {
+	content: "\e614";
+}
+.icon-Robotics:before {
+	content: "\e615";
+}
+.icon-reserwhere:before {
+	content: "\e616";
+}
+.icon-optocoustics:before {
+	content: "\e617";
+}
+.icon-nirmaan:before {
+	content: "\e618";
+}
+.icon-minimal_motor:before {
+	content: "\e619";
+}
+.icon-line_follower:before {
+	content: "\e61a";
+}
+.icon-konstructor:before {
+	content: "\e61b";
+}
+.icon-embesys:before {
+	content: "\e61c";
+}
+.icon-captive_dynax:before {
+	content: "\e61d";
+}
+.icon-bridge_gap:before {
+	content: "\e61e";
+}
+.icon-android_b:before {
+	content: "\e61f";
+}
+.icon-android_a:before {
+	content: "\e620";
+}
 .icon-football:before {
 	content: "\e606";
 }
@@ -41,6 +83,9 @@
 }
 .icon-internet:before {
 	content: "\e602";
+}
+.icon-facebook:before {
+	content: "\e621";
 }
 .icon-coffee:before {
 	content: "\e603";
@@ -56,6 +101,9 @@
 }
 .icon-coin:before {
 	content: "\e608";
+}
+.icon-phone:before {
+	content: "\e624";
 }
 .icon-address-book:before {
 	content: "\e609";
@@ -77,6 +125,15 @@
 }
 .icon-globe:before {
 	content: "\e60f";
+}
+.icon-close:before {
+	content: "\e622";
+}
+.icon-checkmark:before {
+	content: "\e623";
+}
+.icon-codo_mania:before {
+	content: "\e610";
 }
 .icon-arrow-right:before {
 	content: "\e612";

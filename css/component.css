@@ -584,6 +584,27 @@ a:hover, a:focus {
     -moz-animation: moveFromBottom 500ms ease;
     -ms-animation: moveFromBottom 500ms ease;
 }
+
+/* my-events */
+
+.me-event{
+	padding:10px;
+	border:0;
+	border-radius:8px;
+	background:#0C0;
+	margin:10px;
+}
+
+#my-events .me-icon{
+	display:inline-block;
+	font-size:24px;
+}
+
+.me-content{
+	display:inline-block;
+}
+
+
 @-webkit-keyframes smallToBig{
     from {
         -webkit-transform: scale(0.1);

@@ -12,9 +12,8 @@ class Home extends CI_Controller {
   {
     if($this->session->userdata('logged_in'))
     {
-		//$this->load->model('event','',TRUE);
-		$this->profile();
-	  	//print_r($this->event->getRegistrations('codomania'));
+		$events= $this->user->getEvents('codomania')->result_array();
+		$this->load->template('my_events',array('events'=>$events));
     }
     else
     {
@@ -92,6 +91,17 @@ class Home extends CI_Controller {
 	}
 	  
   }
+  
+  
+  function registrations(){
+	  if($user= $this->user->getUser()){
+		  if($user['special']){
+	  		$registrations = $this->event->getRegistrations();
+		  }
+	  }
+  }
+  
+  
   
   	function _check_phone($phone)
 	{

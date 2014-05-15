@@ -1,8 +1,16 @@
 <h1 class="center">My Profile</h1>
-<div id="profile" class="max-480 glass">
-<?php if($id==7){ ?>
-	<P>HI</P>
+<?php 
+$winners = array(1,200,300,500,750,1000,5000);
+
+if(in_array($id, $winners)){ ?>
+	<div class="max-480 glass" style="background:#001141">
+    	<p class="clearfix winner center">Congrats, you are <?=$id?>th User on our website.<br />
+    	You have won a gift voucher.<br />
+        Please, contact Hospitality team to claim your Voucher<br />
+        Phone: <a href="tel:07298470136">+917298470136</a></p>
+    </div>
 <?php } ?>
+<div id="profile" class="max-480 glass">
 	<table>
     	<tr>
         	<td>First Name</td>

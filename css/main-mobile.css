@@ -39,6 +39,13 @@ max-width: 750px;
   margin-right:auto;
 }
 
+.list-group{
+	margin:10px !important;
+}
+
+.winner{
+	font-size:1.1em;
+}
 
 #profile{
 	padding:20px;
@@ -167,7 +174,6 @@ a:hover,a:active,a:visited{
 
 .ca-menu{
     padding:15px !important;
-    margin:20px auto;
     width: 100%;
 	max-width:500px;
 }
@@ -206,7 +212,8 @@ a:hover,a:active,a:visited{
     position: relative;
 }
 .ca-icon{
-    font-size: 60px;
+    font-size: 60px;	
+    color: #333;
     text-shadow: 0px 0px 1px #333;
     line-height: 90px;
     position: absolute;

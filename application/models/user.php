@@ -41,7 +41,8 @@ Class User extends CI_Model
 					'batch' => $row->batch,
 					'branch' => $row->branch,
 					'gender' => $row->gender,
-					'accomodation' => $row->accomodation
+					'accomodation' => $row->accomodation,
+					'special' => $row->special
 				);
 			}
 			return $data;
@@ -160,11 +161,14 @@ Class User extends CI_Model
 		}
 	}
 	
-	function getEvents($event_id){
+	function getEvents($page=0){
 		if($session_data = $this->session->userdata('logged_in')){
 			$query = $this->db 
-					-> where(array('username'=>$session_data['username'],'event_id'=>$event_id))
-					-> get('events_registration');
+					-> select('events.event_id,view_name,description,name,category,events.time')
+					-> from('events_registration')
+					-> join('events','events_registration.event_id=events.event_id')
+					-> where(array('username'=>$session_data['username']))
+					-> get();
 			if($query->num_rows()>=1){
 				return $query;
 			}					

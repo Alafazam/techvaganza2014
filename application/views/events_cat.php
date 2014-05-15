@@ -8,6 +8,7 @@
 						foreach( $events as $event){
 					?>                    
                     	<li class="ca-menu li">
+                        	<span class="ca-icon" ><i class="icon-<?=$event['view_name']?>"></i></span>
                             <a class="icallajax" href="<?php 
 							
 							if (file_exists(APPPATH."views/events/".$event['view_name'].".php"))
