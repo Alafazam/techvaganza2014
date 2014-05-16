@@ -82,7 +82,7 @@ Class Event extends CI_Model
 	}
 	
 	function getRegistrations($eventid){
-		$query = $this->db->select('*')
+		$query = $this->db->select('first_name,last_name,batch,branch,college,email,cell,gender')
 		->from('events_registration')
 		->join('users','events_registration.username=users.username')
 		->where(array('event_id'=>$eventid))->get();

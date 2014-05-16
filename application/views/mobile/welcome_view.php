@@ -25,6 +25,13 @@ background: #330F0F;
   <div class="nav nav-tabs nav-justified">
     <ul class="list-group center">
       <li class="list-group-item"><a href="/">Home</a>         </li>
+      <?php 
+			if(isset($username))
+			{
+				echo    '<li><a class="list-group-item" href="/home">My Dashboard</a></li>';
+			}
+			
+		?>
       <li class="list-group-item"><a href="/aboutus">About Us</a>      </li>
       <li class="list-group-item"><a href="/events">Events</a>       </li>
       <li class="list-group-item"><a href="/comingsoon">Workshops</a>    </li>

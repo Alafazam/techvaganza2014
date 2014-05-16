@@ -59,6 +59,13 @@ $username=$username['username'];
          <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
+            <?php 
+				if(isset($username))
+				{
+					echo    '<li><a href="/home">My Dashboard</a></li>';
+				}
+				
+			?>
             <li class="dropdown">
               <a href="/events" class="dropdown-toggle" data-toggle="dropdown">Events <span class="caret"></span></a>
               <ul class="dropdown-menu">

@@ -6,14 +6,22 @@ class Home extends CI_Controller {
   {
     parent::__construct();
 	$this->load->model('user','',TRUE);
+	$this->load->model('event','',TRUE);
   }
 
   function index()
   {
     if($this->session->userdata('logged_in'))
     {
-		$events= $this->user->getEvents('codomania')->result_array();
-		$this->load->template('my_events',array('events'=>$events));
+		$events= $this->user->getEvents();
+		$user=$this->user->getUser();
+		if($events){
+			$this->load->template('my_events',array('events'=>$events->result_array(),'user'=>$user));
+		}
+		else{
+			$user['empty'] = "yes";
+			$this->load->template('profile_view',$user);
+		}
     }
     else
     {
@@ -96,8 +104,19 @@ class Home extends CI_Controller {
   function registrations(){
 	  if($user= $this->user->getUser()){
 		  if($user['special']){
-	  		$registrations = $this->event->getRegistrations();
+	  		$registrations = $this->event->getRegistrations($user['special']);
+			if($registrations->num_rows()>=1){
+				$this->load->template('my_registrations',array('users'=>$registrations->result_array(),'user'=>$user));
+			}
+			else
+				$this->load->template('message_view',array('message'=>'No registrations Yet!'));
 		  }
+		  else{
+		  	show_404();
+	  	  }
+	  }
+	  else{
+		  show_404();
 	  }
   }
   

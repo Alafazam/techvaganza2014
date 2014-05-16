@@ -47,6 +47,13 @@
                     <a class="mp-back " href="#">back</a>
                     <ul>
                         <li><a class="icon-home" href="/">Home</a></li>
+                        <?php 
+							if(isset($username))
+							{
+								echo    '<li><a class="icon-internet" href="/home">My Dashboard</a></li>';
+							}
+							
+                        ?>
                         <li><a class="icon-map icallajax" href="/aboutus">About Us</a></li>
                         <li class="icon-arrow-left">
                             <a class="icon-calendar" href="/events">Events</a>
@@ -77,8 +84,9 @@
                                             <ul>
                                                 <li><a class="icallajax" href="/events/creatives/captivedynax">Captive Dynax</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/chemeseparator">Cheme-cars</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/heatexchanger">Heat Exchanger</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Fulcrum</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Witricity</a></li>
+                                                <li><a class="icallajax" href="/events/creatives/witricity">Witricity</a></li>
                                                 <li><a class="icallajax" href="/events/creatives/optocoustics">Optocoustics</a></li>
                                             </ul>
                                         </div>
@@ -105,11 +113,10 @@
                                             <ul>
                                                 <li><a class="icallajax" href="/events/fixerelixir/junkyard">Junkyard</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/rockitup">Rock-it Up</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Sanrachna</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Nirman</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/nirmaan">Nirmaan</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/estimator">The Estimator</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/traffixing">Traffixing</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Minimal motor</a></li>
+                                                <li><a class="icallajax" href="/events/fixerelixir/minimalmotor">Minimal motor</a></li>
                                                 <li><a class="icallajax" href="/events/fixerelixir/filterthelitre">Filter the Litter</a></li>
                                             </ul>
                                         </div>
@@ -123,7 +130,7 @@
                                                 <li><a class="icallajax" href="/events/robonoid/smackdown">Smack Down</a></li>
                                                 <li><a class="icallajax" href="/events/robonoid/rescuebot">Rescue Bot</a></li>
                                                 <li><a class="icallajax" href="/comingsoon">Line Follower</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Mystry Box</a></li>
+                                                <li><a class="icallajax" href="/events/robonoid/mysterybox">Mystry Box</a></li>
                                                 <li><a class="icallajax" href="/events/robonoid/embesys">Embesys</a></li>
                                             </ul>
                                         </div>

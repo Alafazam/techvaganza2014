@@ -2,11 +2,14 @@
 session_start(); //we need to call PHP's session object to access it through CI
 class Events extends CI_Controller {
 
+	private	$r = "";
   function __construct()
   {
     parent::__construct();
 	$this->load->model('event','',TRUE);
 	$this->load->model('user');
+	if(isset($_GET['r']))
+		$this->r=$_GET['r'];
   }
   
   function index(){
@@ -46,12 +49,18 @@ class Events extends CI_Controller {
 			  
 			  if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
@@ -95,14 +104,20 @@ class Events extends CI_Controller {
 		  $len =sizeof($event);
 		  if($len){
 			  
-			  if($register==="register"){ // if user wants to register for that event
+			   if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
@@ -146,14 +161,20 @@ class Events extends CI_Controller {
 		  $len =sizeof($event);
 		  if($len){
 			  
-			  if($register==="register"){ // if user wants to register for that event
+			   if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
@@ -197,14 +218,20 @@ class Events extends CI_Controller {
 		  $len =sizeof($event);
 		  if($len){
 			  
-			  if($register==="register"){ // if user wants to register for that event
+			   if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
@@ -248,14 +275,20 @@ class Events extends CI_Controller {
 		  $len =sizeof($event);
 		  if($len){
 			  
-			  if($register==="register"){ // if user wants to register for that event
+			   if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){
@@ -299,14 +332,20 @@ class Events extends CI_Controller {
 		  $len =sizeof($event);
 		  if($len){
 			  
-			  if($register==="register"){ // if user wants to register for that event
+			   if($register==="register"){ // if user wants to register for that event
 				  $this->event->register($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been registered!'));
 			  }
 			  else if($register==="unregister"){ // if user wants to unregister for that event
 				  $this->event->unregister($eventid);
-				  redirect("/events/".$event['category']."/".$event['event_id']);
+				  if($this->r!='home')
+				  	redirect("/events/".$event['category']."/".$event['event_id']);
+				  else				  	
+				  	redirect("/home");
 				  $this->load->template('message_view',array('message'=>'You have been unregistered. If you want to register again, go back and click register'));				  
 			  }
 			  else if($register==="ajax"){

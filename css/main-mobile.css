@@ -272,6 +272,165 @@ a:hover,a:active,a:visited{
     -moz-animation: moveFromBottom 300ms ease-in-out;
     -ms-animation: moveFromBottom 300ms ease-in-out;
 }
+
+
+
+#registrations tr:nth-of-type(odd) { 
+  background: #eee; 
+  color:#000;
+}
+#registrations th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+#registrations td, 
+#registrations th { 
+  padding: 	10px; 
+  border: 1px solid #666; 
+  text-align: left; 
+}
+
+
+#registrations table{
+	color:white;
+	width:100%;
+	border-collapse:collapse;
+	border:1px solid #aaa;
+}
+
+#registrations thead{
+	font-weight:bold
+}
+
+#registrations table, 
+#registrations thead, 
+#registrations tbody, 
+#registrations th, 
+#registrations td, 
+#registrations tr { 
+		display: block; 
+	}
+	
+/* Hide table headers (but not display: none;, for accessibility) */
+#registrations thead tr { 
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+#registrations tr { border: 1px solid #ccc; }
+
+#registrations td { 
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #666; 
+	position: relative;
+	padding-left: 50%; 
+}
+
+#registrations td:before { 
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	top: 6px;
+	left: 6px;
+	width: 45%; 
+	padding-right: 10px; 
+	white-space: nowrap;
+}
+
+/*
+Label the data
+*/
+#registrations td:nth-of-type(1):before { content: "Name :"; }
+#registrations td:nth-of-type(2):before { content: "e-mail :"; }
+#registrations td:nth-of-type(3):before { content: "Phone :"; }
+#registrations td:nth-of-type(4):before { content: "Gender :"; }
+#registrations td:nth-of-type(5):before { content: "College :"; }
+#registrations td:nth-of-type(6):before { content: "Batch and Branch :"; }
+
+
+
+/* my-events */
+
+
+
+#my-events {
+	text-align:center;
+}
+
+.me-event{
+	padding:10px;
+	border:0;
+	border-radius:8px;
+	background:#804000;
+	margin:10px;
+	width:46%;
+	min-width:300px;
+	display:inline-block;
+	vertical-align:middle;
+	text-align:left;
+}
+
+#my-events .me-icon{
+	display:inline-block;
+	font-size:24px;
+}
+
+.me-content{
+	display:inline-block;
+}
+
+.db-nav{
+	max-width:960px;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+.db-nav ul{
+	list-style:none;
+	margin-bottom:0;
+}
+.db-nav li{
+	max-width:120px;
+	float:left;
+	margin-right:4px;
+	margin-bottom:0;
+}
+
+.db-nav input{
+	width: 100%;
+    padding: 8px 5px;
+    margin-bottom: 0px;
+  
+    /* Styles */
+    border: 1px solid #0273dd; /* Fallback */
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        inset 0 10px 10px rgba(255,255,255,0.1);
+    border-radius: 5px 5px 0 0;
+    background: #444;
+    cursor:pointer;
+  
+    /* Font styles */
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+}
+
+.db-nav input:hover{	
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.db-nav li.current input{
+	background:#38a6f0;
+}
+
+
 @-webkit-keyframes moveFromBottom {
     from {
         opacity: 0;

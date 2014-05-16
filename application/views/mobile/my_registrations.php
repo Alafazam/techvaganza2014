@@ -14,12 +14,12 @@
             <table>
             	<thead>
                 	<tr>
-                        <th>Name </th>
-                        <th>e-mail</th>
-                        <th>Phone</th>
-                        <th>Gender</th>
-                        <th>College</th>
-                        <th>Batch and Branch</th>
+                        <th>Name :</th>
+                        <th>e-mail :</th>
+                        <th>Phone :</th>
+                        <th>Gender :</th>
+                        <th>College :</th>
+                        <th>Batch and Branch :</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -68,7 +68,7 @@
 				<ul>
 					<li>Sanidhya Gupta<br>
             Phone No- +919697243484<br>
-            Email- karangupta.guptag@gmail.com </li>
+            Email- karangupta.gupta9@gmail.com </li>
 				<li>Piyush Kohli<br>
             Phone No- +919796614705<br>
             Email- piyushkohli27@gmail.com</li>

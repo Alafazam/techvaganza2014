@@ -82,6 +82,36 @@
 	padding:0 10px;
 }
 	
+#registrations tr:nth-of-type(odd) { 
+  background: #eee; 
+  color:#000;
+  border: 1px solid #000;
+}
+#registrations th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+#registrations td, 
+#registrations th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+
+#registrations table{
+	color:white;
+	width:100%;
+	border-collapse:collapse;
+	border:1px solid #aaa;
+}
+
+#registrations thead{
+	font-weight:bold
+}
+
+
 
 .top_header span.right {
     float: right;
@@ -429,4 +459,20 @@ max-width: 100px;
     display:none;
 
     };
+}
+
+@media print {
+	*{
+		color:black;
+	}
+
+	
+	*:not(#dynamic, #dynamic *){
+		display:none !important;
+	}
+	
+	*:before,*:after{
+		display:none !important;
+	}
+	
 }
