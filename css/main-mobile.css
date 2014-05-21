@@ -297,6 +297,7 @@ a:hover,a:active,a:visited{
 	width:100%;
 	border-collapse:collapse;
 	border:1px solid #aaa;
+	word-wrap:break-word;
 }
 
 #registrations thead{
@@ -335,9 +336,10 @@ a:hover,a:active,a:visited{
 	/* Top/left values mimic padding */
 	top: 6px;
 	left: 6px;
-	width: 45%; 
+	width: 40%; 
 	padding-right: 10px; 
 	white-space: nowrap;
+	word-wrap:break-word;
 }
 
 /*
@@ -366,8 +368,8 @@ Label the data
 	border-radius:8px;
 	background:#804000;
 	margin:10px;
-	width:46%;
-	min-width:300px;
+	width:90%;
+	max-width:480px;
 	display:inline-block;
 	vertical-align:middle;
 	text-align:left;
@@ -430,6 +432,9 @@ Label the data
 	background:#38a6f0;
 }
 
+.sponsor{
+	margin:10px;
+}
 
 @-webkit-keyframes moveFromBottom {
     from {

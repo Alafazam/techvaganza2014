@@ -158,7 +158,7 @@ class Login extends CI_Controller {
 						->get('verification_queue');
 						
 	if($query->num_rows()>=1){
-      $this->form_validation->set_message('_check_database', 'Verify you email Before Login');
+      $this->form_validation->set_message('_check_database', 'Verify you email Before Login. If you haven\'t received verification email, please check your spam folder and also mark that email as NOT SPAM. If any other problem arises, you may contact <a href="mailto:ankit@techvaganza.org">ankit@techvagnza.org</a>');
       return false;		
 	}
 	

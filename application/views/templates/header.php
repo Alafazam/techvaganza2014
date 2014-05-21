@@ -129,7 +129,7 @@
                                             <ul>
                                                 <li><a class="icallajax" href="/events/robonoid/smackdown">Smack Down</a></li>
                                                 <li><a class="icallajax" href="/events/robonoid/rescuebot">Rescue Bot</a></li>
-                                                <li><a class="icallajax" href="/comingsoon">Line Follower</a></li>
+                                                <li><a class="icallajax" href="/events/robonoid/linefollower">Line Follower</a></li>
                                                 <li><a class="icallajax" href="/events/robonoid/mysterybox">Mystry Box</a></li>
                                                 <li><a class="icallajax" href="/events/robonoid/embesys">Embesys</a></li>
                                             </ul>
@@ -144,6 +144,16 @@
                                                 <li><a class="icallajax" href="/events/crossfire/cs">Counter Strike 1.6</a></li>
                                                 <li><a class="icallajax" href="/events/crossfire/nfs">NFS-MW</a></li>
                                                 <li><a class="icallajax" href="/events/crossfire/fifa">FIFA 13</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="icon icon-arrow-left">
+                                        <a class="icon-football" href="/events/technofun">Technofun</a>
+                                        <div class="mp-level">
+                                            <h2>Technofun</h2>
+                                            <a class="mp-back " href="#">back</a>
+                                            <ul>
+                                                <li><a class="icallajax" href="/events/technofun/fotographia">Fotographia</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -227,7 +237,7 @@
                         <div id="viewport" class="winded">
                                         <svg version="1.1" id="star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                         width="100%" height="100%" viewBox=" 0 0 600 600"  xml:space="preserve">
-                                            <g id="logo_conatainer" style="display:none">
+                                            <g id="logo_conatainer" style="visibility:hidden">
                                                 <g id="l0" class="main_logo">
                                                     <!-- <path fill="none" stroke="#000000" stroke-width="1.5626" stroke-miterlimit="10" d="M532.475,280.117
                                                         c0,2.697-2.186,4.883-4.883,4.883h-40.234c-2.696,0-4.883-2.186-4.883-4.883v-40.234c0-2.697,2.187-4.883,4.883-4.883h40.234

@@ -71,8 +71,8 @@ Star.prototype._unwind = function(link) {
         var angle = (360 / this.sub_menus);
         wrapper.animate({
             transform: 'r(' + ((i) * angle) + ',300,300)',
-            opacity: 1,
-            'box-shadow': '5px'
+            opacity: 1
+            // 'box-shadow': '5px'
         }, 320 + (i * (360 / this.sub_menus)), mina.easeout);
         //append logo
         this.fins[i].append(this.logos[i]);

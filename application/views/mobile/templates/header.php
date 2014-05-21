@@ -82,7 +82,13 @@ $username=$username['username'];
                     <a href="/events/fixerelixir" >Fixer-Elixer </a>
                   </li>
                   <li class="dropdown">
-                    <a href="/events/robonoids" >Robonoids </a>
+                    <a href="/events/robonoid" >Robonoid </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="/events/crossfire" >Crossfire </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="/events/technofun" >Technofun </a>
                   </li>
               </ul>
             </li>

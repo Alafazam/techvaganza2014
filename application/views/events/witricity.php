@@ -93,6 +93,9 @@ the certificate of participation.</li>
 						
 			<div class="e_text">
 				<h2>Contact : </h2>
+                <h3>Teacher Coordinator</h3>
+                <ul><li>Mr. Ubaid Bashir</li></ul>
+                <h3>Student Coordinators</h3>
 				<ul>
 					<li>Tusshar Srivastava 09796534624</li>
 		<li>Pitta Anil Reddy 09086801660</li>

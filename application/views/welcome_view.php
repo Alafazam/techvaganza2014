@@ -1,9 +1,11 @@
-                            <div id='top-sticky'>                                       
+                            <div id='top-sticky'>
+                           	  <a href="/team" class="icallajax" target="new">                                       
                                 <img id="techv" src="/images/tv.png"/>
                                 <div>
                                     <span>TECHVAGANZA</span>
                                     <p>2014</p>
                                 </div>                                        
+                              </a>
                             </div><?php
 											echo "<script>var curtime =" .(time()*1000)."</script>"
 									?>  

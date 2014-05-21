@@ -1,7 +1,7 @@
 	<div id="content">
         <div class="col glass"> 
         <div class="page-header container-fluid">
-          <h1 class="center">Rescue Bot</h1>
+          <h1 class="center">Rescue Bot </h1><a href="/pdfs/rescue_bot.pdf" target="new"> [pdf]</a>
             <?php
                 if($username){
                     if(!$isRegistered){
@@ -23,10 +23,10 @@
         	<div class="e_text">
         	    <p></p>
 				<h2>Description : </h2>
-				<p>this event is based on participant’s ability to make optimality decisions and tuning of their robot to perform rescue operations.
+				<p>this event is based on participant's ability to make optimality decisions and tuning of their robot to perform rescue operations.
 					RESCUE PEOPLE AND WIN
 					NO REGISTRATION FEES.
-					‘THIS EVENT IS OPEN TO ALL BRANCHES.’</p>
+					'THIS EVENT IS OPEN TO ALL BRANCHES.'</p>
 			</div>
 			
 			
@@ -41,7 +41,8 @@
 					<li>round there will be maximum two team members allowed from a team in the racing arena.</li>
 					<li>The machines are not allowed to leave any loose parts on any part of the arena. Any machine disintegrating during the race will be disqualified.</li>
 					<li>Teams are not allowed to purposefully damage the machine of the opponent's team. If found doing so on track (while racing), the concerned team will be disqualified. Execution of last three rules will be subjective and relies completely on judges' discretion.</li>
-
+                    <li>Maximum width of bot should be less than 20cm.</li>
+					<p></p>
 				</ul>
 				<h3>General Rules : </h3>
 				<ul>
@@ -67,7 +68,7 @@ CHOOSE CAREFULLY!!!</li>
 				</ul>
 				<h3>ROUND-2:</h3>
 				<ul>
-					<li>Participant’s  bot will have to pass through atleast three rescue points out of five points in shortest time.</li>
+					<li>Participant's  bot will have to pass through atleast three rescue points out of five points in shortest time.</li>
 					<li>Same rules as round 1.</li>
 					<li>This simulates a real life situation in which you are supposed to make decisions according to availability of resources an ease of access of the rescue points.</li>
 
@@ -77,13 +78,10 @@ CHOOSE CAREFULLY!!!</li>
 			<div class="e_text">
 				<h2>Judging Criteria : </h2>
 				<ul>
-					<li>Reaching the final point following all the rules of respective rounds in              shortest time.
+					<li>Reaching the final point following all the rules of respective rounds in shortest time.
 </li>
 					
 				</ul>
-			</div>
-				
-
 			</div>
 			<div class="e_text">
 				<h2>Event Organisers :  </h2>
@@ -93,6 +91,6 @@ CHOOSE CAREFULLY!!!</li>
 					<li>Kunal Nijhawan                   198/11          6th Sem, mechanical  09596825373</li>
 					
 				</ul>
-			</div>
+			</div>	
 		</div>		
     </div>

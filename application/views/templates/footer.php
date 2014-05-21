@@ -159,24 +159,34 @@ var popped = ('state' in window.history  && window.history.state !== null),
 // popstate handler takes care of the back and forward buttons
 
 window.onpopstate = function(event) {
-      // console.log(location.href);
+    // console.log(location.href);
     // Ignore inital popstate that some browsers fire on page load
     var initialPop = !popped && location.href == initialURL
     popped = true
 
 
-    if (!initialPop&& window.location.pathname=='/') 
-    { 
-    ajaxLoader.show();
+    if (!initialPop && location.href == initialURL) {
+        ajaxLoader.show();
+
+        if (window.location.pathname == '/' || window.location.pathname == '/home') {
+            getString = '/welcome/ajax';
+            openStar = true;
+        } else {
+            getString = location.pathname + '/ajax';
+            openStar = false;
+        }
+
+
         window.setTimeout(function() {
-            ajax.get('/welcome/ajax', {}, function(data) {
+            ajax.get(getString, {}, function(data) {
                 updateContent({
                     'content': data
                 });
-                if (!star.open) {
+                if (openStar) {
                     star._unwind()
                 };
-                eval(document.getElementById("runscript").innerHTML);
+                if (document.getElementById("runscript"))
+                    eval(document.getElementById("runscript").innerHTML);
                 setTimeout(function() {
                     ajaxLoader.hide();
                 }, 1000);
@@ -192,7 +202,7 @@ window.onpopstate = function(event) {
         ajaxLoader.show();
         window.setTimeout(function() {
             ajax.get(location.pathname + '/ajax', {}, function(data) {
-               console.log('ajax called');
+                console.log('ajax called');
                 updateContent({
                     'content': data
                 });
@@ -208,7 +218,6 @@ window.onpopstate = function(event) {
     }
 
 }
-
 </script>
     </body>
 </html>

@@ -81,7 +81,6 @@
 			</ul>
 		</div>
 		<div class="e_text">
-			<p>Entry fees is Rs. 100/- per person.</p>
 			<h2>Contact Us</h2>
 			<ul>
 				<li>Sarang Khajuria</li>

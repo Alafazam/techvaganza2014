@@ -57,6 +57,15 @@
                                 <h3 class="ca-sub">Let the Gaming Begin!</h3>
                             </div>
                         </a>
+                    </li>    
+                    <li>
+                        <a class="icallajax" href="/events/technofun">
+                        	<span class="ca-icon" ><i class="icon-football"></i></span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Technofun</h2>
+                                <h3 class="ca-sub">where Technology is fun!</h3>
+                            </div>
+                        </a>
                     </li>                    
                 </ul>
             </div>

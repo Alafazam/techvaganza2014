@@ -31,7 +31,7 @@
 			<ul>
 				<li>It is a team event and each team comprises minimum of two and maximum of three members.</li>
 				<li>This competition comprises of 2 rounds.</li>
-				<li>Round Ist is the screening test and it is based on MCQ’s. The team which qualifies, will be shortlisted for second round.</li>
+				<li>Round Ist is the screening test and it is based on MCQ's. The team which qualifies, will be shortlisted for second round.</li>
 				<li>The shortlisted team have to make the model, each team has to come prepared for the model. </li>
 				<li>The model and its description will be uploaded on the techfest site prior to the event.</li>
 				<li>The model should be preferably scale off.</li>

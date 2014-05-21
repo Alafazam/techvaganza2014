@@ -64,6 +64,9 @@
 			
 			<div class="e_text">
 				<h2>Contact : </h2>
+                <h3>Teacher Coordinator</h3>
+                <ul><li>Mr. Ubaid Bashir</li></ul>
+                <h3>Student Coordinators</h3>
 				<ul>
 					<li>Umer Banday 	08803070568</li>
 					<li>Anand Jha 		09796186566</li>

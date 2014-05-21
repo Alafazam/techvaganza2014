@@ -60,7 +60,6 @@
 				<ul>
 					<li>In this round final 4 participants will clash for title in three different races</li>
 				</ul>
-				<p>Entry Fee 100/- per Head</p>
 
 			</div>
 			<div class="e_text">
@@ -78,7 +77,7 @@
 					<li>Use of any Cheat program</li>
 <li>Intentional disconnection</li>
 <li>Use of any settings exceeding standard or permitted settings</li>
-<li>If the match is disrupted due to unnecessary chatting, the player may be given a warning or lose by default at the referee’s sole discretion.</li>
+<li>If the match is disrupted due to unnecessary chatting, the player may be given a warning or lose by default at the referee's sole discretion.</li>
 <li>Upon discovery of any player committing any violations regarded as unfair play, that player will be disqualified from the tournament immediately</li>
 <li>During the course of any match, the operations staff and/or referee may determine other actions to be unfair play at any time. Two warnings constitute being disqualified from the tournament</li>
 <li>Rules are subject to change at the time of the event as per the discretion of the committee</li>

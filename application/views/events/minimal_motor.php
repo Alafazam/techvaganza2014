@@ -76,6 +76,9 @@
 			
 			<div class="e_text">
 				<h2>Contact : </h2>
+                <h3>Teacher Coordinator</h3>
+                <ul><li>Mr. Ubaid Bashir</li></ul>
+                <h3>Student Coordinators</h3>
 				<ul>
 					<li>Rahul Vijay 	09796797612</li>
 					<li>Ajay Mittal 	07298956913</li>

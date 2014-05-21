@@ -198,6 +198,7 @@ hr{
 
 .sponsor{
 	display:inline-block;
+	vertical-align:middle;
 	margin:15px;
 }
 
@@ -353,6 +354,91 @@ hr{
 	transition: transform 1s linear ;
 	
 }
+
+/* OUR TEAM */
+
+#webd{
+	font-family: Tahoma,sans-serif;
+}
+
+#webd *{
+	padding:0;
+	margin:0
+}
+
+#webd .one{
+	float: left;
+	width: 400px;
+	margin: 20px;
+	cursor:pointer;
+}
+
+#webd .member{
+	display: inline-block;
+	max-width: 150px;
+	height: 150px;
+	width: 400px;
+	border-radius: 100px;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition:max-width 0.2s;
+	-moz-transition:max-width 0.2s;
+	-ms-transition:max-width 0.2s;
+	-o-transition:max-width 0.2s;
+	transition:max-width 0.2s;
+}
+
+#webd .member:before{
+	left:143px;
+}
+#webd .member:after{
+	width:296px;
+}
+
+#webd .reflection{
+	position:absolute;
+	opacity:0.8;
+	z-index:11;
+}
+
+#webd .reflection:before{
+	left:-57px;
+}
+
+#webd .one:hover .member{
+	max-width: 400px;
+}
+
+#webd .pic{
+	border: 0;
+	border-radius: 50%;			
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	z-index: 10;
+	position: relative;
+}
+#webd .pic img{
+	width: 148px;
+	z-index: 10;
+	background: white;
+	border-radius: 50%;	
+}
+
+#webd .details {
+	display: inline-block;
+	vertical-align: middle;
+	left:165px;
+	top: 0;
+	width: 230px;
+	position: absolute;
+	padding: 26px 10px;
+}
+
+#webd .name{
+	font-size: 1.2em;
+}
+
 
 
 /* rules for Desktop Resolutions */

@@ -1,17 +1,16 @@
-
-<?php 
-$winners = array(200,300,500,750,1000,5000);
-
-if(in_array($id, $winners)){ ?>
-        <div class="max-480 glass" style="background:#001141">
-            <p class="clearfix winner center">Congrats, you are <?=$id?>th User on our website.<br />
-            You have won a gift voucher.<br />
-            Please, contact Hospitality team to claim your Voucher<br />
-            Phone: <a href="tel:07298470136">+917298470136</a></p>
-        </div>
-<?php } ?>
-
 <?php if(isset($empty)){?>
+	<?php 
+	$winners = array(200,300,500,750,1000,5000);
+	
+	if(in_array($id, $winners)){ ?>
+			<div class="max-480 glass" style="background:#001141">
+				<p class="clearfix winner center">Congrats, you are <?=$id?>th User on our website.<br />
+				You have won a gift voucher.<br />
+				Please, contact Hospitality team to claim your Voucher<br />
+				Phone: <a href="tel:07298470136">+917298470136</a></p>
+			</div>
+	<?php } 
+	?>
         <div class="max-480 glass">
             <p class="clearfix center">
             You haven't Registered for any event yet.<br />

@@ -35,7 +35,6 @@
 <li>CrossFire may install third party program for communication like Ventrilo    Teamspeak etc</li>
 <li>Participants should bring their own Gaming gear (keyboard, mouse, headphones, mouse pads, etc)</li>
 <li>CS 1.6 (Protocol 47) will be used</li>
-<li>Entry Fee 1000/- per Team</li>
 
 				</ul>
 			</div>

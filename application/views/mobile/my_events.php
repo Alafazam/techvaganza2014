@@ -1,3 +1,15 @@
+<?php 
+$winners = array(200,300,500,750,1000,5000);
+
+if(in_array($user['id'], $winners)){ ?>
+        <div class="max-480 glass" style="background:#001141">
+            <p class="clearfix winner center">Congrats, you are <?=$user['id']?>th User on our website.<br />
+            You have won a gift voucher.<br />
+            Please, contact Hospitality team to claim your Voucher<br />
+            Phone: <a href="tel:07298470136">+917298470136</a></p>
+        </div>
+<?php } 
+?>
    	<div  id="content">
     <div class="db-nav">
         	<ul class="clearfix">
@@ -19,7 +31,7 @@
                 foreach( $events as $event){
             ?>                    
                 <div class="me-event">
-                    <span class="me-icon"><i class="icon-<?=$event['view_name']?>"></i></span>
+                    <!--<span class="me-icon"><i class="icon-<?=$event['view_name']?>"></i></span>-->
                     <a class="icallajax" href="<?php 
                     
                     if (file_exists(APPPATH."views/events/".$event['view_name'].".php"))

@@ -32,7 +32,7 @@
                 <ul>
                     <li><b class="bold">Round 0</b>: This round will be an eliminator round. This round will be MCQ based.</li>
                     <li><b class="bold">Round 1</b>: This round will be simulator based and will test the designing skill of participants. This round is also an eliminator round.</li>
-                    <li><b class="bold">Round 2</b>: In this round participants will be asked to design an embedded system around AVR ATmega8/ATmega16 series which will be required to perform the desired task, provided at the venue of the competition. </li>
+                    <li><b class="bold">Round 2</b>: Details of this event will be revealed on-spot.</li>
                 </ul>
                     <p>Further details will be revealed on the spot</p>
 			</div>

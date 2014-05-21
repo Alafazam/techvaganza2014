@@ -594,11 +594,15 @@ a:hover, a:focus {
 	text-align:center;
 }
 
+#my-events a.reg_button_class{
+	margin-top: 22px;
+}
+
 .me-event{
 	padding:10px;
 	border:0;
 	border-radius:8px;
-	background:#804000;
+	background:#330F0F;
 	margin:10px;
 	width:46%;
 	min-width:300px;

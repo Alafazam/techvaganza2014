@@ -5,7 +5,6 @@ class Hospitality extends CI_Controller {
   function __construct()
   {
     parent::__construct();
-	$this->load->model('event','',TRUE);
   }
   
   function index(){
