@@ -1,0 +1,16 @@
+.DS_Store
+
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+
+<<<<<<< HEAD
+*_notes
+=======
+application/pdfs/*
+
+>>>>>>> 4bdd472704844ef965f431a8fd9b4b38a4503e8a
