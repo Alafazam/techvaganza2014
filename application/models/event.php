@@ -85,7 +85,8 @@ Class Event extends CI_Model
 		$query = $this->db->select('first_name,last_name,batch,branch,college,email,cell,gender')
 		->from('events_registration')
 		->join('users','events_registration.username=users.username')
-		->where(array('event_id'=>$eventid))->get();
+		->where(array('event_id'=>$eventid))
+		->order_by("events_registration.time","asc")->get();
 		
 		return $query;
 	}

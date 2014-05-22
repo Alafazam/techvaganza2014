@@ -32,15 +32,7 @@
 				<li>Car should be powered by any chemical reaction.</li>
 				<li>A team should contain at least two members.</li>
 				<li>No mechanical device is allowed to accelerate the car.</li>
-				<li>Treatment of industrial fluids</li>
-				<li>Dewatering of sludge in wastewater treatment plants</li>
-				<li>Cleaning of crankcase gases from truck and ship diesel engines </li>
 			</ul>
-		</div>
-		<div class="e_text">
-			<h2>Aim</h2>
-			<p>To eliminate oversize granules or to purify impure liquid.
-			</p>
 		</div>
 		<div class="e_text">
 			<h2>Judgement criteria: </h2>
@@ -71,7 +63,7 @@
 			<ul>
 				<h3>Event Managers</h3>
 				<li>Mukesh Kalita                     +918803635003					</li>
-				<li>Sanjay Verma                      +919697276052                 </li>
+				<li>Sanjay Verma                      +919796141342                 </li>
 				<h3>Event coordinators</h3>
 				<li>Goverdhan singh                   +919697537185                 </li>
 				<li>Swyam gupta                       +919086413422                 </li>

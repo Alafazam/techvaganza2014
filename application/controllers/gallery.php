@@ -10,14 +10,14 @@ class Gallery extends CI_Controller {
   function index(){
 	  
 	  	// print categories of all the events
-		$this->load->template('coming_soon_view');
+		$this->load->template('gallery_view');
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }
   function ajax(){
 	  
 	  	// print categories of all the events
-		$this->load->view('coming_soon_view');
+		$this->load->view('gallery_view');
 		//$this->load->template(EVENTVIEW,$data);
 	 
   }

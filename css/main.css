@@ -35,7 +35,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-	background:url(/images/bg.gif)#000 no-repeat;
+	background:url(/images/bg.jpg)#000 no-repeat;
 	background-position:bottom right;
 	background-attachment:fixed;
 	background-size:cover;
@@ -200,6 +200,11 @@ hr{
 	display:inline-block;
 	vertical-align:middle;
 	margin:15px;
+	max-width:240px;
+}
+
+.sponsor img{
+	width:100%;
 }
 
 .max-300{
@@ -548,14 +553,19 @@ max-width: 100px;
 }
 
 @media print {
-	*{
-		color:black;
-	}
-
 	
-	*:not(#dynamic, #dynamic *){
-		display:none !important;
+	*{
+		color:#000;
 	}
+	
+	#viewport,.top_header,nav,.db-nav{
+		display:none;
+	}
+	
+	.scroller, .scroller-inner,.container{
+		height:auto !important;
+	}
+	
 	
 	*:before,*:after{
 		display:none !important;

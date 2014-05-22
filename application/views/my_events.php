@@ -6,7 +6,7 @@ if(in_array($user['id'], $winners)){ ?>
             <p class="clearfix winner center">Congrats, you are <?=$user['id']?>th User on our website.<br />
             You have won a gift voucher.<br />
             Please, contact Hospitality team to claim your Voucher<br />
-            Phone: <a href="tel:07298470136">+917298470136</a></p>
+            Phone: <a href="tel:07298470136">+917298470136</a> or <a href="tel:09858129161">+919858129161</a></p>
         </div>
 <?php } 
 ?>

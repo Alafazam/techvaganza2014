@@ -24,7 +24,7 @@
 		<div class="e_text">
 			<p></p>
 			<h2>Introduction</h2>
-			<p>This event combines the idea of Electrical Engg., Electronics & Communication Engg., Computer Science Engg. and Information Technology . It is mainly focus on practicability of a participant. It has three rounds.
+			<p>This event combines the idea of Electrical Engg., Electronics &amp; Communication Engg., Computer Science Engg. and Information Technology . It is mainly focus on practicability of a participant. It has three rounds.
 			</p>
 		</div>
 		
@@ -73,6 +73,10 @@
 		<div class="e_text">
 			<h2>Contact : </h2>
 			<ul>
+            	<li>Yogesh Kumar<br/>
+                	9086944668</li>
+            	<li>Priya Ranjan<br/>
+                	9796534393</li>
 			</ul>
 		</div>
 	</div>

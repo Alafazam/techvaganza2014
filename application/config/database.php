@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$production=false;
+$production=true;
 
 $active_group = 'default';
 $active_record = TRUE;
@@ -59,7 +59,7 @@ if($production)
 	$db['default']['database'] = 'techvklu_test';
 	$db['default']['dbdriver'] = 'mysql';
 	$db['default']['dbprefix'] = '';
-	$db['default']['pconnect'] = TRUE;
+	$db['default']['pconnect'] = FALSE;
 	$db['default']['db_debug'] = TRUE;
 	$db['default']['cache_on'] = FALSE;
 	$db['default']['cachedir'] = '';

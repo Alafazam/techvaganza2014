@@ -515,5 +515,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 										</script>
+                                        
+                                        <div id="fb-root"></div>
+										<script>(function(d, s, id) {
+                                          var js, fjs = d.getElementsByTagName(s)[0];
+                                          if (d.getElementById(id)) return;
+                                          js = d.createElement(s); js.id = id;
+                                          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=696875733707256&version=v2.0";
+                                          fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));</script>
+                                        <div class="fb-like" data-href="https://www.facebook.com/techvaganza" data-layout="button" data-action="like" data-show-faces="false" data-colorscheme="dark" data-share="false" style="position:fixed;bottom:25px;right:210px;overflow:hidden"></div>
+                                        
+                                        <a href="/pdfs/schedule.pdf" style="position:fixed;bottom:10px;left:20px;" target="new"><span style="padding:10px;background:#38a6f0;border-radius:5px;">Schedule</span></a>
 									
 <!-- if(isset($home)) -->

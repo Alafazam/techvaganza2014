@@ -58,7 +58,7 @@
 					2.	2x 3.5mm jacks
 					3.	1x IR-Photodiode pair
 					4.	Connecting Wires + USB jack/9V battery socket
-				5.	Some resistors and capacitors</li>
+					5.	Some resistors and capacitors</li>
 			</ul>
 		</div>
 		<div class="e_text">
@@ -73,6 +73,13 @@
 				<li>2nd prize: 	Rs. 1000</li>
 				<li>3rd prize:	Rs. 500</li>
 			</ul>
+		</div>
+		<div class="e_text">
+		<h2>Contact:</h2>
+		<ul>
+			<li>Ahtisham-ul-haq 9797265551 ahtishamishap@gmail.com</li>
+			<li>Rishabh Bhargav 9796374282 dravidrishabh@gmail.com</li>
+		</ul>
 		</div>
 	</div>
 </div>

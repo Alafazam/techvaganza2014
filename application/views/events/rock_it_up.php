@@ -29,7 +29,8 @@
 		<div class="e_text">
 			<h2>EVENT FORMAT:</h2>
 			<ul>
-				<li>The event will consist of two Rounds. Each round having different scoring system.</li>
+            	<li>The preliminary round will be a general aptitude quiz</li>
+				<li>The major event will consist of two Rounds. Each round having different scoring system.</li>
 				<li>The Winner will be decided in the last round.</li>
 			</ul>
 		</div>

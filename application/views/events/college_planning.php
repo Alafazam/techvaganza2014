@@ -33,11 +33,11 @@
 			</p>
 		</div>
 		<div class="e_text">
-			<h2>Specificaations : </h2>
+			<h2>Specifications : </h2>
 			<ul>
-				<li>Students shall participate in teams of two members.</li>
+				<li>Students shall participate in teams of two or three members.</li>
 				<li>Participants must have valid students' ID proof. </li>
-				<li>Students have to draw the plan on a drawing sheet which shall be provided on spot.</li>
+				<li>Students have to draw the plan on a drawing sheet which shall be provided on 24th May.</li>
 				<li>Site plan of the land and architectural symbols shall be provided three days before the event. </li>
 			</ul>
 		</div>

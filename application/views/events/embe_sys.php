@@ -61,5 +61,13 @@
 					<li>Certificate of participation to all team members which will qualify Ist round. </li>
 				</ul>
 			</div>
+            <div class="e_text">
+				<h2>Contacts : </h2>
+				<ul>
+					<li>Ravi Bhat<br />9906779768</li>
+					<li>Gourav Prateek Sharma<br />9906081718</li>
+					<li>Kaiten Thakur<br />9086133991</li>
+				</ul>
+			</div>
 		</div>		
     </div>

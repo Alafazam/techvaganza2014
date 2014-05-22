@@ -116,7 +116,7 @@
 				    <div>Email- <a href="mailto:deepakchopra1992@gmail.com">deepakchopra1992@gmail.com</a></div>
 				</div>
 				<div class="contact">
-				    <div class='bold'>Faizan</div>
+				    <div class='bold'>Mir Faizan Ul Haq</div>
 				    <div>Phone No:<a class='bold' href="tel:08494033550">+918494033550</a></div>
 				    <div>Email- <a href="mailto:faizancvl@gmail.com">faizancvl@gmail.com</a></div>
 				</div>

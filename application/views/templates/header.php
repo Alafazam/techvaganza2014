@@ -154,6 +154,7 @@
                                             <a class="mp-back " href="#">back</a>
                                             <ul>
                                                 <li><a class="icallajax" href="/events/technofun/fotographia">Fotographia</a></li>
+                                                <li><a class="icallajax" href="/events/technofun/naf">Adventure Sports</a></li>
                                             </ul>
                                         </div>
                                     </li>

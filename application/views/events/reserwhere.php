@@ -49,5 +49,15 @@
 				<li>Stability of structure</li>
 			</ul>
 		</div>
+        <div class="e_text">
+			<h2>Contacts :</h2>
+			<ul>
+            	<li>Mufti Minaam<br /> 9796364679 </li>
+				<li>Sandeep Kumar<br />9469515833</li>
+				<li>Abhinav Verma<br />9018608153, 7298480610</li>
+				<li>Sandeep Gupta<br /> 9596167616</li>
+				<li>Shubham Pathak<br /> 9086413447</li>
+			</ul>
+		</div>
 	</div>
 </div>
